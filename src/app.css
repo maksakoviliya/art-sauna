@@ -1,3 +1,82 @@
+@font-face {
+    font-family: 'RF Dewi';
+    src: local('RF Dewi Expanded Regular'), local('RF-Dewi-Expanded-Regular'),
+    url('../fonts/RFDewiExpanded-Regular/RFDewiExpanded-Regular.woff2') format('woff2'),
+    url('../fonts/RFDewiExpanded-Regular/RFDewiExpanded-Regular.woff') format('woff'),
+    url('../fonts/RFDewiExpanded-Regular/RFDewiExpanded-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RF Dewi';
+    src: local('RF Dewi Expanded Bold'), local('RF-Dewi-Expanded-Bold'),
+    url('../fonts/RFDewiExpanded-Bold/RFDewiExpanded-Bold.woff2') format('woff2'),
+    url('../fonts/RFDewiExpanded-Bold/RFDewiExpanded-Bold.woff') format('woff'),
+    url('../fonts/RFDewiExpanded-Bold/RFDewiExpanded-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RF Dewi';
+    src: local('RF Dewi Expanded Black'), local('RF-Dewi-Expanded-Black'),
+    url('../fonts/RFDewiExpanded-Black/RFDewiExpanded-Black.woff2') format('woff2'),
+    url('../fonts/RFDewiExpanded-Black/RFDewiExpanded-Black.woff') format('woff'),
+    url('../fonts/RFDewiExpanded-Black/RFDewiExpanded-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: local('Montserrat Regular'), local('Montserrat-Regular'),
+    url('../fonts/Montserrat-Regular/Montserrat-Regular.woff2') format('woff2'),
+    url('../fonts/Montserrat-Regular/Montserrat-Regular.woff') format('woff'),
+    url('../fonts/Montserrat-Regular/Montserrat-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: local('Montserrat Bold'), local('Montserrat-Bold'),
+    url('../fonts/Montserrat-Bold/Montserrat-Bold.woff2') format('woff2'),
+    url('../fonts/Montserrat-Bold/Montserrat-Bold.woff') format('woff'),
+    url('../fonts/Montserrat-Bold/Montserrat-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    .content {
+        @apply max-w-7xl xl:max-w-8xl mx-auto;
+    }
+}
+
+@layer components {
+    .main-banner {
+        background-image: url('./img/banner_1.png');
+    }
+
+    @media (min-width: 768px)  {
+        .main-banner {
+            background-image: url('./img/banner_1_large.png');
+        }
+    }
+
+    .banner-button__wrapper {
+        @apply max-w-xs relative h-[70px] xl:h-20 border border-violet-500;
+    }
+    .banner-button {
+        background: linear-gradient(92.95deg, #A081E6 -2.36%, #8569C4 -2.35%, #9872EB 102.97%);
+        @apply absolute inset-0 h-full w-full font-montserrat font-bold flex items-center justify-center relative text-white shadow-md uppercase text-sm transition translate-x-1.5 translate-y-1.5 duration-75 hover:translate-x-0 hover:translate-y-0;
+    }
+    .banner-button:hover {
+        background: linear-gradient(92.95deg, #8C6BD6 -2.36%, #8C6BD6 -2.35%, #7D56D6 102.97%);
+    }
+}
