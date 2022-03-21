@@ -12,12 +12,25 @@ module.exports = {
             spacing: {
                 0.2: "0.5px",
                 15: "15px",
+                22: "88px",
                 30: "30px"
+            },
+            rotate: {
+                150: '150deg',
+            },
+            blur: {
+                100: '100px',
+                200: '200px',
             },
             maxWidth: {
                 '8xl': "1620px"
             },
             colors: {
+                "gray-450": "rgba(26, 26, 26, .8)",
+
+                "neutral-850": "#292725",
+
+                "violet-400": "#8C6BD6",
                 "violet-500": "#9172D6",
 
                 "white-50": "rgba(255, 255, 255, .5)"
@@ -26,7 +39,8 @@ module.exports = {
                 wide: "0.02em"
             },
             lineHeight: {
-                7.5: "29px"
+                7.5: "29px",
+                30: "30px"
             },
             fontSize: {
                 xxs: "10px",
@@ -36,6 +50,9 @@ module.exports = {
             },
             boxShadow: {
                 'md': "0px 20px 80px rgba(140, 107, 214, 0.3)"
+            },
+            opacity: {
+                2: "0.02"
             },
             keyframes: {
                 drop: {

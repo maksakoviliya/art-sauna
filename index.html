@@ -9,13 +9,16 @@
     <link rel="stylesheet" href="app.css">
     <title>Отделка бань и саун «под ключ»: элитная дизайнерская облицовка и декор</title>
 </head>
-<body class="antialiased">
+<body class="antialiased bg-neutral-850 overflow-x-hidden">
 
-<div class="hidden xl:block fixed inset-y-0 left-1/2 w-0.2 bg-white opacity-10"></div>
-<div class="hidden 3xl:block fixed inset-y-0 left-20 w-0.2 bg-white opacity-10"></div>
-<div class="hidden 3xl:block fixed inset-y-0 right-20 w-0.2 bg-white opacity-10"></div>
+<div class="hidden xl:block fixed inset-y-0 left-1/2 w-0.2 bg-white opacity-10 xl:opacity-30 z-10"></div>
+<div class="hidden 3xl:block fixed inset-y-0 left-20 w-0.2 bg-white opacity-10 xl:opacity-30 z-10"></div>
+<div class="hidden 3xl:block fixed inset-y-0 right-20 w-0.2 bg-white opacity-10 xl:opacity-30 z-10"></div>
 
-<section class="bg-cover bg-top py-15 md:py-30 px-5 main-banner">
+<section class="bg-cover bg-top py-15 md:py-30 px-5 main-banner relative">
+    <div class="absolute inset-x-0 top-0 h-[143px] bg-gradient-to-b from-gray-450"></div>
+    <div class="absolute inset-x-0 bottom-0 h-[90px] bg-gradient-to-t from-neutral-850"></div>
+
     <div class="content">
         <div class="navbar border-t border-white flex items-center justify-between pt-2.5 md:pt-4 xl:pt-5 relative">
             <div class="absolute hidden md:block top-0 mt-0.5 left-48 h-2.5 w-0.2 bg-white xl:h-5"></div>
@@ -91,7 +94,8 @@
         </div>
 
         <div class="pt-[85px] xl:pt-36">
-            <h1 class="uppercase block text-white-50 text-sm tracking-wide md:text-xl xl:text-26">ОТДЕЛКА БАНЬ И САУН «ПОД
+            <h1 class="uppercase block text-white-50 text-sm tracking-wide md:text-xl xl:text-26">ОТДЕЛКА БАНЬ И САУН
+                «ПОД
                 КЛЮЧ»</h1>
             <h2 class="uppercase block mt-7 md:mt-14 text-white text-22 md:text-4xl leading-7.5 xl:leading-snug tracking-wide xl:text-54">
                 Создаем <br>
@@ -112,25 +116,28 @@
                         <path d="M25.95 6.047 0 6M25.85 11.095l6.852-5.048L25.85 1v10.095Z" stroke="white"
                               stroke-miterlimit="10" stroke-linejoin="round"/>
                     </svg>
-                    Смотреть проекты
+                    Узнать стоимость
                 </a>
             </div>
-            <div class="border-b border-white h-44 xl:h-56 relative">
-                <a href="#hello" class="absolute top-auto bottom-8 left-1/2 transform -translate-x-1/2">
+            <div class="border-b border-white h-44 xl:h-80 relative">
+                <a href="#hello" class="absolute top-auto bottom-8 xl:bottom-32 left-1/2 transform -translate-x-1/2">
                     <svg fill="none" xmlns="http://www.w3.org/2000/svg"
-                         class="w-3 animate-drop-3 opacity-75 -translate-x-1/2 absolute opacity-0 xl:w-5" viewBox="0 0 12 8">
+                         class="w-3 animate-drop-3 opacity-75 -translate-x-1/2 absolute opacity-0 xl:w-5"
+                         viewBox="0 0 12 8">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                               d="M.03.15A.287.287 0 0 1 .287 0h11.428c.108 0 .207.058.255.15a.265.265 0 0 1-.025.287L6.23 7.888A.29.29 0 0 1 6 8a.29.29 0 0 1-.23-.112L.056.438A.265.265 0 0 1 .03.15ZM.852.55 6 7.263 11.149.549H.851Z"
                               fill="white"/>
                     </svg>
                     <svg fill="none" xmlns="http://www.w3.org/2000/svg"
-                         class="w-3 animate-drop-2 opacity-75 -translate-x-1/2 absolute opacity-0 xl:w-5" viewBox="0 0 12 8">
+                         class="w-3 animate-drop-2 opacity-75 -translate-x-1/2 absolute opacity-0 xl:w-5"
+                         viewBox="0 0 12 8">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                               d="M.03.15A.287.287 0 0 1 .287 0h11.428c.108 0 .207.058.255.15a.265.265 0 0 1-.025.287L6.23 7.888A.29.29 0 0 1 6 8a.29.29 0 0 1-.23-.112L.056.438A.265.265 0 0 1 .03.15ZM.852.55 6 7.263 11.149.549H.851Z"
                               fill="white"/>
                     </svg>
                     <svg fill="none" xmlns="http://www.w3.org/2000/svg"
-                         class="w-3 animate-drop-1 opacity-75 -translate-x-1/2 absolute opacity-0 xl:w-5" viewBox="0 0 12 8">
+                         class="w-3 animate-drop-1 opacity-75 -translate-x-1/2 absolute opacity-0 xl:w-5"
+                         viewBox="0 0 12 8">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                               d="M.03.15A.287.287 0 0 1 .287 0h11.428c.108 0 .207.058.255.15a.265.265 0 0 1-.025.287L6.23 7.888A.29.29 0 0 1 6 8a.29.29 0 0 1-.23-.112L.056.438A.265.265 0 0 1 .03.15ZM.852.55 6 7.263 11.149.549H.851Z"
                               fill="white"/>
@@ -142,7 +149,115 @@
                     <!--                          fill="white"/>-->
                     <!--                </svg>-->
                 </a>
-                <div class="absolute top-full mt-0.5 left-1/2 h-2.5 w-0.2 bg-white"></div>
+                <div class="absolute top-full mt-0.5 left-1/2 h-2.5 xl:h-5 w-0.2 bg-white"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-[68px] md:py-30 xl:py-[58px] px-5 text-white">
+    <div class="content">
+        <div class="lg:flex relative items-start border-b border-white gap-20 xl:gap-48 pb-[71px] xl:pb-24">
+
+            <div class="absolute top-full mt-0.5 left-1/2 h-2.5 xl:h-5 w-0.2 bg-white"></div>
+            <div class="bg-white opacity-10 z-0 absolute -top-20 -right-3/4 md:-right-1/3 xl:right-0 xl:top-1/2 xl:translate-x-1/3 md:bottom-0 md:top-auto w-[400px] h-[400px] xl:w-[800px] xl:h-[800px] filter blur-200 rounded-full"></div>
+            <div class="bg-white opacity-10 z-0 absolute top-1/2 md:hidden xl:block -left-3/4 w-[400px] h-[400px] xl:w-[800px] xl:h-[800px] xl:-left-1/2 xl:top-0 filter blur-200 rounded-full"></div>
+            <div class="absolute -bottom-22 xl:bottom-auto xl:top-full xl:-translate-y-1/3 left-1/2 transform -translate-x-1/2 text-[150px] md:text-[200px] xl:text-[300px] leading-none uppercase font-black opacity-2 text-right xl:left-auto xl:right-0 xl:translate-x-0">
+                Art <br>sauna
+            </div>
+
+            <div class="flex-1 hidden lg:block">
+                <div class="relative pr-20 xl:pr-28">
+                    <div class="border border-violet-500 relative">
+                        <img src="./img/avatar.png" class="transform translate-x-2.5 translate-y-2.5" alt="">
+                    </div>
+                    <div class="absolute  right-0 top-0 transform rotate-180 text-right"
+                         style="writing-mode: vertical-lr">
+                        <p class="text-violet-500 text-sm uppercase">Основатель компании <span class="font-bold">ArtSauna</span>
+                        </p>
+                        <h4 class="uppercase text-lg font-black">Александр гребенец</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-1">
+                <h2 class="uppercase text-22 md:text-3xl xl:text-[50px] xl:leading-snug leading-7.5 tracking-wider"><span
+                        class="font-black">ДАВАЙТЕ</span><br> ЗНАКОМИТЬСЯ</h2>
+                <div class="flex mt-30 gap-6 lg:hidden">
+                    <img src="./img/avatar_small.png" class="w-22 h-22" alt="">
+                    <div>
+                        <h3 class="font-black uppercase text-sm leading-6">Александр<br>гребенец</h3>
+                        <h4 class="uppercase font-montserrat text-xs mt-2.5 tracking-widest">Основатель <br>компании
+                            <span class="font-bold">ArtSauna</span></h4>
+                    </div>
+                </div>
+                <p class="block opacity-80 md:text-lg mt-9 font-montserrat xl:text-xl xl:mt-20 xl:leading-30">Меня зовут <span
+                        class="font-bold text-violet-500">Александр Гребенец</span>.
+                    <br class="md:hidden"> Я создатель и
+                    идейный вдохновитель компании ArtSauna, а значит отвечаю за
+                    качественное парение. <br><br>
+                    Последние 15 лет посвятил этому проекту, потому что по-настоящему люблю баню и хочу нести эту любовь
+                    и
+                    культуру в массы. <br><br>
+                    Посмотрите короткий ролик о нашей компании, как мы создаем арт-объекты, комфорт, тепло и эстетику.
+                </p>
+                <div class="flex items-center pt-[58px] xl:pt-32 gap-4 xl:gap-30">
+                    <button class="group block w-22 h-22 xl:w-40 xl:h-40 relative">
+                        <svg class="w-[114px] h-[114px] xl:w-[190px] xl:h-[190px] absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 transition transform group-hover:rotate-90"
+                             viewBox="0 0 200 201" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_d_5_23)">
+                                <circle r="78" transform="matrix(1 0 0 1 100 100)" stroke="url(#paint0_linear_5_23)"
+                                        stroke-width="4"
+                                        shape-rendering="crispEdges"/>
+                            </g>
+                            <defs>
+                                <filter id="filter0_d_5_23" x="0" y="0.281982" width="200" height="200"
+                                        filterUnits="userSpaceOnUse"
+                                        color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                                   values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                   result="hardAlpha"/>
+                                    <feOffset dy="4"/>
+                                    <feGaussianBlur stdDeviation="10"/>
+                                    <feComposite in2="hardAlpha" operator="out"/>
+                                    <feColorMatrix type="matrix"
+                                                   values="0 0 0 0 0.549686 0 0 0 0 0.419608 0 0 0 0 0.839216 0 0 0 0.4 0"/>
+                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_5_23"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_5_23"
+                                             result="shape"/>
+                                </filter>
+                                <linearGradient id="paint0_linear_5_23" x1="80" y1="0" x2="80" y2="160"
+                                                gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#8C6BD6"/>
+                                    <stop offset="1" stop-color="#8C6BD6" stop-opacity="0"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <svg class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-[70px] h-[70px] xl:w-32 xl:h-32 transform transition group-hover:rotate-150"
+                             viewBox="0 0 128 129" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="64" cy="64.282" r="63" stroke="url(#paint0_linear_5_24)" stroke-width="2"/>
+                            <defs>
+                                <linearGradient id="paint0_linear_5_24" x1="64" y1="0.281982" x2="64" y2="128.282"
+                                                gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#ECB229" stop-opacity="0"/>
+                                    <stop offset="1" stop-color="#EC8B29"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <svg fill="none" xmlns="http://www.w3.org/2000/svg"
+                             class="absolute absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-4 xl:w-7"
+                             viewBox="0 0 17 20">
+                            <path
+                                    d="M16.45 10 .775 19.05V.95L16.45 10Z" fill="white"/>
+                        </svg>
+                    </button>
+                    <p class="font-black leading-tight uppercase tracking-wide md:text-lg xl:text-xl whitespace-nowrap xl:leading-none">про <span
+                            class="text-violet-500">“ARTsauna”</span>
+                        <br>
+                        <span class="text-xl md:text-2xl xl:text-[26px]">за 2 минуты</span></p>
+                </div>
             </div>
         </div>
     </div>

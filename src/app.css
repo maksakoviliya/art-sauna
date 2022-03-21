@@ -60,12 +60,12 @@
 
 @layer components {
     .main-banner {
-        background-image: url('./img/banner_1.png');
+        background-image: url('./img/banner_2.png');
     }
 
     @media (min-width: 768px)  {
         .main-banner {
-            background-image: url('./img/banner_1_large.png');
+            background-image: url('./img/banner_2_large.png');
         }
     }
 
