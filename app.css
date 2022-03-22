@@ -748,6 +748,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 2.25rem;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .block {
   display: block;
 }
@@ -1257,6 +1261,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .opacity-80 {
   opacity: 0.8;
+}
+
+.opacity-50 {
+  opacity: 0.5;
 }
 
 .blur-200 {
