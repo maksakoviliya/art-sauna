@@ -68,6 +68,15 @@
             background-image: url('./img/banner_2_large.png');
         }
     }
+    .second-banner {
+        background-image: url('./img/banner_3.png');
+    }
+
+    @media (min-width: 768px)  {
+        .second-banner {
+            background-image: url('./img/banner_3_large.png');
+        }
+    }
 
     .banner-button__wrapper {
         @apply max-w-xs relative h-[70px] xl:h-20 border border-violet-500;
