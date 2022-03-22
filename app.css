@@ -1853,6 +1853,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-top: 1.5rem;
   }
 
+  .xl\:mt-44 {
+    margin-top: 11rem;
+  }
+
   .xl\:block {
     display: block;
   }

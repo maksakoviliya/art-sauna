@@ -1,7 +1,7 @@
 {
-  "type": "module",
   "devDependencies": {
     "laravel-mix": "^6.0.43",
+    "laravel-mix-simple-image-processing": "^1.0.7",
     "tailwindcss": "^3.0.23"
   },
   "dependencies": {
