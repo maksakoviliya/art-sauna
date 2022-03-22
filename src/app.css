@@ -79,4 +79,35 @@
     .banner-button:hover {
         background: linear-gradient(92.95deg, #8C6BD6 -2.36%, #8C6BD6 -2.35%, #7D56D6 102.97%);
     }
+
+    .item.active {
+        @apply bg-gradient-to-r from-violet-500 to-violet-400;
+    }
+    .item.active span {
+        @apply from-white to-white text-violet-500;
+    }
+    .item.active .hide-when-active {
+        @apply hidden;
+    }
+}
+
+@layer utilities {
+    .flex-centered {
+        @apply flex flex-col items-center justify-center;
+    }
+}
+
+.ac.js-enabled .ac-panel {
+    visibility: hidden;
+}
+.ac.is-active .ac-panel {
+    visibility: visible;
+}
+.ac .ac-panel {
+    overflow: hidden;
+    transition-property: height, visibility;
+    transition-timing-function: ease;
+}
+.ac.is-active .hide-when-active {
+    @apply hidden;
 }

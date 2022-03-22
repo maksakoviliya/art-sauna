@@ -13,7 +13,8 @@ module.exports = {
                 0.2: "0.5px",
                 15: "15px",
                 22: "88px",
-                30: "30px"
+                30: "30px",
+                70: "70px"
             },
             rotate: {
                 150: '150deg',
@@ -32,6 +33,7 @@ module.exports = {
 
                 "violet-400": "#8C6BD6",
                 "violet-500": "#9172D6",
+                "violet-50": "rgba(145, 114, 214, .3)",
 
                 "white-50": "rgba(255, 255, 255, .5)"
             },
