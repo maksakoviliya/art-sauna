@@ -120,3 +120,7 @@
 .ac.is-active .hide-when-active {
     @apply hidden;
 }
+
+.type_pagination.active {
+    @apply bg-gradient-to-r from-violet-500 to-violet-400 text-white
+}
