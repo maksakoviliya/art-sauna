@@ -17,12 +17,20 @@ Array.from(items).forEach(function(element) {
     element.addEventListener('click', itemClick);
 });
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.swiper_team', {
     loop: false,
     navigation: {
         nextEl: '#type_next',
         prevEl: '#type_prev',
     },
+    spaceBetween: 40
+});
+const swiper_merch = new Swiper('.swiper_merch', {
+    loop: false,
+    // navigation: {
+    //     nextEl: '#type_next',
+    //     prevEl: '#type_prev',
+    // },
     spaceBetween: 40
 });
 
@@ -58,5 +66,18 @@ let types_next = document.querySelectorAll(".types_next");
 Array.from(types_next).forEach(function(element) {
     element.addEventListener('click', function () {
         swiper.slideNext()
+    });
+});
+
+let merch_prev = document.querySelectorAll(".merch_prev");
+Array.from(merch_prev).forEach(function(element) {
+    element.addEventListener('click', function () {
+        swiper_merch.slidePrev()
+    });
+});
+let merch_next = document.querySelectorAll(".merch_next");
+Array.from(merch_next).forEach(function(element) {
+    element.addEventListener('click', function () {
+        swiper_merch.slideNext()
     });
 });

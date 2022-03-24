@@ -20,12 +20,20 @@ function itemClick() {
 Array.from(items).forEach(function (element) {
   element.addEventListener('click', itemClick);
 });
-var swiper = new Swiper('.swiper', {
+var swiper = new Swiper('.swiper_team', {
   loop: false,
   navigation: {
     nextEl: '#type_next',
     prevEl: '#type_prev'
   },
+  spaceBetween: 40
+});
+var swiper_merch = new Swiper('.swiper_merch', {
+  loop: false,
+  // navigation: {
+  //     nextEl: '#type_next',
+  //     prevEl: '#type_prev',
+  // },
   spaceBetween: 40
 });
 var types = document.querySelectorAll(".type_pagination");
@@ -57,6 +65,18 @@ var types_next = document.querySelectorAll(".types_next");
 Array.from(types_next).forEach(function (element) {
   element.addEventListener('click', function () {
     swiper.slideNext();
+  });
+});
+var merch_prev = document.querySelectorAll(".merch_prev");
+Array.from(merch_prev).forEach(function (element) {
+  element.addEventListener('click', function () {
+    swiper_merch.slidePrev();
+  });
+});
+var merch_next = document.querySelectorAll(".merch_next");
+Array.from(merch_next).forEach(function (element) {
+  element.addEventListener('click', function () {
+    swiper_merch.slideNext();
   });
 });
 /******/ })()
