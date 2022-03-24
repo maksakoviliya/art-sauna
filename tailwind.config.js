@@ -75,6 +75,7 @@ module.exports = {
                 "drop-1": 'drop .9s linear infinite',
                 "drop-2": 'drop .9s linear infinite .3s',
                 "drop-3": 'drop .9s linear infinite .6s',
+                "spin-slowly": 'spin 3s linear infinite'
             }
         },
     },

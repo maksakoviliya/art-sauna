@@ -895,6 +895,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 0.25rem;
 }
 
+.mt-11 {
+  margin-top: 2.75rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
 .block {
   display: block;
 }
@@ -987,12 +995,36 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 68px;
 }
 
-.h-1 {
-  height: 0.25rem;
+.h-0\.5 {
+  height: 0.125rem;
 }
 
 .h-auto {
   height: auto;
+}
+
+.h-20 {
+  height: 5rem;
+}
+
+.h-\[100px\] {
+  height: 100px;
+}
+
+.h-\[60px\] {
+  height: 60px;
+}
+
+.h-64 {
+  height: 16rem;
+}
+
+.h-70 {
+  height: 70px;
+}
+
+.h-72 {
+  height: 18rem;
 }
 
 .w-0\.2 {
@@ -1091,16 +1123,40 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 30px;
 }
 
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-7 {
+  width: 1.75rem;
+}
+
+.w-20 {
+  width: 5rem;
+}
+
+.w-\[100px\] {
+  width: 100px;
+}
+
+.w-\[60px\] {
+  width: 60px;
+}
+
+.w-auto {
+  width: auto;
+}
+
 .max-w-sm {
   max-width: 24rem;
 }
 
-.max-w-full {
-  max-width: 100%;
-}
-
 .max-w-\[478px\] {
   max-width: 478px;
+}
+
+.max-w-\[462px\] {
+  max-width: 462px;
 }
 
 .flex-1 {
@@ -1270,8 +1326,23 @@ Ensure the default browser behavior of the `hidden` attribute.
           animation: spin 1s linear infinite;
 }
 
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slowly {
+  -webkit-animation: spin 3s linear infinite;
+          animation: spin 3s linear infinite;
+}
+
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
 }
 
 .flex-col {
@@ -1602,6 +1673,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 1.5rem;
 }
 
+.pl-5 {
+  padding-left: 1.25rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -1684,6 +1759,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .leading-snug {
   line-height: 1.375;
+}
+
+.leading-5 {
+  line-height: 1.25rem;
+}
+
+.leading-relaxed {
+  line-height: 1.625;
 }
 
 .tracking-tighter {
@@ -1902,6 +1985,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 768px) {
+  .md\:absolute {
+    position: absolute;
+  }
+
   .md\:-right-1\/3 {
     right: -33.333333%;
   }
@@ -1912,6 +1999,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:top-auto {
     top: auto;
+  }
+
+  .md\:right-full {
+    right: 100%;
+  }
+
+  .md\:left-auto {
+    left: auto;
   }
 
   .md\:mt-14 {
@@ -1934,6 +2029,18 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-top: 30px;
   }
 
+  .md\:mr-20 {
+    margin-right: 5rem;
+  }
+
+  .md\:mr-10 {
+    margin-right: 2.5rem;
+  }
+
+  .md\:mt-22 {
+    margin-top: 88px;
+  }
+
   .md\:block {
     display: block;
   }
@@ -1946,12 +2053,24 @@ Ensure the default browser behavior of the `hidden` attribute.
     display: none;
   }
 
+  .md\:h-1 {
+    height: 0.25rem;
+  }
+
   .md\:w-\[154px\] {
     width: 154px;
   }
 
   .md\:w-1\/2 {
     width: 50%;
+  }
+
+  .md\:w-1 {
+    width: 0.25rem;
+  }
+
+  .md\:w-full {
+    width: 100%;
   }
 
   .md\:max-w-xl {
@@ -2068,16 +2187,12 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-top: 5rem;
   }
 
-  .lg\:mt-10 {
-    margin-top: 2.5rem;
-  }
-
-  .lg\:mt-8 {
-    margin-top: 2rem;
-  }
-
   .lg\:mt-5 {
     margin-top: 1.25rem;
+  }
+
+  .lg\:mt-16 {
+    margin-top: 4rem;
   }
 
   .lg\:block {
@@ -2182,6 +2297,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 @media (min-width: 1280px) {
   .xl\:absolute {
     position: absolute;
+  }
+
+  .xl\:relative {
+    position: relative;
+  }
+
+  .xl\:inset-0 {
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
   }
 
   .xl\:bottom-32 {
@@ -2330,16 +2456,28 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-top: 1.75rem;
   }
 
-  .xl\:mt-2 {
-    margin-top: 0.5rem;
-  }
-
   .xl\:mt-0\.5 {
     margin-top: 0.125rem;
   }
 
   .xl\:mt-60 {
     margin-top: 60px;
+  }
+
+  .xl\:mt-10 {
+    margin-top: 2.5rem;
+  }
+
+  .xl\:mt-9 {
+    margin-top: 2.25rem;
+  }
+
+  .xl\:mt-14 {
+    margin-top: 3.5rem;
+  }
+
+  .xl\:mt-2 {
+    margin-top: 0.5rem;
   }
 
   .xl\:block {
@@ -2418,6 +2556,26 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: 100px;
   }
 
+  .xl\:h-\[550px\] {
+    height: 550px;
+  }
+
+  .xl\:h-22 {
+    height: 88px;
+  }
+
+  .xl\:h-16 {
+    height: 4rem;
+  }
+
+  .xl\:h-\[90px\] {
+    height: 90px;
+  }
+
+  .xl\:h-14 {
+    height: 3.5rem;
+  }
+
   .xl\:w-5 {
     width: 1.25rem;
   }
@@ -2494,6 +2652,42 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 100px;
   }
 
+  .xl\:w-30 {
+    width: 30px;
+  }
+
+  .xl\:w-\[34px\] {
+    width: 34px;
+  }
+
+  .xl\:w-12\.5 {
+    width: 50px;
+  }
+
+  .xl\:w-12 {
+    width: 3rem;
+  }
+
+  .xl\:w-8 {
+    width: 2rem;
+  }
+
+  .xl\:w-22 {
+    width: 88px;
+  }
+
+  .xl\:w-16 {
+    width: 4rem;
+  }
+
+  .xl\:w-\[90px\] {
+    width: 90px;
+  }
+
+  .xl\:w-14 {
+    width: 3.5rem;
+  }
+
   .xl\:max-w-xl {
     max-width: 36rem;
   }
@@ -2566,16 +2760,12 @@ Ensure the default browser behavior of the `hidden` attribute.
     gap: 1.75rem;
   }
 
-  .xl\:gap-100 {
-    gap: 100px;
+  .xl\:gap-200 {
+    gap: 200px;
   }
 
   .xl\:gap-0 {
     gap: 0px;
-  }
-
-  .xl\:gap-200 {
-    gap: 200px;
   }
 
   .xl\:object-cover {
@@ -2691,16 +2881,20 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-right: 10rem;
   }
 
-  .xl\:pb-14 {
-    padding-bottom: 3.5rem;
+  .xl\:pb-30 {
+    padding-bottom: 30px;
   }
 
   .xl\:pt-30 {
     padding-top: 30px;
   }
 
-  .xl\:pb-30 {
-    padding-bottom: 30px;
+  .xl\:pl-10 {
+    padding-left: 2.5rem;
+  }
+
+  .xl\:pl-30 {
+    padding-left: 30px;
   }
 
   .xl\:text-center {
@@ -2786,13 +2980,65 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 1536px) {
+  .\32xl\:absolute {
+    position: absolute;
+  }
+
+  .\32xl\:right-0 {
+    right: 0px;
+  }
+
+  .\32xl\:bottom-0 {
+    bottom: 0px;
+  }
+
+  .\32xl\:top-auto {
+    top: auto;
+  }
+
+  .\32xl\:w-auto {
+    width: auto;
+  }
+
   .\32xl\:pl-22 {
     padding-left: 88px;
   }
 }
 
 @media (min-width: 1660px) {
+  .\33xl\:absolute {
+    position: absolute;
+  }
+
+  .\33xl\:top-auto {
+    top: auto;
+  }
+
+  .\33xl\:bottom-0 {
+    bottom: 0px;
+  }
+
+  .\33xl\:mt-10 {
+    margin-top: 2.5rem;
+  }
+
+  .\33xl\:mt-4 {
+    margin-top: 1rem;
+  }
+
+  .\33xl\:mt-3 {
+    margin-top: 0.75rem;
+  }
+
+  .\33xl\:mt-2 {
+    margin-top: 0.5rem;
+  }
+
   .\33xl\:block {
     display: block;
+  }
+
+  .\33xl\:w-auto {
+    width: auto;
   }
 }
