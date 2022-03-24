@@ -104,6 +104,19 @@
     .flex-centered {
         @apply flex flex-col items-center justify-center;
     }
+    .video-container {
+        @apply overflow-hidden relative w-full
+    }
+
+    .video-container::after {
+        padding-top: 56.25%;
+        display: block;
+        content: '';
+    }
+
+    .video-container iframe {
+        @apply absolute inset-0 w-full h-full
+    }
 }
 
 .ac.js-enabled .ac-panel {

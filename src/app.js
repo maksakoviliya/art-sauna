@@ -47,3 +47,16 @@ swiper.on('slideChange', function (sw) {
 
     types[sw.activeIndex].classList.add('active')
 });
+
+let types_prev = document.querySelectorAll(".types_prev");
+Array.from(types_prev).forEach(function(element) {
+    element.addEventListener('click', function () {
+        swiper.slidePrev()
+    });
+});
+let types_next = document.querySelectorAll(".types_next");
+Array.from(types_next).forEach(function(element) {
+    element.addEventListener('click', function () {
+        swiper.slideNext()
+    });
+});
