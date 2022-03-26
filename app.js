@@ -7,6 +7,10 @@ new Accordion('.accordion-container-first', {
   duration: 75,
   openOnInit: [0]
 });
+new Accordion('.accordion-container-second', {
+  duration: 75,
+  openOnInit: [0]
+});
 var items = document.querySelectorAll(".item");
 
 function itemClick() {
