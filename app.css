@@ -2699,6 +2699,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-top: 9rem;
   }
 
+  .xl\:mt-14 {
+    margin-top: 3.5rem;
+  }
+
   .xl\:block {
     display: block;
   }
@@ -3139,6 +3143,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-bottom: 23px;
   }
 
+  .xl\:py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
   .xl\:pt-5 {
     padding-top: 1.25rem;
   }
@@ -3205,6 +3214,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .xl\:pb-\[60px\] {
     padding-bottom: 60px;
+  }
+
+  .xl\:pt-8 {
+    padding-top: 2rem;
+  }
+
+  .xl\:pt-12 {
+    padding-top: 3rem;
   }
 
   .xl\:text-center {
@@ -3287,6 +3304,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .xl\:leading-\[64px\] {
     line-height: 64px;
+  }
+
+  .xl\:leading-\[31px\] {
+    line-height: 31px;
+  }
+
+  .xl\:tracking-wider {
+    letter-spacing: 0.05em;
+  }
+
+  .xl\:tracking-widest {
+    letter-spacing: 0.1em;
   }
 
   .xl\:opacity-30 {
