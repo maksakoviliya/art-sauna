@@ -35,6 +35,7 @@ module.exports = {
                 '8xl': "1620px"
             },
             colors: {
+                "gray-350": "rgba(196, 196, 196, 0.13)",
                 "gray-450": "rgba(26, 26, 26, .8)",
 
                 "neutral-850": "#292725",
