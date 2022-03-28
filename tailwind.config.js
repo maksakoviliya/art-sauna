@@ -1,5 +1,5 @@
 module.exports = {
-    content: ["./**/*.html"],
+    content: ["./**/*.html", "./src/**/*.js"],
     theme: {
         extend: {
             screens: {
@@ -38,6 +38,7 @@ module.exports = {
                 "gray-450": "rgba(26, 26, 26, .8)",
 
                 "neutral-850": "#292725",
+                "neutral-750": "#3C3A38",
 
                 "violet-400": "#8C6BD6",
                 "violet-500": "#9172D6",
