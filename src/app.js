@@ -162,6 +162,16 @@ Array.from(portfolio_screen).forEach(function (element, i) {
     }));
 });
 
+// function createComparison(element) {
+//     element.addEventListener('mousemove', (evt) => {
+//         console.log(evt);
+//         let layer = element.querySelector('.compare:nth-child(2)');
+//         let width = evt.offsetX, height = parseInt(getComputedStyle(layer).height);
+//         layer.style.clip = `rect(0px ${width}px ${height}px 0px)`;
+//     }, false);
+// }
+//
+// createComparison(document.querySelector('#comparison'));
 
 // let swiper2 = new Swiper(".mySwiper2", {
 // spaceBetween: 20,

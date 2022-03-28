@@ -144,3 +144,13 @@
 .type_pagination.active {
     @apply bg-gradient-to-r from-violet-500 to-violet-400 text-white
 }
+
+/*.divider:before {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    transform: translateY(-50%);*/
+/*    background: #fff;*/
+/*    width: 14px;*/
+/*    height: 74px;*/
+/*}*/
