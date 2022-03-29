@@ -3,7 +3,8 @@ module.exports = {
     theme: {
         extend: {
             screens: {
-              "3xl": "1660px"
+                "3xl": "1660px",
+                "4xl": "1920px"
             },
             fontFamily: {
                 sans: ['RF Dewi', 'sans-serif'],
@@ -23,6 +24,7 @@ module.exports = {
                 93: "372px",
                 100: "100px",
                 200: "200px",
+                300: "300px",
             },
             rotate: {
                 150: '150deg',

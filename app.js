@@ -45,8 +45,9 @@ var swiper_portfolio = new Swiper('.swiper_portfolio', {
     }
   },
   spaceBetween: 40,
-  preventClicks: false,
-  preventClicksPropagation: false
+  slideToClickedSlide: true // preventClicks: false,
+  // preventClicksPropagation: false
+
 });
 var types = document.querySelectorAll(".type_pagination");
 

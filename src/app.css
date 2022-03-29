@@ -79,10 +79,12 @@
     }
 
     .banner-button__wrapper {
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 21px), calc(100% - 21px) 100%, 0 100%);
         @apply max-w-xs relative h-[70px] xl:h-20 border border-violet-500;
     }
     .banner-button {
         background: linear-gradient(92.95deg, #A081E6 -2.36%, #8569C4 -2.35%, #9872EB 102.97%);
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%);
         @apply absolute inset-0 h-full w-full font-montserrat font-bold flex items-center justify-center relative text-white shadow-md uppercase text-sm transition translate-x-1.5 translate-y-1.5 duration-75 hover:translate-x-0 hover:translate-y-0;
     }
     .banner-button:hover {

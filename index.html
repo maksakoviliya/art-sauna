@@ -21,9 +21,9 @@
 </head>
 <body class="antialiased bg-neutral-850 overflow-x-hidden">
 
-<div class="hidden xl:block fixed inset-y-0 left-1/2 w-0.2 bg-white opacity-10 xl:opacity-30 z-10"></div>
-<div class="hidden 3xl:block fixed inset-y-0 left-20 w-0.2 bg-white opacity-10 xl:opacity-30 z-10"></div>
-<div class="hidden 3xl:block fixed inset-y-0 right-20 w-0.2 bg-white opacity-10 xl:opacity-30 z-10"></div>
+<div class="hidden xl:block fixed inset-y-0 left-1/2 w-0.2 bg-white opacity-10 z-10"></div>
+<div class="hidden 4xl:block fixed inset-y-0 left-20 w-0.2 bg-white opacity-10 z-10"></div>
+<div class="hidden 4xl:block fixed inset-y-0 right-20 w-0.2 bg-white opacity-10 z-10"></div>
 
 <section class="bg-cover bg-top py-15 md:py-30 px-5 main-banner relative">
     <div class="absolute w-full inset-x-0 top-0 h-[143px] bg-gradient-to-b from-gray-450"></div>
@@ -200,10 +200,10 @@
                             <span class="font-bold">ArtSauna</span></h4>
                     </div>
                 </div>
-                <p class="block opacity-80 md:text-lg mt-9 font-montserrat xl:text-xl xl:mt-20 xl:leading-30">Меня зовут
+                <p class="block opacity-80 md:text-lg mt-9 font-montserrat xl:text-xl xl:mt-20 xl:leading-30 xl:max-w-md">Меня зовут
                     <span
                             class="font-bold text-violet-500">Александр Гребенец</span>.
-                    <br class="md:hidden"> Я создатель и
+                    <br> Я создатель и
                     идейный вдохновитель компании ArtSauna, а значит отвечаю за
                     качественное парение. <br><br>
                     Последние 15 лет посвятил этому проекту, потому что по-настоящему люблю баню и хочу нести эту любовь
@@ -211,10 +211,10 @@
                     культуру в массы. <br><br>
                     Посмотрите короткий ролик о нашей компании, как мы создаем арт-объекты, комфорт, тепло и эстетику.
                 </p>
-                <div class="flex items-center pt-[58px] xl:pt-32 gap-4 xl:gap-30">
+                <div class="flex items-center pt-[58px] xl:pt-32 gap-10 xl:gap-30">
                     <button data-micromodal-trigger="modal-4" class="group block w-22 h-22 xl:w-40 xl:h-40 relative">
                         <span class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
-                            <svg class="w-[114px] h-[114px] xl:w-[190px] xl:h-[190px] animate-spin-slowly duration-700 transition group-hover:rotate-90"
+                            <svg class="w-[114px] h-[114px] xl:w-[190px] xl:h-[190px] animate-spin-slowly duration-700 transition"
                                  viewBox="0 0 200 201" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_d_5_23)">
@@ -248,7 +248,7 @@
                         </svg>
                         </span>
                         <span class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 ">
-                            <svg class="w-[70px] h-[70px] xl:w-32 xl:h-32 transition animate-spin-slowly duration-1000 group-hover:rotate-150"
+                            <svg class="w-[70px] h-[70px] xl:w-32 xl:h-32 transition animate-spin-slowly duration-1000"
                                  viewBox="0 0 128 129" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                             <circle cx="64" cy="64.282" r="63" stroke="url(#paint0_linear_5_24)" stroke-width="2"/>
@@ -268,9 +268,12 @@
                                     d="M16.45 10 .775 19.05V.95L16.45 10Z" fill="white"/>
                         </svg>
                     </button>
-                    <p class="font-black leading-tight uppercase tracking-wide md:text-lg xl:text-xl whitespace-nowrap xl:leading-none">
-                        про <span
-                            class="text-violet-500">“ARTsauna”</span>
+                    <p class="font-black leading-tight uppercase tracking-wide md:text-lg xl:text-xl xl:leading-none">
+                        ПОСМОТРИТЕ ВИДЕО <br>И ПРИМИТЕ
+                        <span
+                            class="text-violet-500">РЕШЕНИЕ</span>
+                        О РАБОТЕ С НАМИ!
+                        <br>
                         <br>
                         <span class="text-xl md:text-2xl xl:text-[26px]">за 2 минуты</span></p>
                 </div>
@@ -284,7 +287,7 @@
     <!--        <div class="absolute w-full inset-x-0 bottom-0 h-[90px] bg-gradient-to-t from-neutral-850"></div>-->
 
     <div class="px-5">
-        <div class="content relative">
+        <div class="content relative z-10">
             <h2 class="uppercase text-22 md:text-3xl xl:text-[50px] xl:leading-snug leading-7.5 xl:leading-[64px] tracking-wide title relative z-10 break-words"><span
                     class="font-black">Оцените качество </span>наших работ</h2>
 
@@ -311,7 +314,7 @@
         </div>
     </div>
 
-    <div class="w-full px-5 mt-12.5 md:mt-0">
+    <div class="w-full px-5 mt-12.5 md:mt-0 relative z-10">
         <div class="swiper_portfolio swiper relative w-full content overflow-visible-important text-neutral-850 hidden md:block">
             <div class="swiper-wrapper">
                 <div data-type="russian" class="portfolio-by-type swiper-slide">
@@ -417,26 +420,6 @@
                                 </div>
                             </div>
                             <div class="swiper portfolio-thumbs mt-5 relative max-h-[90px]">
-                                <button class="portfolio-prev absolute top-1/2 -translate-y-1/2 left-0 z-10 hover:bg-opacity-100 transition w-10 bg-neutral-850 bg-opacity-80 h-full group disabled:hidden">
-                                    <svg width="52" height="18"
-                                         class="absolute top-1/2 transform rotate-180 -translate-y-1/2 group-hover:translate-x-0 left-0 translate-x-4 transition duration-75"
-                                         viewBox="0 0 52 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M40 9L0 9" stroke="#F2F2F2" stroke-miterlimit="10"
-                                              stroke-linejoin="round"/>
-                                        <path d="M39.8398 17L50.7021 9L39.8398 1V17Z" stroke="#F2F2F2"
-                                              stroke-miterlimit="10" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
-                                <button class="portfolio-next absolute top-1/2 -translate-y-1/2 right-0 z-10 hover:bg-opacity-100 transition w-10 bg-neutral-850 bg-opacity-80 h-full group">
-                                    <svg width="52" height="18"
-                                         class="absolute top-1/2 transform -translate-y-1/2 right-0 -translate-x-4 group-hover:translate-x-0 duration-75 transition"
-                                         viewBox="0 0 52 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M40 9L0 9" stroke="#F2F2F2" stroke-miterlimit="10"
-                                              stroke-linejoin="round"/>
-                                        <path d="M39.8398 17L50.7021 9L39.8398 1V17Z" stroke="#F2F2F2"
-                                              stroke-miterlimit="10" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <img src="https://swiperjs.com/demos/images/nature-1.jpg"/>
@@ -473,7 +456,7 @@
 
                         </div>
                         <div class="flex-1 xl:pl-18">
-                            <h4 class="text-3xl font-black uppercase leading-tight xl:text-[40px]">Русская <br>баня</h4>
+                            <h4 class="text-3xl font-black uppercase leading-tight xl:text-[40px] xl:leading-[41px]">Русская <br>баня</h4>
                             <div class="mt-30">
                                 <div class="flex justify-between items-center">
                                     <p class="xl:text-lg font-bold">Размеры:</p>
@@ -556,26 +539,6 @@
                                 </div>
                             </div>
                             <div class="swiper portfolio-thumbs mt-5 relative max-h-[90px]">
-                                <button class="portfolio-prev absolute top-1/2 -translate-y-1/2 left-0 z-10 hover:bg-opacity-100 transition w-10 bg-neutral-850 bg-opacity-80 h-full group disabled:hidden">
-                                    <svg width="52" height="18"
-                                         class="absolute top-1/2 transform rotate-180 -translate-y-1/2 group-hover:translate-x-0 left-0 translate-x-4 transition duration-75"
-                                         viewBox="0 0 52 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M40 9L0 9" stroke="#F2F2F2" stroke-miterlimit="10"
-                                              stroke-linejoin="round"/>
-                                        <path d="M39.8398 17L50.7021 9L39.8398 1V17Z" stroke="#F2F2F2"
-                                              stroke-miterlimit="10" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
-                                <button class="portfolio-next absolute top-1/2 -translate-y-1/2 right-0 z-10 hover:bg-opacity-100 transition w-10 bg-neutral-850 bg-opacity-80 h-full group">
-                                    <svg width="52" height="18"
-                                         class="absolute top-1/2 transform -translate-y-1/2 right-0 -translate-x-4 group-hover:translate-x-0 duration-75 transition"
-                                         viewBox="0 0 52 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M40 9L0 9" stroke="#F2F2F2" stroke-miterlimit="10"
-                                              stroke-linejoin="round"/>
-                                        <path d="M39.8398 17L50.7021 9L39.8398 1V17Z" stroke="#F2F2F2"
-                                              stroke-miterlimit="10" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <img src="https://swiperjs.com/demos/images/nature-1.jpg"/>
@@ -612,7 +575,7 @@
 
                         </div>
                         <div class="flex-1 xl:pl-18">
-                            <h4 class="text-3xl font-black uppercase leading-tight xl:text-[40px]">Русская <br>баня</h4>
+                            <h4 class="text-3xl font-black uppercase leading-tight xl:text-[40px] xl:leading-[41px]">Русская <br>баня</h4>
                             <div class="mt-30">
                                 <div class="flex justify-between items-center">
                                     <p class="xl:text-lg font-bold">Размеры:</p>
@@ -694,26 +657,6 @@
                                 </div>
                             </div>
                             <div class="swiper portfolio-thumbs mt-5 relative max-h-[90px]">
-                                <button class="portfolio-prev absolute top-1/2 -translate-y-1/2 left-0 z-10 hover:bg-opacity-100 transition w-10 bg-neutral-850 bg-opacity-80 h-full group disabled:hidden">
-                                    <svg width="52" height="18"
-                                         class="absolute top-1/2 transform rotate-180 -translate-y-1/2 group-hover:translate-x-0 left-0 translate-x-4 transition duration-75"
-                                         viewBox="0 0 52 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M40 9L0 9" stroke="#F2F2F2" stroke-miterlimit="10"
-                                              stroke-linejoin="round"/>
-                                        <path d="M39.8398 17L50.7021 9L39.8398 1V17Z" stroke="#F2F2F2"
-                                              stroke-miterlimit="10" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
-                                <button class="portfolio-next absolute top-1/2 -translate-y-1/2 right-0 z-10 hover:bg-opacity-100 transition w-10 bg-neutral-850 bg-opacity-80 h-full group">
-                                    <svg width="52" height="18"
-                                         class="absolute top-1/2 transform -translate-y-1/2 right-0 -translate-x-4 group-hover:translate-x-0 duration-75 transition"
-                                         viewBox="0 0 52 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M40 9L0 9" stroke="#F2F2F2" stroke-miterlimit="10"
-                                              stroke-linejoin="round"/>
-                                        <path d="M39.8398 17L50.7021 9L39.8398 1V17Z" stroke="#F2F2F2"
-                                              stroke-miterlimit="10" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <img src="https://swiperjs.com/demos/images/nature-1.jpg"/>
@@ -750,7 +693,7 @@
 
                         </div>
                         <div class="flex-1 xl:pl-18">
-                            <h4 class="text-3xl font-black uppercase leading-tight xl:text-[40px]">Сауна</h4>
+                            <h4 class="text-3xl font-black uppercase leading-tight xl:text-[40px] xl:leading-[41px]">Сауна</h4>
                             <div class="mt-30">
                                 <div class="flex justify-between items-center">
                                     <p class="xl:text-lg font-bold">Размеры:</p>
@@ -832,26 +775,6 @@
                                 </div>
                             </div>
                             <div class="swiper portfolio-thumbs mt-5 relative max-h-[90px]">
-                                <button class="portfolio-prev absolute top-1/2 -translate-y-1/2 left-0 z-10 hover:bg-opacity-100 transition w-10 bg-neutral-850 bg-opacity-80 h-full group disabled:hidden">
-                                    <svg width="52" height="18"
-                                         class="absolute top-1/2 transform rotate-180 -translate-y-1/2 group-hover:translate-x-0 left-0 translate-x-4 transition duration-75"
-                                         viewBox="0 0 52 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M40 9L0 9" stroke="#F2F2F2" stroke-miterlimit="10"
-                                              stroke-linejoin="round"/>
-                                        <path d="M39.8398 17L50.7021 9L39.8398 1V17Z" stroke="#F2F2F2"
-                                              stroke-miterlimit="10" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
-                                <button class="portfolio-next absolute top-1/2 -translate-y-1/2 right-0 z-10 hover:bg-opacity-100 transition w-10 bg-neutral-850 bg-opacity-80 h-full group">
-                                    <svg width="52" height="18"
-                                         class="absolute top-1/2 transform -translate-y-1/2 right-0 -translate-x-4 group-hover:translate-x-0 duration-75 transition"
-                                         viewBox="0 0 52 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M40 9L0 9" stroke="#F2F2F2" stroke-miterlimit="10"
-                                              stroke-linejoin="round"/>
-                                        <path d="M39.8398 17L50.7021 9L39.8398 1V17Z" stroke="#F2F2F2"
-                                              stroke-miterlimit="10" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <img src="https://swiperjs.com/demos/images/nature-1.jpg"/>
@@ -888,7 +811,7 @@
 
                         </div>
                         <div class="flex-1 xl:pl-18">
-                            <h4 class="text-3xl font-black uppercase leading-tight xl:text-[40px]">Сауна</h4>
+                            <h4 class="text-3xl font-black uppercase leading-tight xl:text-[40px] xl:leading-[41px]">Сауна</h4>
                             <div class="mt-30">
                                 <div class="flex justify-between items-center">
                                     <p class="xl:text-lg font-bold">Размеры:</p>
@@ -970,26 +893,6 @@
                                 </div>
                             </div>
                             <div class="swiper portfolio-thumbs mt-5 relative max-h-[90px]">
-                                <button class="portfolio-prev absolute top-1/2 -translate-y-1/2 left-0 z-10 hover:bg-opacity-100 transition w-10 bg-neutral-850 bg-opacity-80 h-full group disabled:hidden">
-                                    <svg width="52" height="18"
-                                         class="absolute top-1/2 transform rotate-180 -translate-y-1/2 group-hover:translate-x-0 left-0 translate-x-4 transition duration-75"
-                                         viewBox="0 0 52 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M40 9L0 9" stroke="#F2F2F2" stroke-miterlimit="10"
-                                              stroke-linejoin="round"/>
-                                        <path d="M39.8398 17L50.7021 9L39.8398 1V17Z" stroke="#F2F2F2"
-                                              stroke-miterlimit="10" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
-                                <button class="portfolio-next absolute top-1/2 -translate-y-1/2 right-0 z-10 hover:bg-opacity-100 transition w-10 bg-neutral-850 bg-opacity-80 h-full group">
-                                    <svg width="52" height="18"
-                                         class="absolute top-1/2 transform -translate-y-1/2 right-0 -translate-x-4 group-hover:translate-x-0 duration-75 transition"
-                                         viewBox="0 0 52 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M40 9L0 9" stroke="#F2F2F2" stroke-miterlimit="10"
-                                              stroke-linejoin="round"/>
-                                        <path d="M39.8398 17L50.7021 9L39.8398 1V17Z" stroke="#F2F2F2"
-                                              stroke-miterlimit="10" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <img src="https://swiperjs.com/demos/images/nature-1.jpg"/>
@@ -1026,7 +929,7 @@
 
                         </div>
                         <div class="flex-1 xl:pl-18">
-                            <h4 class="text-3xl font-black uppercase leading-tight xl:text-[40px]">Хаммам</h4>
+                            <h4 class="text-3xl font-black uppercase leading-tight xl:text-[40px] xl:leading-[41px]">Хаммам</h4>
                             <div class="mt-30">
                                 <div class="flex justify-between items-center">
                                     <p class="xl:text-lg font-bold">Размеры:</p>
@@ -1480,19 +1383,26 @@
 
     <div class="px-5">
         <div class="content relative">
-            <div class="swiper_portfolio_navs md:flex items-center justify-center gap-30 hidden mt-10 relative">
+            <div class="swiper_portfolio_navs md:flex items-center justify-center gap-30 hidden mt-10 relative z-10">
                 <button class="swiper_portfolio_prev text-white hover:text-violet-500 transition">
-                    <svg class="fill-current w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 16">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M25.25 8a.875.875 0 0 0-.875-.875H3.737L9.245 1.62A.876.876 0 0 0 8.005.38l-7 7a.875.875 0 0 0 0 1.24l7 7a.875.875 0 0 0 1.43-.955.877.877 0 0 0-.19-.284L3.737 8.875h20.638A.875.875 0 0 0 25.25 8Z"/>
-                    </svg>
+                    <svg width="52" height="18"
+                                         class="transform rotate-180 stroke-current"
+                                         viewBox="0 0 52 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M40 9L0 9" stroke-miterlimit="10"
+                                              stroke-linejoin="round"/>
+                                        <path d="M39.8398 17L50.7021 9L39.8398 1V17Z"
+                                              stroke-miterlimit="10" stroke-linejoin="round"/>
+                                    </svg>
                 </button>
 
                 <button class="swiper_portfolio_next text-white hover:text-violet-500 transition">
-                    <svg class="fill-current w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 16">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M.75 8a.875.875 0 0 0 .875.875h20.638l-5.508 5.505a.874.874 0 0 0 .285 1.43.877.877 0 0 0 .954-.19l7-7a.874.874 0 0 0 0-1.24l-7-7a.876.876 0 0 0-1.238 1.24l5.507 5.505H1.625A.875.875 0 0 0 .75 8Z"/>
-                    </svg>
+                    <svg width="52" height="18" class="stroke-current"
+                                         viewBox="0 0 52 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M40 9L0 9" stroke-miterlimit="10"
+                                              stroke-linejoin="round"/>
+                                        <path d="M39.8398 17L50.7021 9L39.8398 1V17Z"
+                                              stroke-miterlimit="10" stroke-linejoin="round"/>
+                                    </svg>
                 </button>
             </div>
 
@@ -1506,6 +1416,10 @@
 
 <section class="mt-18 py-3.5 md:py-30 xl:pb-30 xl:pt-30 xl:mt-20 px-5 text-white relative">
     <div class="content relative">
+        <div class="absolute hidden md:block z-0 bottom-auto xl:-translate-y-1/3 left-1/2 transform -translate-x-1/2 text-[150px] md:text-[200px] xl:text-[300px] leading-none uppercase font-black opacity-2 text-right xl:left-auto xl:right-0 xl:translate-x-0">
+            Art <br>sauna
+        </div>
+
         <h2 class="uppercase text-22 md:text-3xl xl:text-[50px] xl:leading-snug leading-7.5 xl:leading-[64px] tracking-wide title relative break-words"><span
                 class="font-black">Вы получите парную, </span><br class="hidden xl:inline">которую себе представляли
         </h2>
@@ -1518,8 +1432,7 @@
             <div class="lg:w-7/12 xl:w-3/4">
                 <div class="bg-white py-30 px-5 xl:pt-10 xl:px-10 xl:pb-3">
                     <!--                    <img src="./img/item_1.png" alt="">-->
-                    <img-comparison-slider class="outline-none max-h-[222px] md:max-h-[340px] xl:max-h-[500px]"
-                                           hover="true">
+                    <img-comparison-slider class="outline-none max-h-[222px] md:max-h-[340px] xl:max-h-[500px]">
                         <img slot="first" class="h-full object-cover" src="./img/banner_2_large.png"/>
                         <img slot="second" class="h-full  object-cover" src="./img/banner_3_large.png"/>
                     </img-comparison-slider>
@@ -1539,14 +1452,12 @@
                                 <p class="text-xs xl:text-sm">Дизайнер «ArtSaunaa»</p>
                             </div>
                         </div>
-                        <p class="text-sm font-montserrat md:row-span-2">Прочитаем ваши мысли и поймем какую парную вы
-                            хотите, потом все это отразим на бумаге. <br><br>С полной прорисовкой плана – что, где будет
-                            располагаться, из каких материалов будет построено. И самое главное, один в один реализуем у
-                            вас дома</p>
+                        <p class="text-sm font-montserrat md:row-span-2">Прочитаем ваши мысли и поймем какую парную вы хотите. Потом все это отразим на бумаге.
+                            <br><br>С полной прорисовкой плана: что, где будет располагаться, из каких материалов будет построено. И самое главное один-в-один реализуем у вас дома</p>
                         <div class="border border-neutral-850 border-opacity-10 py-[18px] px-3 flex gap-4 items-center xl:bg-gray-350 xl:flex-col xl:items-center xl:justify-center">
                             <button class="group block w-20 h-20 xl:w-22 xl:h-22 relative flex-shrink-0">
                         <span class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
-                            <svg class="w-[100px] h-[100px] xl:w-[90px] xl:h-[90px] animate-spin-slowly duration-700 transition group-hover:rotate-90"
+                            <svg class="w-[100px] h-[100px] xl:w-[90px] xl:h-[90px] animate-spin-slowly duration-700 transition"
                                  viewBox="0 0 200 201" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_d_5_23)">
@@ -1580,7 +1491,7 @@
                         </svg>
                         </span>
                                 <span class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 ">
-                            <svg class="w-[60px] h-[60px] xl:w-14 xl:h-14 transition animate-spin-slowly duration-1000 group-hover:rotate-150"
+                            <svg class="w-[60px] h-[60px] xl:w-14 xl:h-14 transition animate-spin-slowly duration-1000"
                                  viewBox="0 0 128 129" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                             <circle cx="64" cy="64.282" r="63" stroke="url(#paint0_linear_5_24)" stroke-width="2"/>
@@ -1600,7 +1511,7 @@
                                             d="M16.45 10 .775 19.05V.95L16.45 10Z"/>
                                 </svg>
                             </button>
-                            <p class="text-sm font-bold xl:text-center">Посмотреть видео <span class="text-violet-500">дизайн-проекта</span>
+                            <p class="text-sm font-bold xl:text-center">Посмотреть видео о <span class="text-violet-500">дизайн-проекте</span>
                             </p>
                         </div>
                     </div>
@@ -1668,7 +1579,34 @@
         </div>
 
         <div class="border-b border-white relative mt-22">
-            <div class="bg-white opacity-10 z-0 absolute top-1/2 hidden xl:block left-0 w-[400px] h-[400px] xl:w-[800px] xl:h-[800px] xl:top-auto bottom-1/2 filter blur-200 rounded-full"></div>
+            <svg class="w-[500px] h-[500px] z-0 absolute xl:w-[800px] xl:h-[800px] left-1/2 bottom-200 transform -translate-x-1/2 lg:translate-x-0 lg:left-auto lg:right-0 lg:bottom-300"
+                 viewBox="0 0 1614 1680" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.1" filter="url(#filter0_f_42_1572)">
+                    <ellipse cx="774.5" cy="839.801" rx="439.5" ry="439.572" fill="white"/>
+                </g>
+                <defs>
+                    <filter id="filter0_f_42_1572" x="-65" y="0.229492" width="1679" height="1679.14"
+                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                        <feGaussianBlur stdDeviation="200" result="effect1_foregroundBlur_42_1572"/>
+                    </filter>
+                </defs>
+            </svg>
+            <svg class="hidden lg:block z-0 absolute xl:w-[800px] xl:h-[800px] -top-1/2 right-0"
+                 viewBox="0 0 1614 1680" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.1" filter="url(#filter0_f_42_1572)">
+                    <ellipse cx="774.5" cy="839.801" rx="439.5" ry="439.572" fill="white"/>
+                </g>
+                <defs>
+                    <filter id="filter0_f_42_1572" x="-65" y="0.229492" width="1679" height="1679.14"
+                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                        <feGaussianBlur stdDeviation="200" result="effect1_foregroundBlur_42_1572"/>
+                    </filter>
+                </defs>
+            </svg>
             <div class="absolute top-full mt-0.5 left-1/2 h-2.5 xl:h-5 w-0.2 bg-white"></div>
         </div>
     </div>

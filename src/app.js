@@ -43,8 +43,9 @@ const swiper_portfolio = new Swiper('.swiper_portfolio', {
         },
     },
     spaceBetween: 40,
-    preventClicks: false,
-    preventClicksPropagation: false
+    slideToClickedSlide: true
+    // preventClicks: false,
+    // preventClicksPropagation: false
 });
 
 let types = document.querySelectorAll(".type_pagination");
