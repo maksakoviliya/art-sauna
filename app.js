@@ -45,7 +45,8 @@ var swiper_portfolio = new Swiper('.swiper_portfolio', {
     }
   },
   spaceBetween: 40,
-  simulateTouch: false
+  preventClicks: false,
+  preventClicksPropagation: false
 });
 var types = document.querySelectorAll(".type_pagination");
 
@@ -99,20 +100,12 @@ Array.from(portfolio_tab).forEach(function (element) {
     });
     element.classList.add('active');
     Array.from(portfolio_panels).forEach(function (portfolio_element) {
-      console.log('portfolio_element.dataset.type', portfolio_element.dataset.type);
-      console.log('element.dataset.target', element.dataset.target);
-
       if (portfolio_element.dataset.type == element.dataset.target) {
-        console.log('portfolio_element', portfolio_element);
-        console.log('remove');
         portfolio_element.classList.remove('hidden');
       } else {
-        console.log('portfolio_element', portfolio_element);
-        console.log('add');
         portfolio_element.classList.add('hidden');
       }
     });
-    console.log('target', element.dataset['target']);
   });
 });
 var portfolio_items = document.querySelectorAll(".portfolio-item");

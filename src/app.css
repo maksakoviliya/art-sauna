@@ -160,14 +160,14 @@
     justify-content: center;
     align-items: center;
     @apply z-30 p-5
-}   
+}
 
 .modal__container {
     background-color: #fff;
     max-height: 100vh;
     overflow-y: auto;
     box-sizing: border-box;
-    @apply max-w-640 px-[70px] py-[60px]
+    @apply max-w-640 p-5 sm:p-10 md:px-[70px] md:py-[60px]
 }
 
 .modal__header {

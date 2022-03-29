@@ -212,7 +212,7 @@
                     Посмотрите короткий ролик о нашей компании, как мы создаем арт-объекты, комфорт, тепло и эстетику.
                 </p>
                 <div class="flex items-center pt-[58px] xl:pt-32 gap-4 xl:gap-30">
-                    <button class="group block w-22 h-22 xl:w-40 xl:h-40 relative">
+                    <button data-micromodal-trigger="modal-4" class="group block w-22 h-22 xl:w-40 xl:h-40 relative">
                         <span class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
                             <svg class="w-[114px] h-[114px] xl:w-[190px] xl:h-[190px] animate-spin-slowly duration-700 transition group-hover:rotate-90"
                                  viewBox="0 0 200 201" fill="none"
@@ -1618,7 +1618,7 @@
                            class="h-[70px] xl:h-100 xl:text-2xl xl:text-center px-5 py-[23px] w-full text-neutral-850 font-montserrat outline-none"
                            placeholder="+7 999 999 99 99"/>
                     <div class="banner-button__wrapper max-w-full xl:max-h-full xl:h-[123px] mt-4 md:mt-30">
-                        <a href="#projects" class="banner-button group xl:text-[22px]">
+                        <button class="banner-button group xl:text-[22px]">
                             <svg fill="none"
                                  class="hidden md:block h-4 absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-1/2 group-hover:-translate-x-6 transition duration-75"
                                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 18">
@@ -1632,7 +1632,7 @@
                                       stroke-miterlimit="10" stroke-linejoin="round"/>
                             </svg>
                             Оставить заявку
-                        </a>
+                        </button>
                     </div>
                 </div>
                 <p class="mt-30 font-montserrat text-xs text-white opacity-80 xl:text-base xl:mt-10">Нажимая кнопку, вы
@@ -2555,7 +2555,7 @@
                             <p class="font-montserrat mt-9 uppercase text-xs font-bold block xl:mt-12.5">Или оставьте
                                 заявку на сайте:</p>
                             <div class="banner-button__wrapper xl:h-17 xl:w-64 mt-15">
-                                <button class="banner-button group">
+                                <button data-micromodal-trigger="modal-2" class="banner-button group">
                                     Оставить заявку
                                 </button>
                             </div>
@@ -2831,7 +2831,7 @@
                     </div>
 
                     <div class="banner-button__wrapper w-full max-w-[478px] mt-5 md:mt-30 xl:mt-60">
-                        <button class="banner-button group px-4">
+                        <button class="banner-button group px-4" data-micromodal-trigger="modal-2">
                             записаться <br class="md:hidden"> на онлайн-встречу
                         </button>
                     </div>
@@ -3697,7 +3697,7 @@
                     </div>
                 </div>
                 <div class="banner-button__wrapper lg:lg:max-w-full lg:w-full mt-5 md:mt-10 xl:mt-24">
-                    <a href="#projects" class="banner-button group text-xs md:text-base">
+                    <button data-micromodal-trigger="modal-3" class="banner-button group text-xs md:text-base">
                         <svg fill="none"
                              class="hidden md:block h-4 absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-1/2 group-hover:-translate-x-6 transition duration-75"
                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 18">
@@ -3711,7 +3711,7 @@
                                   stroke-miterlimit="10" stroke-linejoin="round"/>
                         </svg>
                         Задать вопрос руководителю
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
@@ -3928,6 +3928,60 @@
             <p class="mt-30 font-montserrat text-xs opacity-80 xl:text-base xl:mt-10">Нажимая кнопку, вы
                 даете согласие на обработку
                 <a href="#" class="underline">персональных данных</a></p>
+        </div>
+    </div>
+</div>
+
+<div class="modal micromodal-slide" id="modal-2" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-2-title">
+            <h2 class="text-2xl uppercase font-black text-center tracking-wide">Оставьте ваши контакты</h2>
+            <p class="text-center font-montserrat opacity-80 mt-4">Мы свяжемся с вами в течение 15 минут</p>
+            <input type="text"
+                   class="h-70 w-full flex-centered justify-start bg-gray-200 outline-none px-6 font-montserrat mt-10"
+                   placeholder="Введите свой номер телефона">
+            <div class="banner-button__wrapper max-w-full w-full mt-5 h-[80px]">
+                <button data-micromodal-trigger="modal-2" class="banner-button group text-sm text-center">
+                    Оставить заявку
+                </button>
+            </div>
+            <p class="mt-30 font-montserrat text-xs opacity-80 xl:text-base xl:mt-10">Нажимая кнопку, вы
+                даете согласие на обработку
+                <a href="#" class="underline">персональных данных</a></p>
+        </div>
+    </div>
+</div>
+
+<div class="modal micromodal-slide" id="modal-3" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-3-title">
+            <h2 class="md:text-2xl uppercase font-black text-center tracking-wide">Задайте вопрос руководителю</h2>
+            <input type="text"
+                   class="h-70 w-full flex-centered justify-start bg-gray-200 outline-none px-6 font-montserrat mt-10"
+                   placeholder="Введите ваше имя">
+            <input type="text"
+                   class="h-70 w-full flex-centered justify-start bg-gray-200 outline-none px-6 font-montserrat mt-10"
+                   placeholder="Введите свой номер телефона">
+            <textarea class="resize-none h-32 w-full flex-centered justify-start bg-gray-200 outline-none p-6 font-montserrat mt-10"
+                      placeholder="Введите свой номер телефона"></textarea>
+            <div class="banner-button__wrapper max-w-full w-full mt-5 h-[80px]">
+                <button data-micromodal-trigger="modal-3" class="banner-button group text-sm text-center">
+                    Задать вопрос руководителю
+                </button>
+            </div>
+            <p class="mt-30 font-montserrat text-xs opacity-80 xl:text-base xl:mt-10">Нажимая кнопку, вы
+                даете согласие на обработку
+                <a href="#" class="underline">персональных данных</a></p>
+        </div>
+    </div>
+</div>
+
+<div class="modal micromodal-slide" id="modal-4" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="max-w-640 max-h-screen h-[70vh] w-full" role="dialog" aria-modal="true" aria-labelledby="modal-3-title">
+            <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/us-AVio40Qg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </div>
     </div>
 </div>

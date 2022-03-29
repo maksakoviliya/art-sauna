@@ -753,10 +753,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: 0px;
 }
 
-.bottom-\[260px\] {
-  bottom: 260px;
-}
-
 .-left-1 {
   left: -0.25rem;
 }
@@ -1100,6 +1096,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 70px;
 }
 
+.h-32 {
+  height: 8rem;
+}
+
+.h-\[50vh\] {
+  height: 50vh;
+}
+
+.h-\[70vh\] {
+  height: 70vh;
+}
+
 .max-h-\[400px\] {
   max-height: 400px;
 }
@@ -1114,6 +1122,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .max-h-\[570px\] {
   max-height: 570px;
+}
+
+.max-h-screen {
+  max-height: 100vh;
 }
 
 .w-0\.2 {
@@ -1278,6 +1290,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .max-w-\[462px\] {
   max-width: 462px;
+}
+
+.max-w-640 {
+  max-width: 640px;
 }
 
 .flex-1 {
@@ -1455,6 +1471,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .animate-spin-slowly {
   -webkit-animation: spin 3s linear infinite;
           animation: spin 3s linear infinite;
+}
+
+.resize-none {
+  resize: none;
 }
 
 .grid-cols-1 {
@@ -1720,6 +1740,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .p-5 {
   padding: 1.25rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .py-15 {
@@ -2195,10 +2219,25 @@ Ensure the default browser behavior of the `hidden` attribute.
   overflow-y: auto;
   box-sizing: border-box;
   max-width: 640px;
-  padding-left: 70px;
-  padding-right: 70px;
-  padding-top: 60px;
-  padding-bottom: 60px
+  padding: 1.25rem
+}
+
+@media (min-width: 640px) {
+  .modal__container {
+    padding: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .modal__container {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  .modal__container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .modal__header {
