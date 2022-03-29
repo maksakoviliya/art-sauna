@@ -566,12 +566,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .banner-button__wrapper {
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 21px), calc(100% - 21px) 100%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 21px), calc(100% - 21px) 100%, 0 100%);
   position: relative;
   height: 70px;
   max-width: 20rem;
-  border-width: 1px;
+  border-top-width: 1px;
+  border-left-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(145 114 214 / var(--tw-border-opacity));
 }
@@ -580,6 +579,30 @@ Ensure the default browser behavior of the `hidden` attribute.
   .banner-button__wrapper {
     height: 5rem;
   }
+}
+
+.banner-button__wrapper:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  margin-top: -1px;
+  width: 0.5rem;
+  border-top-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(145 114 214 / var(--tw-border-opacity));
+}
+
+.banner-button__wrapper:before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin-left: -1px;
+  height: 0.5rem;
+  border-right-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(145 114 214 / var(--tw-border-opacity));
 }
 
 .banner-button {
@@ -689,14 +712,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 50%;
 }
 
-.left-20 {
-  left: 5rem;
-}
-
-.right-20 {
-  right: 5rem;
-}
-
 .top-0 {
   top: 0px;
 }
@@ -769,12 +784,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   bottom: 50%;
 }
 
+.bottom-auto {
+  bottom: auto;
+}
+
 .bottom-200 {
   bottom: 200px;
 }
 
-.bottom-auto {
-  bottom: auto;
+.-top-1\/2 {
+  top: -50%;
 }
 
 .top-7 {
@@ -819,22 +838,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .top-2 {
   top: 0.5rem;
-}
-
-.right-1\/2 {
-  right: 50%;
-}
-
-.-bottom-1\/2 {
-  bottom: -50%;
-}
-
-.-bottom-1 {
-  bottom: -0.25rem;
-}
-
-.-top-1\/2 {
-  top: -50%;
 }
 
 .z-10 {
@@ -2119,11 +2122,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .blur-200 {
   --tw-blur: blur(200px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.blur {
-  --tw-blur: blur(8px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
@@ -3928,11 +3926,5 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .\33xl\:w-auto {
     width: auto;
-  }
-}
-
-@media (min-width: 1920px) {
-  .\34xl\:block {
-    display: block;
   }
 }
