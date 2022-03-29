@@ -54,7 +54,7 @@
 
 @layer base {
     .content {
-        @apply max-w-7xl xl:max-w-8xl mx-auto;
+        @apply max-w-5xl xl:max-w-6xl 2xl:max-w-7xl 3xl:max-w-8xl mx-auto;
     }
 }
 
@@ -99,11 +99,11 @@
     }
 
     .item.active {
-        @apply bg-gradient-to-r from-violet-500 to-violet-400;
+        @apply border-violet-500;
     }
-    .item.active span {
-        @apply from-white to-white text-violet-500;
-    }
+    /*.item.active span {*/
+    /*    @apply from-white to-white text-violet-500;*/
+    /*}*/
     .item.active .hide-when-active {
         @apply hidden;
     }

@@ -491,10 +491,22 @@ Ensure the default browser behavior of the `hidden` attribute.
 .content {
   margin-left: auto;
   margin-right: auto;
-  max-width: 80rem;
+  max-width: 64rem;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1440px) {
+  .content {
+    max-width: 72rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .content {
+    max-width: 80rem;
+  }
+}
+
+@media (min-width: 1660px) {
   .content {
     max-width: 1620px;
   }
@@ -575,7 +587,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: rgb(145 114 214 / var(--tw-border-opacity));
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1440px) {
   .banner-button__wrapper {
     height: 5rem;
   }
@@ -648,19 +660,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .item.active {
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-  --tw-gradient-from: #9172D6;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(145 114 214 / 0));
-  --tw-gradient-to: #8C6BD6;
+  --tw-border-opacity: 1;
+  border-color: rgb(145 114 214 / var(--tw-border-opacity));
 }
 
-.item.active span {
-  --tw-gradient-from: #fff;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(255 255 255 / 0));
-  --tw-gradient-to: #fff;
-  --tw-text-opacity: 1;
-  color: rgb(145 114 214 / var(--tw-text-opacity));
-}
+/*.item.active span {*/
+
+/*    @apply from-white to-white text-violet-500;*/
+
+/*}*/
 
 .item.active .hide-when-active {
   display: none;
@@ -1315,6 +1323,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 462px;
 }
 
+.max-w-xl {
+  max-width: 36rem;
+}
+
 .max-w-640 {
   max-width: 640px;
 }
@@ -1327,18 +1339,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   flex-shrink: 0;
 }
 
-.-translate-y-1\/2 {
-  --tw-translate-y: -50%;
+.-translate-x-4 {
+  --tw-translate-x: -1rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .-translate-x-1\/2 {
   --tw-translate-x: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.-translate-x-4 {
-  --tw-translate-x: -1rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1359,6 +1366,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .translate-y-2 {
   --tw-translate-y: 0.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -2437,11 +2449,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   will-change: transform;
 }
 
-.hover\:border-violet-500:hover {
-  --tw-border-opacity: 1;
-  border-color: rgb(145 114 214 / var(--tw-border-opacity));
-}
-
 .hover\:from-violet-400:hover {
   --tw-gradient-from: #8C6BD6;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(140 107 214 / 0));
@@ -2465,13 +2472,23 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(145 114 214 / var(--tw-text-opacity));
 }
 
+.group:hover .group-hover\:translate-x-4 {
+  --tw-translate-x: 1rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:-translate-y-1 {
+  --tw-translate-y: -0.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .group:hover .group-hover\:-translate-x-6 {
   --tw-translate-x: -1.5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.group:hover .group-hover\:translate-x-4 {
-  --tw-translate-x: 1rem;
+.group:hover .group-hover\:-translate-y-2 {
+  --tw-translate-y: -0.5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -2500,10 +2517,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 768px) {
-  .md\:absolute {
-    position: absolute;
-  }
-
   .md\:-right-1\/3 {
     right: -33.333333%;
   }
@@ -2514,14 +2527,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:top-auto {
     top: auto;
-  }
-
-  .md\:right-full {
-    right: 100%;
-  }
-
-  .md\:left-auto {
-    left: auto;
   }
 
   .md\:left-5 {
@@ -2570,10 +2575,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:mt-30 {
     margin-top: 30px;
-  }
-
-  .md\:mr-10 {
-    margin-right: 2.5rem;
   }
 
   .md\:block {
@@ -2734,6 +2735,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:tracking-wide {
     letter-spacing: 0.02em;
+  }
+
+  .md\:text-black {
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
   }
 }
 
@@ -2923,10 +2929,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-right: 5rem;
   }
 
-  .lg\:text-left {
-    text-align: left;
-  }
-
   .lg\:text-center {
     text-align: center;
   }
@@ -2956,20 +2958,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1440px) {
   .xl\:absolute {
     position: absolute;
-  }
-
-  .xl\:relative {
-    position: relative;
-  }
-
-  .xl\:inset-0 {
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
   }
 
   .xl\:bottom-32 {
@@ -3128,6 +3119,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .xl\:mt-22 {
     margin-top: 88px;
+  }
+
+  .xl\:mr-10 {
+    margin-right: 2.5rem;
   }
 
   .xl\:mr-44 {
@@ -3898,8 +3893,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 1536px) {
-  .\32xl\:right-0 {
-    right: 0px;
+  .\32xl\:mr-44 {
+    margin-right: 11rem;
+  }
+
+  .\32xl\:h-20 {
+    height: 5rem;
+  }
+
+  .\32xl\:w-20 {
+    width: 5rem;
   }
 
   .\32xl\:pl-22 {
@@ -3908,23 +3911,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 1660px) {
-  .\33xl\:absolute {
-    position: absolute;
-  }
-
-  .\33xl\:top-auto {
-    top: auto;
-  }
-
-  .\33xl\:bottom-0 {
-    bottom: 0px;
-  }
-
   .\33xl\:mt-2 {
     margin-top: 0.5rem;
-  }
-
-  .\33xl\:w-auto {
-    width: auto;
   }
 }

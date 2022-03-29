@@ -18,7 +18,7 @@ function itemClick() {
 }
 
 Array.from(items).forEach(function (element) {
-    element.addEventListener('click', itemClick);
+    element.addEventListener('mouseover', itemClick);
 });
 
 const swiper = new Swiper('.swiper_team', {
@@ -28,6 +28,7 @@ const swiper = new Swiper('.swiper_team', {
 });
 const swiper_merch = new Swiper('.swiper_merch', {
     loop: false,
+    effect: "fade",
     spaceBetween: 40
 });
 const swiper_portfolio = new Swiper('.swiper_portfolio', {
@@ -182,3 +183,8 @@ Array.from(portfolio_screen).forEach(function (element, i) {
 MicroModal.init();
 
 let scroll = new SmoothScroll('a[href*="#"]');
+
+let selector = document.querySelectorAll(".phone-input");
+
+let im = new Inputmask("+7 999 999 99 99");
+im.mask(selector);

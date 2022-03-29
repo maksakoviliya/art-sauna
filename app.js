@@ -22,7 +22,7 @@ function itemClick() {
 }
 
 Array.from(items).forEach(function (element) {
-  element.addEventListener('click', itemClick);
+  element.addEventListener('mouseover', itemClick);
 });
 var swiper = new Swiper('.swiper_team', {
   loop: false,
@@ -30,6 +30,7 @@ var swiper = new Swiper('.swiper_team', {
 });
 var swiper_merch = new Swiper('.swiper_merch', {
   loop: false,
+  effect: "fade",
   spaceBetween: 40
 });
 var swiper_portfolio = new Swiper('.swiper_portfolio', {
@@ -168,5 +169,8 @@ Array.from(portfolio_screen).forEach(function (element, i) {
 
 MicroModal.init();
 var scroll = new SmoothScroll('a[href*="#"]');
+var selector = document.querySelectorAll(".phone-input");
+var im = new Inputmask("+7 999 999 99 99");
+im.mask(selector);
 /******/ })()
 ;
