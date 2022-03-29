@@ -44,7 +44,8 @@ var swiper_portfolio = new Swiper('.swiper_portfolio', {
       return "<span class=\"".concat(className, " w-4 h-4 bg-neutral-750 rounded-full\"></span>");
     }
   },
-  spaceBetween: 40
+  spaceBetween: 40,
+  simulateTouch: false
 });
 var types = document.querySelectorAll(".type_pagination");
 
@@ -170,5 +171,8 @@ Array.from(portfolio_screen).forEach(function (element, i) {
 //     prevEl: ".portfolio-prev",
 // },
 // });
+
+MicroModal.init();
+var scroll = new SmoothScroll('a[href*="#"]');
 /******/ })()
 ;

@@ -32,9 +32,11 @@ module.exports = {
                 200: '200px',
             },
             maxWidth: {
+                640: "640px",
                 '8xl': "1620px"
             },
             colors: {
+                "gray-200": "#F6F6F6",
                 "gray-350": "rgba(196, 196, 196, 0.13)",
                 "gray-450": "rgba(26, 26, 26, .8)",
 

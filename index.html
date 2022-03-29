@@ -113,7 +113,7 @@
                 <strong class="font-black">для парения и отдыха</strong>
             </h2>
             <div class="banner-button__wrapper mt-10 md:mt-20 xl:mt-24">
-                <a href="#projects" class="banner-button group">
+                <a href="#projects" data-scroll class="banner-button group">
                     <svg fill="none"
                          class="hidden md:block h-4 absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-1/2 group-hover:-translate-x-6 transition duration-75"
                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 18">
@@ -279,7 +279,7 @@
     </div>
 </section>
 
-<section class="pt-18 md:py-30 xl:pb-30 xl:pt-0 xl:mt-20 text-white relative bg-cover bg-center bg-top">
+<section class="pt-18 md:py-30 xl:pb-30 xl:pt-0 xl:mt-20 text-white relative bg-cover bg-center bg-top" id="projects">
     <!--        <div class="absolute w-full inset-x-0 top-0 h-[143px] bg-gradient-to-b from-gray-450"></div>-->
     <!--        <div class="absolute w-full inset-x-0 bottom-0 h-[90px] bg-gradient-to-t from-neutral-850"></div>-->
 
@@ -324,25 +324,36 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <img src="https://swiperjs.com/demos/images/nature-1.jpg"/>
-                                        <div class="flex items-center absolute bottom-[260px] -left-1">
+                                        <div class="flex items-center absolute  top-0 -left-1">
                                             <button class="group block w-22 h-22 xl:w-100 xl:h-100 relative">
                         <span class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
-                            <svg class="w-[80px] h-[80px] xl:w-100 xl:h-100 animate-spin-slowly duration-700 transition group-hover:rotate-90" viewBox="0 0 133 133" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="w-[80px] h-[80px] xl:w-100 xl:h-100 animate-spin-slowly duration-700 transition group-hover:rotate-90"
+                                 viewBox="0 0 133 133" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g filter="url(#filter0_d_74_147)">
-                                        <circle r="45.4816" transform="matrix(-1 0 0 1 66.4816 66.4816)" stroke="url(#paint0_linear_74_147)" stroke-width="2" shape-rendering="crispEdges"/>
+                                        <circle r="45.4816" transform="matrix(-1 0 0 1 66.4816 66.4816)"
+                                                stroke="url(#paint0_linear_74_147)" stroke-width="2"
+                                                shape-rendering="crispEdges"/>
                                         </g>
                                         <defs>
-                                        <filter id="filter0_d_74_147" x="0" y="0.0366211" width="132.963" height="132.963" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <filter id="filter0_d_74_147" x="0" y="0.0366211" width="132.963"
+                                                height="132.963" filterUnits="userSpaceOnUse"
+                                                color-interpolation-filters="sRGB">
                                         <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                        <feColorMatrix in="SourceAlpha" type="matrix"
+                                                       values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                       result="hardAlpha"/>
                                         <feOffset dy="4"/>
                                         <feGaussianBlur stdDeviation="10"/>
                                         <feComposite in2="hardAlpha" operator="out"/>
-                                        <feColorMatrix type="matrix" values="0 0 0 0 0.549686 0 0 0 0 0.419608 0 0 0 0 0.839216 0 0 0 0.4 0"/>
-                                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_74_147"/>
-                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_74_147" result="shape"/>
+                                        <feColorMatrix type="matrix"
+                                                       values="0 0 0 0 0.549686 0 0 0 0 0.419608 0 0 0 0 0.839216 0 0 0 0.4 0"/>
+                                        <feBlend mode="normal" in2="BackgroundImageFix"
+                                                 result="effect1_dropShadow_74_147"/>
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_74_147"
+                                                 result="shape"/>
                                         </filter>
-                                        <linearGradient id="paint0_linear_74_147" x1="46.4816" y1="0" x2="46.4816" y2="92.9631" gradientUnits="userSpaceOnUse">
+                                        <linearGradient id="paint0_linear_74_147" x1="46.4816" y1="0" x2="46.4816"
+                                                        y2="92.9631" gradientUnits="userSpaceOnUse">
                                         <stop stop-color="white"/>
                                         <stop offset="1" stop-color="white" stop-opacity="0"/>
                                         </linearGradient>
@@ -496,9 +507,10 @@
                                 </div>
                             </div>
                             <div class="banner-button__wrapper max-w-[478px] mt-10">
-                                <a href="#projects" class="banner-button group text-sm text-center">
+                                <button data-micromodal-trigger="modal-1"
+                                        class="banner-button group text-sm text-center">
                                     Расчитать стоимость своего проекта
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1069,22 +1081,33 @@
                                 <div class="flex items-center absolute -top-1 -left-1">
                                     <button class="group block w-22 h-22 xl:w-40 xl:h-40 relative">
                         <span class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
-                            <svg class="w-[80px] h-[80px] xl:w-[190px] xl:h-[190px] animate-spin-slowly duration-700 transition group-hover:rotate-90" viewBox="0 0 133 133" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="w-[80px] h-[80px] xl:w-[190px] xl:h-[190px] animate-spin-slowly duration-700 transition group-hover:rotate-90"
+                                 viewBox="0 0 133 133" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g filter="url(#filter0_d_74_147)">
-                                        <circle r="45.4816" transform="matrix(-1 0 0 1 66.4816 66.4816)" stroke="url(#paint0_linear_74_147)" stroke-width="2" shape-rendering="crispEdges"/>
+                                        <circle r="45.4816" transform="matrix(-1 0 0 1 66.4816 66.4816)"
+                                                stroke="url(#paint0_linear_74_147)" stroke-width="2"
+                                                shape-rendering="crispEdges"/>
                                         </g>
                                         <defs>
-                                        <filter id="filter0_d_74_147" x="0" y="0.0366211" width="132.963" height="132.963" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <filter id="filter0_d_74_147" x="0" y="0.0366211" width="132.963"
+                                                height="132.963" filterUnits="userSpaceOnUse"
+                                                color-interpolation-filters="sRGB">
                                         <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                        <feColorMatrix in="SourceAlpha" type="matrix"
+                                                       values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                       result="hardAlpha"/>
                                         <feOffset dy="4"/>
                                         <feGaussianBlur stdDeviation="10"/>
                                         <feComposite in2="hardAlpha" operator="out"/>
-                                        <feColorMatrix type="matrix" values="0 0 0 0 0.549686 0 0 0 0 0.419608 0 0 0 0 0.839216 0 0 0 0.4 0"/>
-                                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_74_147"/>
-                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_74_147" result="shape"/>
+                                        <feColorMatrix type="matrix"
+                                                       values="0 0 0 0 0.549686 0 0 0 0 0.419608 0 0 0 0 0.839216 0 0 0 0.4 0"/>
+                                        <feBlend mode="normal" in2="BackgroundImageFix"
+                                                 result="effect1_dropShadow_74_147"/>
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_74_147"
+                                                 result="shape"/>
                                         </filter>
-                                        <linearGradient id="paint0_linear_74_147" x1="46.4816" y1="0" x2="46.4816" y2="92.9631" gradientUnits="userSpaceOnUse">
+                                        <linearGradient id="paint0_linear_74_147" x1="46.4816" y1="0" x2="46.4816"
+                                                        y2="92.9631" gradientUnits="userSpaceOnUse">
                                         <stop stop-color="white"/>
                                         <stop offset="1" stop-color="white" stop-opacity="0"/>
                                         </linearGradient>
@@ -1191,22 +1214,33 @@
                                 <div class="flex items-center absolute -top-1 -left-1">
                                     <button class="group block w-22 h-22 xl:w-40 xl:h-40 relative">
                         <span class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
-                            <svg class="w-[80px] h-[80px] xl:w-[190px] xl:h-[190px] animate-spin-slowly duration-700 transition group-hover:rotate-90" viewBox="0 0 133 133" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="w-[80px] h-[80px] xl:w-[190px] xl:h-[190px] animate-spin-slowly duration-700 transition group-hover:rotate-90"
+                                 viewBox="0 0 133 133" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g filter="url(#filter0_d_74_147)">
-                                        <circle r="45.4816" transform="matrix(-1 0 0 1 66.4816 66.4816)" stroke="url(#paint0_linear_74_147)" stroke-width="2" shape-rendering="crispEdges"/>
+                                        <circle r="45.4816" transform="matrix(-1 0 0 1 66.4816 66.4816)"
+                                                stroke="url(#paint0_linear_74_147)" stroke-width="2"
+                                                shape-rendering="crispEdges"/>
                                         </g>
                                         <defs>
-                                        <filter id="filter0_d_74_147" x="0" y="0.0366211" width="132.963" height="132.963" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <filter id="filter0_d_74_147" x="0" y="0.0366211" width="132.963"
+                                                height="132.963" filterUnits="userSpaceOnUse"
+                                                color-interpolation-filters="sRGB">
                                         <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                        <feColorMatrix in="SourceAlpha" type="matrix"
+                                                       values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                       result="hardAlpha"/>
                                         <feOffset dy="4"/>
                                         <feGaussianBlur stdDeviation="10"/>
                                         <feComposite in2="hardAlpha" operator="out"/>
-                                        <feColorMatrix type="matrix" values="0 0 0 0 0.549686 0 0 0 0 0.419608 0 0 0 0 0.839216 0 0 0 0.4 0"/>
-                                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_74_147"/>
-                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_74_147" result="shape"/>
+                                        <feColorMatrix type="matrix"
+                                                       values="0 0 0 0 0.549686 0 0 0 0 0.419608 0 0 0 0 0.839216 0 0 0 0.4 0"/>
+                                        <feBlend mode="normal" in2="BackgroundImageFix"
+                                                 result="effect1_dropShadow_74_147"/>
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_74_147"
+                                                 result="shape"/>
                                         </filter>
-                                        <linearGradient id="paint0_linear_74_147" x1="46.4816" y1="0" x2="46.4816" y2="92.9631" gradientUnits="userSpaceOnUse">
+                                        <linearGradient id="paint0_linear_74_147" x1="46.4816" y1="0" x2="46.4816"
+                                                        y2="92.9631" gradientUnits="userSpaceOnUse">
                                         <stop stop-color="white"/>
                                         <stop offset="1" stop-color="white" stop-opacity="0"/>
                                         </linearGradient>
@@ -1313,22 +1347,33 @@
                                 <div class="flex items-center absolute -top-1 -left-1">
                                     <button class="group block w-22 h-22 xl:w-40 xl:h-40 relative">
                         <span class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
-                            <svg class="w-[80px] h-[80px] xl:w-[190px] xl:h-[190px] animate-spin-slowly duration-700 transition group-hover:rotate-90" viewBox="0 0 133 133" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="w-[80px] h-[80px] xl:w-[190px] xl:h-[190px] animate-spin-slowly duration-700 transition group-hover:rotate-90"
+                                 viewBox="0 0 133 133" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g filter="url(#filter0_d_74_147)">
-                                        <circle r="45.4816" transform="matrix(-1 0 0 1 66.4816 66.4816)" stroke="url(#paint0_linear_74_147)" stroke-width="2" shape-rendering="crispEdges"/>
+                                        <circle r="45.4816" transform="matrix(-1 0 0 1 66.4816 66.4816)"
+                                                stroke="url(#paint0_linear_74_147)" stroke-width="2"
+                                                shape-rendering="crispEdges"/>
                                         </g>
                                         <defs>
-                                        <filter id="filter0_d_74_147" x="0" y="0.0366211" width="132.963" height="132.963" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <filter id="filter0_d_74_147" x="0" y="0.0366211" width="132.963"
+                                                height="132.963" filterUnits="userSpaceOnUse"
+                                                color-interpolation-filters="sRGB">
                                         <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                        <feColorMatrix in="SourceAlpha" type="matrix"
+                                                       values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                       result="hardAlpha"/>
                                         <feOffset dy="4"/>
                                         <feGaussianBlur stdDeviation="10"/>
                                         <feComposite in2="hardAlpha" operator="out"/>
-                                        <feColorMatrix type="matrix" values="0 0 0 0 0.549686 0 0 0 0 0.419608 0 0 0 0 0.839216 0 0 0 0.4 0"/>
-                                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_74_147"/>
-                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_74_147" result="shape"/>
+                                        <feColorMatrix type="matrix"
+                                                       values="0 0 0 0 0.549686 0 0 0 0 0.419608 0 0 0 0 0.839216 0 0 0 0.4 0"/>
+                                        <feBlend mode="normal" in2="BackgroundImageFix"
+                                                 result="effect1_dropShadow_74_147"/>
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_74_147"
+                                                 result="shape"/>
                                         </filter>
-                                        <linearGradient id="paint0_linear_74_147" x1="46.4816" y1="0" x2="46.4816" y2="92.9631" gradientUnits="userSpaceOnUse">
+                                        <linearGradient id="paint0_linear_74_147" x1="46.4816" y1="0" x2="46.4816"
+                                                        y2="92.9631" gradientUnits="userSpaceOnUse">
                                         <stop stop-color="white"/>
                                         <stop offset="1" stop-color="white" stop-opacity="0"/>
                                         </linearGradient>
@@ -1562,7 +1607,7 @@
                 </div>
             </div>
             <div class="lg:w-5/12 mt-10 md:mt-0 text-white">
-                <h3 class="mt-[60px] md:mt-0 text-lg font-bold uppercase xl:text-3xl xl:leading-[45px] tracking-tight">
+                <h3 class="mt-[60px] lg:mt-0 text-lg font-bold uppercase xl:text-3xl xl:leading-[45px] tracking-tight">
                     Предлагаем обсудить
                     <span class="text-violet-500">дизайн-проект</span> вашей будущей парной</h3>
                 <p class="font-montserrat opacity-80 mt-5 xl:text-xl xl:mt-10 xl:leading-7.5">Оставьте заявку и наш
@@ -2701,16 +2746,16 @@
             <div class="my-30 bg-neutral-850 w-full h-0.05"></div>
             <div class="grid grid-cols-1 gap-30 md:grid-cols-2">
                 <div class="video-container">
-                    <!--                    <iframe src="https://www.youtube.com/embed/-JAvsguxQQw"-->
-                    <!--                            title="YouTube video player" frameborder="0"-->
-                    <!--                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"-->
-                    <!--                            allowfullscreen></iframe>-->
+                    <iframe src="https://www.youtube.com/embed/-JAvsguxQQw"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                 </div>
                 <div class="video-container">
-                    <!--                    <iframe src="https://www.youtube.com/embed/ReBppm4xx4Y"-->
-                    <!--                            title="YouTube video player" frameborder="0"-->
-                    <!--                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"-->
-                    <!--                            allowfullscreen></iframe>-->
+                    <iframe src="https://www.youtube.com/embed/ReBppm4xx4Y"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                 </div>
             </div>
             <div class="flex flex-col md:flex-row md:items-center gap-30 mt-30">
@@ -3867,12 +3912,31 @@
     </div>
 </footer>
 
+<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+            <h2 class="text-2xl uppercase font-black text-center tracking-wide">Оставьте ваши контакты</h2>
+            <p class="text-center font-montserrat opacity-80 mt-4">Мы свяжемся с вами и рассчитаем стоимость проекта</p>
+            <input type="text"
+                   class="h-70 w-full flex-centered justify-start bg-gray-200 outline-none px-6 font-montserrat mt-10"
+                   placeholder="Введите свой номер телефона">
+            <div class="banner-button__wrapper max-w-full w-full mt-5 h-[80px]">
+                <button data-micromodal-trigger="modal-1" class="banner-button group text-sm text-center">
+                    Расчитать стоимость своего проекта
+                </button>
+            </div>
+            <p class="mt-30 font-montserrat text-xs opacity-80 xl:text-base xl:mt-10">Нажимая кнопку, вы
+                даете согласие на обработку
+                <a href="#" class="underline">персональных данных</a></p>
+        </div>
+    </div>
+</div>
+
 <script src="https://unpkg.com/accordion-js@3.2.0/dist/accordion.min.js"></script>
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-<script
-        defer
-        src="https://unpkg.com/img-comparison-slider@7/dist/index.js"
-></script>
+<script src="https://unpkg.com/img-comparison-slider@7/dist/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
 <script src="./app.js"></script>
 </body>
 </html>
