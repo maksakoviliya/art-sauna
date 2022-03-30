@@ -1,5 +1,15 @@
 @font-face {
     font-family: 'RF Dewi';
+    src: local('RF Dewi Expanded Light'), local('RF-Dewi-Expanded-Light'),
+    url('./fonts/RFDewiExpanded-Light/RFDewiExpanded-Light.woff2') format('woff2'),
+    url('./fonts/RFDewiExpanded-Light/RFDewiExpanded-Light.woff') format('woff'),
+    url('./fonts/RFDewiExpanded-Light/RFDewiExpanded-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RF Dewi';
     src: local('RF Dewi Expanded Regular'), local('RF-Dewi-Expanded-Regular'),
     url('./fonts/RFDewiExpanded-Regular/RFDewiExpanded-Regular.woff2') format('woff2'),
     url('./fonts/RFDewiExpanded-Regular/RFDewiExpanded-Regular.woff') format('woff'),
