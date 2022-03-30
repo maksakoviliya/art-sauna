@@ -10,6 +10,16 @@
 
 @font-face {
     font-family: 'RF Dewi';
+    src: local('RF Dewi Expanded Semibold'), local('RF-Dewi-Expanded-Semibold'),
+    url('./fonts/RFDewiExpanded-Semibold/RFDewiExpanded-Semibold.woff2') format('woff2'),
+    url('./fonts/RFDewiExpanded-Semibold/RFDewiExpanded-Semibold.woff') format('woff'),
+    url('./fonts/RFDewiExpanded-Semibold/RFDewiExpanded-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RF Dewi';
     src: local('RF Dewi Expanded Bold'), local('RF-Dewi-Expanded-Bold'),
     url('./fonts/RFDewiExpanded-Bold/RFDewiExpanded-Bold.woff2') format('woff2'),
     url('./fonts/RFDewiExpanded-Bold/RFDewiExpanded-Bold.woff') format('woff'),

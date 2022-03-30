@@ -76,13 +76,13 @@ module.exports = {
                     '0%': {transform: 'translateY(-30px) translateX(-50%)', opacity: 0},
                     '50%': {transform: 'translateY(-15px) translateX(-50%)', opacity: .85},
                     '100%': {transform: 'translateY(0) translateX(-50%)', opacity: .05},
-                }
+                },
             },
             animation: {
                 "drop-1": 'drop .9s linear infinite',
                 "drop-2": 'drop .9s linear infinite .3s',
                 "drop-3": 'drop .9s linear infinite .6s',
-                "spin-slowly": 'spin 3s linear infinite'
+                "spin-slowly": 'spin 3s linear infinite',
             }
         },
     },

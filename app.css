@@ -14,6 +14,19 @@
 @font-face {
   font-family: 'RF Dewi';
 
+  src: local('RF Dewi Expanded Semibold'), local('RF-Dewi-Expanded-Semibold'),
+    url('./fonts/RFDewiExpanded-Semibold/RFDewiExpanded-Semibold.woff2') format('woff2'),
+    url('./fonts/RFDewiExpanded-Semibold/RFDewiExpanded-Semibold.woff') format('woff'),
+    url('./fonts/RFDewiExpanded-Semibold/RFDewiExpanded-Semibold.ttf') format('truetype');
+
+  font-weight: 600;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RF Dewi';
+
   src: local('RF Dewi Expanded Bold'), local('RF-Dewi-Expanded-Bold'),
     url('./fonts/RFDewiExpanded-Bold/RFDewiExpanded-Bold.woff2') format('woff2'),
     url('./fonts/RFDewiExpanded-Bold/RFDewiExpanded-Bold.woff') format('woff'),
@@ -1279,10 +1292,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 68px;
 }
 
-.w-30 {
-  width: 30px;
-}
-
 .w-7 {
   width: 1.75rem;
 }
@@ -1297,6 +1306,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-11 {
   width: 2.75rem;
+}
+
+.w-30 {
+  width: 30px;
 }
 
 .w-2\.5 {
@@ -1593,6 +1606,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .overflow-x-hidden {
   overflow-x: hidden;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
 }
 
 .break-words {
@@ -2000,6 +2017,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .font-black {
   font-weight: 900;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 .uppercase {
@@ -2499,6 +2520,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .group:hover .group-hover\:rotate-150 {
   --tw-rotate: 150deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:-scale-y-100 {
+  --tw-scale-y: -1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -3046,11 +3072,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   .xl\:my-2 {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-  }
-
-  .xl\:my-12 {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
   }
 
   .xl\:mt-24 {
