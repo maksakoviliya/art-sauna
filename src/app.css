@@ -143,6 +143,9 @@
     .overflow-visible-important {
         overflow: visible !important;
     }
+    .hidden-important {
+        display: none !important;
+    }
 }
 
 .ac.js-enabled .ac-panel {

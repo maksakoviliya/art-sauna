@@ -1292,6 +1292,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 68px;
 }
 
+.w-auto {
+  width: auto;
+}
+
 .w-7 {
   width: 1.75rem;
 }
@@ -1606,10 +1610,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .overflow-x-hidden {
   overflow-x: hidden;
-}
-
-.overflow-y-hidden {
-  overflow-y: hidden;
 }
 
 .break-words {
@@ -2215,6 +2215,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   overflow: visible !important;
 }
 
+.hidden-important {
+  display: none !important;
+}
+
 .ac.js-enabled .ac-panel {
   visibility: hidden;
 }
@@ -2528,6 +2532,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.group:hover .group-hover\:text-\[\#ff0000\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 0 0 / var(--tw-text-opacity));
+}
+
 .group:hover .group-hover\:opacity-100 {
   opacity: 1;
 }
@@ -2647,10 +2656,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     max-width: 36rem;
   }
 
-  .md\:max-w-\[478px\] {
-    max-width: 478px;
-  }
-
   .md\:-translate-y-4 {
     --tw-translate-y: -1rem;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -2690,6 +2695,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:gap-30 {
     gap: 30px;
+  }
+
+  .md\:overflow-x-visible {
+    overflow-x: visible;
   }
 
   .md\:border {
@@ -3294,8 +3303,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: 68px;
   }
 
-  .xl\:h-\[845px\] {
-    height: 845px;
+  .xl\:h-\[790px\] {
+    height: 790px;
   }
 
   .xl\:h-\[550px\] {
@@ -3687,9 +3696,9 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-right: 3rem;
   }
 
-  .xl\:py-5 {
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
+  .xl\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .xl\:px-60 {

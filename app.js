@@ -26,6 +26,8 @@ Array.from(items).forEach(function (element) {
 });
 var swiper = new Swiper('.swiper_team', {
   loop: false,
+  effect: "fade",
+  simulateTouch: false,
   spaceBetween: 40
 });
 var swiper_merch = new Swiper('.swiper_merch', {
@@ -172,5 +174,10 @@ var scroll = new SmoothScroll('a[href*="#"]');
 var selector = document.querySelectorAll(".phone-input");
 var im = new Inputmask("+7 999 999 99 99");
 im.mask(selector);
+Array.from(document.querySelectorAll(".video-preview")).forEach(function (element) {
+  element.addEventListener('click', function () {
+    element.classList.add('hidden-important');
+  });
+});
 /******/ })()
 ;

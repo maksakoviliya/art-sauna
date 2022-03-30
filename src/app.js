@@ -23,7 +23,8 @@ Array.from(items).forEach(function (element) {
 
 const swiper = new Swiper('.swiper_team', {
     loop: false,
-
+    effect: "fade",
+    simulateTouch: false,
     spaceBetween: 40
 });
 const swiper_merch = new Swiper('.swiper_merch', {
@@ -188,3 +189,9 @@ let selector = document.querySelectorAll(".phone-input");
 
 let im = new Inputmask("+7 999 999 99 99");
 im.mask(selector);
+
+Array.from(document.querySelectorAll(".video-preview")).forEach(function (element) {
+    element.addEventListener('click', function () {
+        element.classList.add('hidden-important')
+    })
+})
