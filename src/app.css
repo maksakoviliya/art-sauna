@@ -64,7 +64,7 @@
 
 @layer base {
     .content {
-        @apply max-w-5xl xl:max-w-6xl 2xl:max-w-7xl 3xl:max-w-8xl mx-auto;
+        @apply max-w-6xl xl:max-w-7xl 3xl:max-w-8xl mx-auto;
     }
 }
 
