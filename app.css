@@ -1059,6 +1059,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 68px;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .h-\[80px\] {
   height: 80px;
 }
@@ -1081,10 +1085,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-12 {
   height: 3rem;
-}
-
-.h-full {
-  height: 100%;
 }
 
 .h-\[60px\] {
@@ -1235,6 +1235,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 50%;
 }
 
+.w-auto {
+  width: auto;
+}
+
 .w-\[80px\] {
   width: 80px;
 }
@@ -1301,10 +1305,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-17 {
   width: 68px;
-}
-
-.w-auto {
-  width: auto;
 }
 
 .w-7 {
@@ -1531,8 +1531,16 @@ Ensure the default browser behavior of the `hidden` attribute.
           animation: spin 3s linear infinite;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .resize-none {
   resize: none;
+}
+
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .grid-cols-1 {
@@ -1926,6 +1934,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pt-18 {
   padding-top: 72px;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem;
 }
 
 .pt-5 {
@@ -2489,6 +2501,28 @@ Ensure the default browser behavior of the `hidden` attribute.
   will-change: transform;
 }
 
+.custom-pagination {
+  position: relative !important;
+  width: auto !important;
+  display: flex !important;
+  align-items: center;
+  bottom: 0 !important;
+}
+
+.custom-pagination .swiper-pagination-bullet {
+  opacity: 100%;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(60 58 56 / var(--tw-bg-opacity));
+}
+
+.custom-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .hover\:from-violet-400:hover {
   --tw-gradient-from: #8C6BD6;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(140 107 214 / 0));
@@ -2702,6 +2736,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:justify-center {
     justify-content: center;
+  }
+
+  .md\:justify-between {
+    justify-content: space-between;
   }
 
   .md\:gap-10 {
@@ -3852,13 +3890,13 @@ Ensure the default browser behavior of the `hidden` attribute.
     line-height: 2rem;
   }
 
+  .xl\:text-\[40px\] {
+    font-size: 40px;
+  }
+
   .xl\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
-  }
-
-  .xl\:text-\[40px\] {
-    font-size: 40px;
   }
 
   .xl\:text-base {

@@ -42,11 +42,15 @@ var swiper_portfolio = new Swiper('.swiper_portfolio', {
     nextEl: '.swiper_portfolio_next'
   },
   pagination: {
-    el: '.swiper-portfolio-pagination',
-    renderBullet: function renderBullet(index, className) {
-      return "<span class=\"".concat(className, " w-4 h-4 bg-neutral-750 rounded-full\"></span>");
-    }
+    el: '.swiper-pagination',
+    clickable: true
   },
+  // pagination: {
+  //     el: '.swiper-portfolio-pagination',
+  //     // renderBullet: function (index, className) {
+  //     //     return `<span class="${ className } w-4 h-4 bg-neutral-750 rounded-full"></span>`;
+  //     // },
+  // },
   spaceBetween: 40,
   slideToClickedSlide: true // preventClicks: false,
   // preventClicksPropagation: false
@@ -121,33 +125,25 @@ portfolio_btn.addEventListener('click', function () {
   portfolio_btn.classList.remove('flex-centered');
   portfolio_btn.classList.add('hidden');
 });
-var portfolio_thumb = document.querySelectorAll(".portfolio-thumbs");
-var portfolio_thumbs = [];
-Array.from(portfolio_thumb).forEach(function (element, i) {
-  portfolio_thumbs.push(new Swiper(element, {
-    spaceBetween: 20,
-    slidesPerView: 4,
-    freeMode: true,
-    watchSlidesProgress: true,
-    navigation: {
-      nextEl: ".portfolio-next",
-      prevEl: ".portfolio-prev"
-    }
-  }));
-});
 var portfolio_screen = document.querySelectorAll(".portfolio-screen");
 var swiper_screens = [];
 Array.from(portfolio_screen).forEach(function (element, i) {
   swiper_screens.push(new Swiper(element, {
     spaceBetween: 20,
+    effect: "fade",
+    simulateTouch: false,
     navigation: {
       nextEl: ".portfolio-next",
       prevEl: ".portfolio-prev"
-    },
-    thumbs: {
-      swiper: portfolio_thumbs[i]
     }
   }));
+  Array.from(element.nextElementSibling.querySelectorAll(".portfolio-thumb")).forEach(function (item, idx) {
+    item.addEventListener('click', function () {
+      console.log('elem i', i);
+      console.log('elem', idx);
+      swiper_screens[i].slideTo(idx + 1);
+    });
+  });
 }); // function createComparison(element) {
 //     element.addEventListener('mousemove', (evt) => {
 //         console.log(evt);

@@ -323,3 +323,20 @@
 .micromodal-slide .modal__overlay {
     will-change: transform;
 }
+
+.custom-pagination {
+    position: relative !important;
+    width: auto !important;
+    display: flex !important;
+    align-items: center;
+    bottom: 0 !important;
+}
+
+.custom-pagination .swiper-pagination-bullet {
+    opacity: 100%;
+    @apply w-4 h-4 bg-neutral-750 rounded-full;
+}
+
+.custom-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    @apply bg-white;
+}
