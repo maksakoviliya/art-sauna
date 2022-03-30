@@ -36,7 +36,8 @@ module.exports = {
             },
             maxWidth: {
                 640: "640px",
-                '8xl': "1620px"
+                '8xl': "1620px",
+                'screen': "100vw"
             },
             colors: {
                 "gray-200": "#F6F6F6",
@@ -54,6 +55,10 @@ module.exports = {
             },
             letterSpacing: {
                 wide: "0.02em"
+            },
+            gridTemplateRows: {
+                '3x200': 'repeat(3, 200px)',
+                '3x224': 'repeat(3, 224px)',
             },
             lineHeight: {
                 7.5: "29px",

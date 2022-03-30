@@ -49,8 +49,8 @@ const swiper_portfolio = new Swiper('.swiper_portfolio', {
     //     // },
     // },
     spaceBetween: 40,
-    slideToClickedSlide: true
-    // preventClicks: false,
+    slideToClickedSlide: true,
+    preventClicks: true,
     // preventClicksPropagation: false
 });
 
@@ -61,7 +61,7 @@ function typePaginationClick() {
         element.classList.remove('active')
     });
     this.classList.add('active')
-    swiper.slideTo(Array.from(types).indexOf(this), 75)
+    swiper.slideTo(Array.from(types).indexOf(this))
 }
 
 Array.from(types).forEach(function (element) {

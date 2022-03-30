@@ -74,27 +74,27 @@
 
 @layer base {
     .content {
-        @apply max-w-6xl xl:max-w-7xl 3xl:max-w-8xl mx-auto;
+        @apply max-w-6xl xl:max-w-7xl 2xl:max-w-8xl mx-auto;
     }
 }
 
 @layer components {
     .main-banner {
-        background-image: url('img/banner_2.png');
+        background-image: url('./img/banner_2.png');
     }
 
     @media (min-width: 768px)  {
         .main-banner {
-            background-image: url('img/banner_2_large.png');
+            background-image: url('./img/banner_2_large.png');
         }
     }
     .second-banner {
-        background-image: url('img/banner_3.png');
+        background-image: url('./img/banner_3.png');
     }
 
     @media (min-width: 768px)  {
         .second-banner {
-            background-image: url('img/banner_3_large.png');
+            background-image: url('./img/banner_3_large.png');
         }
     }
 
@@ -155,6 +155,10 @@
     }
     .hidden-important {
         display: none !important;
+    }
+
+    .bg-full {
+        background-size: 100% 100%;
     }
 }
 
@@ -339,4 +343,12 @@
 
 .custom-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
     @apply bg-white;
+}
+
+.handle-container:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: #fff;
 }

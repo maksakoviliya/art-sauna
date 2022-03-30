@@ -52,8 +52,8 @@ var swiper_portfolio = new Swiper('.swiper_portfolio', {
   //     // },
   // },
   spaceBetween: 40,
-  slideToClickedSlide: true // preventClicks: false,
-  // preventClicksPropagation: false
+  slideToClickedSlide: true,
+  preventClicks: true // preventClicksPropagation: false
 
 });
 var types = document.querySelectorAll(".type_pagination");
@@ -63,7 +63,7 @@ function typePaginationClick() {
     element.classList.remove('active');
   });
   this.classList.add('active');
-  swiper.slideTo(Array.from(types).indexOf(this), 75);
+  swiper.slideTo(Array.from(types).indexOf(this));
 }
 
 Array.from(types).forEach(function (element) {
