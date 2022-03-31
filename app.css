@@ -1203,6 +1203,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 80vh;
 }
 
+.h-\[320px\] {
+  height: 320px;
+}
+
 .max-h-\[222px\] {
   max-height: 222px;
 }
