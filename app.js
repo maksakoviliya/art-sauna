@@ -56,6 +56,17 @@ var swiper_portfolio = new Swiper('.swiper_portfolio', {
   preventClicks: true // preventClicksPropagation: false
 
 });
+document.querySelectorAll('.portfolio-item').forEach(function (n) {
+  var slider = new Swiper(n.querySelector('.swiper_portfolio_mobile'), {
+    navigation: {
+      nextEl: n.querySelector('.portfolio_mobile_prev'),
+      prevEl: n.querySelector('.portfolio_mobile_next')
+    },
+    autoHeight: true,
+    effect: "fade",
+    spaceBetween: 20
+  });
+});
 var types = document.querySelectorAll(".type_pagination");
 
 function typePaginationClick() {
@@ -74,19 +85,19 @@ swiper.on('slideChange', function (sw) {
     element.classList.remove('active');
   });
   types[sw.activeIndex].classList.add('active');
-});
-var types_prev = document.querySelectorAll(".types_prev");
-Array.from(types_prev).forEach(function (element) {
-  element.addEventListener('click', function () {
-    swiper.slidePrev();
-  });
-});
-var types_next = document.querySelectorAll(".types_next");
-Array.from(types_next).forEach(function (element) {
-  element.addEventListener('click', function () {
-    swiper.slideNext();
-  });
-});
+}); // let types_prev = document.querySelectorAll(".types_prev");
+// Array.from(types_prev).forEach(function (element) {
+//     element.addEventListener('click', function () {
+//         swiper.slidePrev()
+//     });
+// });
+// let types_next = document.querySelectorAll(".types_next");
+// Array.from(types_next).forEach(function (element) {
+//     element.addEventListener('click', function () {
+//         swiper.slideNext()
+//     });
+// });
+
 var merch_prev = document.querySelectorAll(".merch_prev");
 Array.from(merch_prev).forEach(function (element) {
   element.addEventListener('click', function () {
@@ -119,11 +130,21 @@ Array.from(portfolio_tab).forEach(function (element) {
 var portfolio_items = document.querySelectorAll(".portfolio-item");
 var portfolio_btn = document.getElementById('showOtherItems');
 portfolio_btn.addEventListener('click', function () {
-  Array.from(portfolio_items).forEach(function (element) {
-    element.classList.remove('hidden');
-  });
-  portfolio_btn.classList.remove('flex-centered');
-  portfolio_btn.classList.add('hidden');
+  if (!portfolio_btn.classList.contains('opened')) {
+    Array.from(portfolio_items).forEach(function (element) {
+      element.classList.remove('hidden');
+    });
+    portfolio_btn.textContent = 'Скрыть';
+    portfolio_btn.classList.add('opened');
+  } else {
+    Array.from(portfolio_items).forEach(function (element, i) {
+      if (i > 2) {
+        element.classList.add('hidden');
+      }
+    });
+    portfolio_btn.textContent = 'Показать еще';
+    portfolio_btn.classList.remove('opened');
+  }
 });
 var portfolio_screen = document.querySelectorAll(".portfolio-screen");
 var swiper_screens = [];
