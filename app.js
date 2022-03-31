@@ -41,19 +41,14 @@ var swiper_portfolio = new Swiper('.swiper_portfolio', {
     prevEl: '.swiper_portfolio_prev',
     nextEl: '.swiper_portfolio_next'
   },
+  // simulateTouch: false,
   pagination: {
     el: '.swiper-pagination',
     clickable: true
   },
-  // pagination: {
-  //     el: '.swiper-portfolio-pagination',
-  //     // renderBullet: function (index, className) {
-  //     //     return `<span class="${ className } w-4 h-4 bg-neutral-750 rounded-full"></span>`;
-  //     // },
-  // },
   spaceBetween: 40,
   slideToClickedSlide: true,
-  preventClicks: true // preventClicksPropagation: false
+  preventClicks: false // preventClicksPropagation: false
 
 });
 document.querySelectorAll('.portfolio-item').forEach(function (n) {
@@ -146,6 +141,18 @@ portfolio_btn.addEventListener('click', function () {
     portfolio_btn.classList.remove('opened');
   }
 });
+MicroModal.init();
+var swiper_screens_modal = [];
+document.querySelectorAll('.gallery-container').forEach(function (n) {
+  swiper_screens_modal.push(new Swiper(n.querySelector('.portfolio-screen-modal'), {
+    navigation: {
+      nextEl: n.querySelector('.modal_next'),
+      prevEl: n.querySelector('.modal_prev')
+    },
+    autoHeight: true,
+    spaceBetween: 20
+  }));
+});
 var portfolio_screen = document.querySelectorAll(".portfolio-screen");
 var swiper_screens = [];
 Array.from(portfolio_screen).forEach(function (element, i) {
@@ -160,10 +167,13 @@ Array.from(portfolio_screen).forEach(function (element, i) {
   }));
   Array.from(element.nextElementSibling.querySelectorAll(".portfolio-thumb")).forEach(function (item, idx) {
     item.addEventListener('click', function () {
-      console.log('elem i', i);
-      console.log('elem', idx);
-      swiper_screens[i].slideTo(idx + 1);
+      swiper_screens[i].slideTo(idx);
     });
+  });
+  element.addEventListener('click', function () {
+    console.log('cliced', swiper_screens[i].activeIndex, element.dataset.target);
+    swiper_screens_modal[i].slideTo(swiper_screens[i].activeIndex);
+    MicroModal.show(element.dataset.target);
   });
 }); // function createComparison(element) {
 //     element.addEventListener('mousemove', (evt) => {
@@ -186,7 +196,6 @@ Array.from(portfolio_screen).forEach(function (element, i) {
 // },
 // });
 
-MicroModal.init();
 var scroll = new SmoothScroll('a[href*="#"]');
 var selector = document.querySelectorAll(".phone-input");
 var im = new Inputmask("+7 999 999 99 99");
