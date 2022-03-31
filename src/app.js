@@ -154,7 +154,13 @@ portfolio_btn.addEventListener('click', function () {
     }
 })
 
-MicroModal.init();
+MicroModal.init({
+    onClose: modal => {
+        modal.querySelectorAll('iframe').forEach(iframe => {
+            iframe.setAttribute('src', iframe.getAttribute('src'));
+        });
+    },
+});
 
 let swiper_screens_modal = []
 document.querySelectorAll('.gallery-container').forEach(n => {

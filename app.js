@@ -145,7 +145,13 @@ portfolio_btn.addEventListener('click', function () {
     portfolio_btn.classList.remove('opened');
   }
 });
-MicroModal.init();
+MicroModal.init({
+  onClose: function onClose(modal) {
+    modal.querySelectorAll('iframe').forEach(function (iframe) {
+      iframe.setAttribute('src', iframe.getAttribute('src'));
+    });
+  }
+});
 var swiper_screens_modal = [];
 document.querySelectorAll('.gallery-container').forEach(function (n) {
   swiper_screens_modal.push(new Swiper(n.querySelector('.portfolio-screen-modal'), {
