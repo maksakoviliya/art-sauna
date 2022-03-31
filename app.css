@@ -583,7 +583,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 @media (min-width: 768px)  {
   .main-banner {
-    background-image: url('./img/banner_2_large.png');
+    background-image: url('./img/main_banner.png');
   }
 }
 
@@ -800,14 +800,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: 0px;
 }
 
-.-left-1 {
-  left: -0.25rem;
-}
-
-.-top-1 {
-  top: -0.25rem;
-}
-
 .bottom-1\/2 {
   bottom: 50%;
 }
@@ -979,6 +971,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 3rem;
 }
 
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
 .mt-22 {
   margin-top: 88px;
 }
@@ -1017,10 +1013,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mt-11 {
   margin-top: 2.75rem;
-}
-
-.mt-3 {
-  margin-top: 0.75rem;
 }
 
 .mt-8 {
@@ -1095,16 +1087,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 68px;
 }
 
-.h-\[80px\] {
-  height: 80px;
-}
-
-.h-\[45px\] {
-  height: 45px;
+.h-18 {
+  height: 72px;
 }
 
 .h-3\/4 {
   height: 75%;
+}
+
+.h-14 {
+  height: 3.5rem;
+}
+
+.h-\[80px\] {
+  height: 80px;
+}
+
+.h-30 {
+  height: 30px;
 }
 
 .h-auto {
@@ -1179,16 +1179,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 10rem;
 }
 
-.h-30 {
-  height: 30px;
-}
-
 .h-\[47px\] {
   height: 47px;
-}
-
-.h-18 {
-  height: 72px;
 }
 
 .h-70 {
@@ -1203,28 +1195,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 70vh;
 }
 
-.h-80 {
-  height: 20rem;
-}
-
-.h-9 {
-  height: 2.25rem;
-}
-
-.h-14 {
-  height: 3.5rem;
-}
-
 .h-\[80vh\] {
   height: 80vh;
-}
-
-.max-h-\[400px\] {
-  max-height: 400px;
-}
-
-.max-h-\[90px\] {
-  max-height: 90px;
 }
 
 .max-h-\[222px\] {
@@ -1295,24 +1267,28 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 50%;
 }
 
-.w-\[80px\] {
-  width: 80px;
-}
-
-.w-\[45px\] {
-  width: 45px;
-}
-
 .w-3\/4 {
   width: 75%;
 }
 
-.w-10 {
-  width: 2.5rem;
+.w-14 {
+  width: 3.5rem;
+}
+
+.w-\[80px\] {
+  width: 80px;
+}
+
+.w-30 {
+  width: 30px;
 }
 
 .w-2 {
   width: 0.5rem;
+}
+
+.w-10 {
+  width: 2.5rem;
 }
 
 .w-0\.05 {
@@ -1383,36 +1359,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 2.75rem;
 }
 
-.w-30 {
-  width: 30px;
-}
-
 .w-2\.5 {
   width: 0.625rem;
 }
 
 .w-\[154px\] {
   width: 154px;
-}
-
-.w-80 {
-  width: 20rem;
-}
-
-.w-9 {
-  width: 2.25rem;
-}
-
-.w-14 {
-  width: 3.5rem;
-}
-
-.w-8 {
-  width: 2rem;
-}
-
-.w-16 {
-  width: 4rem;
 }
 
 .max-w-screen {
@@ -1631,20 +1583,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
-.grid-cols-1 {
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
 .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .grid-cols-6 {
   grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .grid-rows-5 {
@@ -1703,12 +1655,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 1.5rem;
 }
 
-.gap-5 {
-  gap: 1.25rem;
+.gap-3 {
+  gap: 0.75rem;
 }
 
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
 }
 
 .gap-2\.5 {
@@ -1725,10 +1681,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .gap-8 {
   gap: 2rem;
-}
-
-.gap-3 {
-  gap: 0.75rem;
 }
 
 .overflow-x-hidden {
@@ -1813,11 +1765,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-gray-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(246 246 246 / var(--tw-bg-opacity));
-}
-
-.bg-neutral-750 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(60 58 56 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-20 {
@@ -1917,10 +1864,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 1.5rem;
 }
 
-.p-3 {
-  padding: 0.75rem;
-}
-
 .py-15 {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -1934,6 +1877,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-17 {
   padding-top: 68px;
   padding-bottom: 68px;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .py-3\.5 {
@@ -1951,19 +1904,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 30px;
 }
 
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
 .py-\[18px\] {
   padding-top: 18px;
   padding-bottom: 18px;
-}
-
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
 }
 
 .py-\[23px\] {
@@ -2054,10 +1997,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 72px;
 }
 
-.pb-2 {
-  padding-bottom: 0.5rem;
-}
-
 .pt-5 {
   padding-top: 1.25rem;
 }
@@ -2135,11 +2074,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .text-xl {
@@ -2287,10 +2221,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .opacity-30 {
   opacity: 0.3;
-}
-
-.opacity-60 {
-  opacity: 0.6;
 }
 
 .opacity-70 {
@@ -2716,23 +2646,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.group:hover .group-hover\:rotate-90 {
-  --tw-rotate: 90deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.group:hover .group-hover\:rotate-150 {
-  --tw-rotate: 150deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .group:hover .group-hover\:-scale-y-100 {
   --tw-scale-y: -1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.group:hover .group-hover\:opacity-100 {
-  opacity: 1;
 }
 
 @media (min-width: 640px) {
@@ -3064,6 +2980,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: 100%;
   }
 
+  .lg\:h-\[400px\] {
+    height: 400px;
+  }
+
   .lg\:h-16 {
     height: 4rem;
   }
@@ -3078,10 +2998,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:h-14 {
     height: 3.5rem;
-  }
-
-  .lg\:h-\[400px\] {
-    height: 400px;
   }
 
   .lg\:w-16 {
@@ -3167,10 +3083,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     gap: 4rem;
   }
 
-  .lg\:p-5 {
-    padding: 1.25rem;
-  }
-
   .lg\:p-10 {
     padding: 2.5rem;
   }
@@ -3209,6 +3121,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     text-align: right;
   }
 
+  .lg\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
   .lg\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
@@ -3227,11 +3144,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
-  }
-
-  .lg\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
   }
 
   .lg\:flex-centered {
@@ -3369,12 +3281,16 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-top: 5rem;
   }
 
-  .xl\:mt-6 {
-    margin-top: 1.5rem;
+  .xl\:mt-4 {
+    margin-top: 1rem;
   }
 
   .xl\:mt-10 {
     margin-top: 2.5rem;
+  }
+
+  .xl\:mt-5 {
+    margin-top: 1.25rem;
   }
 
   .xl\:mt-36 {
@@ -3399,6 +3315,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .xl\:mt-16 {
     margin-top: 4rem;
+  }
+
+  .xl\:mt-6 {
+    margin-top: 1.5rem;
   }
 
   .xl\:mt-44 {
@@ -3465,24 +3385,12 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-top: 106px;
   }
 
-  .xl\:mt-5 {
-    margin-top: 1.25rem;
-  }
-
   .xl\:mt-11 {
     margin-top: 2.75rem;
   }
 
   .xl\:mt-2\.5 {
     margin-top: 0.625rem;
-  }
-
-  .xl\:mt-4 {
-    margin-top: 1rem;
-  }
-
-  .xl\:mt-1 {
-    margin-top: 0.25rem;
   }
 
   .xl\:block {
@@ -3513,12 +3421,12 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: 800px;
   }
 
-  .xl\:h-100 {
-    height: 100px;
+  .xl\:h-auto {
+    height: auto;
   }
 
-  .xl\:h-\[55px\] {
-    height: 55px;
+  .xl\:h-\[90px\] {
+    height: 90px;
   }
 
   .xl\:h-40 {
@@ -3541,12 +3449,12 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: 88px;
   }
 
-  .xl\:h-\[90px\] {
-    height: 90px;
-  }
-
   .xl\:h-14 {
     height: 3.5rem;
+  }
+
+  .xl\:h-100 {
+    height: 100px;
   }
 
   .xl\:h-\[123px\] {
@@ -3601,10 +3509,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: 3rem;
   }
 
-  .xl\:h-auto {
-    height: auto;
-  }
-
   .xl\:max-h-\[500px\] {
     max-height: 500px;
   }
@@ -3625,12 +3529,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 1.75rem;
   }
 
-  .xl\:w-100 {
-    width: 100px;
-  }
-
-  .xl\:w-\[55px\] {
-    width: 55px;
+  .xl\:w-full {
+    width: 100%;
   }
 
   .xl\:w-40 {
@@ -3667,10 +3567,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .xl\:w-14 {
     width: 3.5rem;
-  }
-
-  .xl\:w-full {
-    width: 100%;
   }
 
   .xl\:w-6 {
@@ -3711,6 +3607,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .xl\:w-2 {
     width: 0.5rem;
+  }
+
+  .xl\:w-100 {
+    width: 100px;
   }
 
   .xl\:w-12\.5 {
@@ -3833,6 +3733,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     gap: 30px;
   }
 
+  .xl\:gap-5 {
+    gap: 1.25rem;
+  }
+
   .xl\:gap-100 {
     gap: 100px;
   }
@@ -3843,10 +3747,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .xl\:gap-12 {
     gap: 3rem;
-  }
-
-  .xl\:gap-5 {
-    gap: 1.25rem;
   }
 
   .xl\:gap-7 {

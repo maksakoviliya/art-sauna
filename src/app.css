@@ -85,7 +85,7 @@
 
     @media (min-width: 768px)  {
         .main-banner {
-            background-image: url('./img/banner_2_large.png');
+            background-image: url('./img/main_banner.png');
         }
     }
     .second-banner {
