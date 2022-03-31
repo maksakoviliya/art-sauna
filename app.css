@@ -1415,6 +1415,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 133px;
 }
 
+.w-8 {
+  width: 2rem;
+}
+
 .max-w-screen {
   max-width: 100vw;
 }
