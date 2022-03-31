@@ -1239,6 +1239,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-height: 100vh;
 }
 
+.max-h-\[800px\] {
+  max-height: 800px;
+}
+
+.max-h-\[790px\] {
+  max-height: 790px;
+}
+
+.max-h-\[585px\] {
+  max-height: 585px;
+}
+
 .w-0\.2 {
   width: 0.5px;
 }

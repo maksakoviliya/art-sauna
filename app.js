@@ -35,7 +35,7 @@ var swiper = new Swiper('.swiper_team', {
   }
 });
 var swiper_merch = new Swiper('.swiper_merch', {
-  loop: false,
+  loop: true,
   effect: "fade",
   spaceBetween: 40
 });

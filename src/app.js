@@ -32,7 +32,7 @@ const swiper = new Swiper('.swiper_team', {
     },
 });
 const swiper_merch = new Swiper('.swiper_merch', {
-    loop: false,
+    loop: true,
     effect: "fade",
     spaceBetween: 40
 });
