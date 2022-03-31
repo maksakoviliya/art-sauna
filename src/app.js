@@ -181,6 +181,9 @@ Array.from(portfolio_screen).forEach(function (element, i) {
     swiper_screens.push(new Swiper(element, {
         spaceBetween: 20,
         effect: "fade",
+        autoplay: {
+            delay: 2000,
+        },
         simulateTouch: false,
         navigation: {
             nextEl: ".portfolio-next",

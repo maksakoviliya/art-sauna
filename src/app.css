@@ -356,3 +356,6 @@
 .button-bg {
     background-image: radial-gradient(47.34% 47.35% at 22.68% 19.41%, rgba(41, 39, 37, 0.63) 17.42%, rgba(0, 0, 0, 0) 100%)
 }
+.button-bg-large {
+    background-image: radial-gradient(53.88% 53.88% at 13.97% 94.88%, rgba(41, 39, 37, 0.63) 17.42%, rgba(0, 0, 0, 0) 100%)
+}
