@@ -1019,6 +1019,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 2rem;
 }
 
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
 .block {
   display: block;
 }
@@ -3509,6 +3513,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: 3rem;
   }
 
+  .xl\:h-18 {
+    height: 72px;
+  }
+
   .xl\:max-h-\[500px\] {
     max-height: 500px;
   }
@@ -3694,6 +3702,21 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .xl\:-translate-y-12 {
     --tw-translate-y: -3rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .xl\:-translate-y-1 {
+    --tw-translate-y: -0.25rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .xl\:-translate-y-2 {
+    --tw-translate-y: -0.5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .xl\:-translate-y-3 {
+    --tw-translate-y: -0.75rem;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
@@ -3978,6 +4001,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-bottom: 60px;
   }
 
+  .xl\:pr-24 {
+    padding-right: 6rem;
+  }
+
   .xl\:text-center {
     text-align: center;
   }
@@ -4167,5 +4194,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .\33xl\:flex-nowrap {
     flex-wrap: nowrap;
+  }
+
+  .\33xl\:pr-20 {
+    padding-right: 5rem;
   }
 }

@@ -25,7 +25,11 @@ const swiper = new Swiper('.swiper_team', {
     loop: false,
     effect: "fade",
     simulateTouch: false,
-    spaceBetween: 40
+    spaceBetween: 40,
+    navigation: {
+        prevEl: '.swiper_team_prev',
+        nextEl: '.swiper_team_next',
+    },
 });
 const swiper_merch = new Swiper('.swiper_merch', {
     loop: false,
