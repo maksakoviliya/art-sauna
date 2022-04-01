@@ -1079,6 +1079,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 11rem;
 }
 
+.h-\[500px\] {
+  height: 500px;
+}
+
 .h-\[400px\] {
   height: 400px;
 }
@@ -1157,10 +1161,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-7 {
   height: 1.75rem;
-}
-
-.h-\[500px\] {
-  height: 500px;
 }
 
 .h-5 {
@@ -2646,6 +2646,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .button-bg-large {
   background-image: radial-gradient(53.88% 53.88% at 13.97% 94.88%, rgba(41, 39, 37, 0.63) 17.42%, rgba(0, 0, 0, 0) 100%)
+}
+
+.light {
+  background-image: radial-gradient(rgba(255,255,255,.1) 0%, rgba(255,255,255,0) 80%)
 }
 
 .hover\:from-violet-400:hover {
