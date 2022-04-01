@@ -218,18 +218,37 @@ Array.from(document.querySelectorAll(".video-preview")).forEach(function (elemen
 function handleSubmit(e) {
     e.preventDefault()
 
-    let phone = Inputmask.unmask(e.target.elements.phone.value, { mask: "+7 999 999 99 99" })
+    let phone = Inputmask.unmask(e.target.elements.phone.value, {mask: "+7 999 999 99 99"})
     if (phone.length < 10) {
         e.target.elements.phone.classList.add('bg-red-200')
     } else {
         e.target.elements.phone.classList.remove('bg-red-200')
+
+        fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            body: JSON.stringify({
+                title: 'foo',
+                body: 'bar',
+                userId: 1,
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+        })
+            .then((response) => {
+                console.log('res', response)
+            })
+            .then((json) => {
+                console.log(json)
+                e.target.elements.phone.classList.add('bg-red-200')
+            });
     }
 }
 
 function handleSubmitQuestion(e) {
     e.preventDefault()
 
-    let phone = Inputmask.unmask(e.target.elements.phone.value, { mask: "+7 999 999 99 99" })
+    let phone = Inputmask.unmask(e.target.elements.phone.value, {mask: "+7 999 999 99 99"})
     if (phone.length < 10) {
         e.target.elements.phone.classList.add('bg-red-200')
     } else {
