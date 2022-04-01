@@ -1803,6 +1803,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(246 246 246 / var(--tw-bg-opacity));
 }
 
+.bg-red-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-20 {
   --tw-bg-opacity: 0.2;
 }
@@ -3033,6 +3038,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: 3.5rem;
   }
 
+  .lg\:h-\[1000px\] {
+    height: 1000px;
+  }
+
   .lg\:w-16 {
     width: 4rem;
   }
@@ -3055,6 +3064,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:w-full {
     width: 100%;
+  }
+
+  .lg\:w-\[1000px\] {
+    width: 1000px;
   }
 
   .lg\:max-w-full {

@@ -42,6 +42,7 @@ const swiper_portfolio = new Swiper('.swiper_portfolio', {
         prevEl: '.swiper_portfolio_prev',
         nextEl: '.swiper_portfolio_next',
     },
+    mousewheel: true,
     // simulateTouch: false,
     pagination: {
         el: '.swiper-pagination',
@@ -249,3 +250,31 @@ Array.from(document.querySelectorAll(".video-preview")).forEach(function (elemen
         element.classList.add('hidden-important')
     })
 })
+
+function handleSubmit(e) {
+    e.preventDefault()
+
+    let phone = Inputmask.unmask(e.target.elements.phone.value, { mask: "+7 999 999 99 99" })
+    if (phone.length < 10) {
+        e.target.elements.phone.classList.add('bg-red-200')
+    } else {
+        e.target.elements.phone.classList.remove('bg-red-200')
+    }
+}
+
+function handleSubmitQuestion(e) {
+    e.preventDefault()
+
+    let phone = Inputmask.unmask(e.target.elements.phone.value, { mask: "+7 999 999 99 99" })
+    if (phone.length < 10) {
+        e.target.elements.phone.classList.add('bg-red-200')
+    } else {
+        e.target.elements.phone.classList.remove('bg-red-200')
+    }
+}
+
+document.getElementById('apply-main').addEventListener("submit", handleSubmit)
+document.getElementById('back-call').addEventListener("submit", handleSubmit)
+document.getElementById('contacts').addEventListener("submit", handleSubmit)
+document.getElementById('contacts-2').addEventListener("submit", handleSubmit)
+document.getElementById('question').addEventListener("submit", handleSubmitQuestion)
