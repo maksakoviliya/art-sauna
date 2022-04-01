@@ -364,19 +364,19 @@
     background-image: radial-gradient(rgba(255,255,255,.1) 0%, rgba(255,255,255,0) 75%)
 }
 
-.animated {
-    @apply duration-200
-}
+/*.animated {*/
+/*    @apply duration-200*/
+/*}*/
 
-.from-bottom {
-    @apply opacity-0 transform translate-y-8
-}
-.from-bottom.active {
-    @apply translate-y-0 opacity-100
-}
-.from-right {
-    @apply opacity-0 transform translate-x-8
-}
-.from-right.active {
-    @apply translate-x-0 opacity-100
-}
+/*.from-bottom {*/
+/*    @apply opacity-0 transform translate-y-8*/
+/*}*/
+/*.from-bottom.active {*/
+/*    @apply translate-y-0 opacity-100*/
+/*}*/
+/*.from-right {*/
+/*    @apply opacity-0 transform translate-x-8*/
+/*}*/
+/*.from-right.active {*/
+/*    @apply translate-x-0 opacity-100*/
+/*}*/

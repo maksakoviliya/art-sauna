@@ -45,7 +45,9 @@ var swiper_portfolio = new Swiper('.swiper_portfolio', {
     prevEl: '.swiper_portfolio_prev',
     nextEl: '.swiper_portfolio_next'
   },
-  mousewheel: true,
+  mousewheel: {
+    forceToAxis: true
+  },
   // simulateTouch: false,
   pagination: {
     el: '.swiper-pagination',
@@ -261,25 +263,24 @@ document.getElementById('apply-main').addEventListener("submit", handleSubmit);
 document.getElementById('back-call').addEventListener("submit", handleSubmit);
 document.getElementById('contacts').addEventListener("submit", handleSubmit);
 document.getElementById('contacts-2').addEventListener("submit", handleSubmit);
-document.getElementById('question').addEventListener("submit", handleSubmitQuestion);
-Array.from(document.querySelectorAll('.with-animation')).forEach(function (section) {
-  new Waypoint({
-    element: section,
-    handler: function handler(direction) {
-      var elements = Array.from(this.element.querySelectorAll('.animated'));
-
-      if (direction === 'down') {
-        elements.forEach(function (el) {
-          el.classList.add('active');
-        });
-      } else {
-        elements.forEach(function (el) {
-          el.classList.remove('active');
-        });
-      }
-    },
-    offset: '70%'
-  });
-});
+document.getElementById('question').addEventListener("submit", handleSubmitQuestion); //
+// Array.from(document.querySelectorAll('.with-animation')).forEach(function (section) {
+//     new Waypoint({
+//         element: section,
+//         handler: function(direction) {
+//             let elements = Array.from(this.element.querySelectorAll('.animated'))
+//             if (direction === 'down') {
+//                 elements.forEach(function (el) {
+//                     el.classList.add('active')
+//                 })
+//             } else {
+//                 elements.forEach(function (el) {
+//                     el.classList.remove('active')
+//                 })
+//             }
+//         },
+//         offset: '70%'
+//     })
+// })
 /******/ })()
 ;

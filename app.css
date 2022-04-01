@@ -2661,33 +2661,35 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-image: radial-gradient(rgba(255,255,255,.1) 0%, rgba(255,255,255,0) 75%)
 }
 
-.animated {
-  transition-duration: 200ms;
-}
+/*.animated {*/
 
-.from-bottom {
-  --tw-translate-y: 2rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  opacity: 0;
-}
+/*    @apply duration-200*/
 
-.from-bottom.active {
-  --tw-translate-y: 0px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  opacity: 1;
-}
+/*}*/
 
-.from-right {
-  --tw-translate-x: 2rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  opacity: 0;
-}
+/*.from-bottom {*/
 
-.from-right.active {
-  --tw-translate-x: 0px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  opacity: 1;
-}
+/*    @apply opacity-0 transform translate-y-8*/
+
+/*}*/
+
+/*.from-bottom.active {*/
+
+/*    @apply translate-y-0 opacity-100*/
+
+/*}*/
+
+/*.from-right {*/
+
+/*    @apply opacity-0 transform translate-x-8*/
+
+/*}*/
+
+/*.from-right.active {*/
+
+/*    @apply translate-x-0 opacity-100*/
+
+/*}*/
 
 .hover\:from-violet-400:hover {
   --tw-gradient-from: #8C6BD6;
