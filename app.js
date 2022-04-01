@@ -87,19 +87,7 @@ swiper.on('slideChange', function (sw) {
     element.classList.remove('active');
   });
   types[sw.activeIndex].classList.add('active');
-}); // let types_prev = document.querySelectorAll(".types_prev");
-// Array.from(types_prev).forEach(function (element) {
-//     element.addEventListener('click', function () {
-//         swiper.slidePrev()
-//     });
-// });
-// let types_next = document.querySelectorAll(".types_next");
-// Array.from(types_next).forEach(function (element) {
-//     element.addEventListener('click', function () {
-//         swiper.slideNext()
-//     });
-// });
-
+});
 var merch_prev = document.querySelectorAll(".merch_prev");
 Array.from(merch_prev).forEach(function (element) {
   element.addEventListener('click', function () {
@@ -202,28 +190,7 @@ Array.from(portfolio_screen).forEach(function (element, i) {
       MicroModal.show(element.dataset.target);
     });
   });
-}); // function createComparison(element) {
-//     element.addEventListener('mousemove', (evt) => {
-//         console.log(evt);
-//         let layer = element.querySelector('.compare:nth-child(2)');
-//         let width = evt.offsetX, height = parseInt(getComputedStyle(layer).height);
-//         layer.style.clip = `rect(0px ${width}px ${height}px 0px)`;
-//     }, false);
-// }
-//
-// createComparison(document.querySelector('#comparison'));
-// let swiper2 = new Swiper(".mySwiper2", {
-// spaceBetween: 20,
-// slidesPerView: 4,
-// freeMode: true,
-// watchSlidesProgress: true,
-// navigation: {
-//     nextEl: ".portfolio-next",
-//     prevEl: ".portfolio-prev",
-// },
-// });
-
-var scroll = new SmoothScroll('a[href*="#"]');
+});
 var selector = document.querySelectorAll(".phone-input");
 var im = new Inputmask("+7 999 999 99 99");
 im.mask(selector);
@@ -263,24 +230,6 @@ document.getElementById('apply-main').addEventListener("submit", handleSubmit);
 document.getElementById('back-call').addEventListener("submit", handleSubmit);
 document.getElementById('contacts').addEventListener("submit", handleSubmit);
 document.getElementById('contacts-2').addEventListener("submit", handleSubmit);
-document.getElementById('question').addEventListener("submit", handleSubmitQuestion); //
-// Array.from(document.querySelectorAll('.with-animation')).forEach(function (section) {
-//     new Waypoint({
-//         element: section,
-//         handler: function(direction) {
-//             let elements = Array.from(this.element.querySelectorAll('.animated'))
-//             if (direction === 'down') {
-//                 elements.forEach(function (el) {
-//                     el.classList.add('active')
-//                 })
-//             } else {
-//                 elements.forEach(function (el) {
-//                     el.classList.remove('active')
-//                 })
-//             }
-//         },
-//         offset: '70%'
-//     })
-// })
+document.getElementById('question').addEventListener("submit", handleSubmitQuestion);
 /******/ })()
 ;
