@@ -1,4 +1,5 @@
 <?php
+print_r($_POST);
 //if (!empty($_POST['name'])) {
 //    $to = 'maksak_il@mail.ru';
 //    $subject = 'the subject';
