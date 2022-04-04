@@ -8,4 +8,6 @@ if (!empty($_POST['name'])) {
 
     mail($to, $subject, $message, $headers);
     echo 'success';
+} else {
+    echo 'no data';
 }
