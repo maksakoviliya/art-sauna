@@ -250,15 +250,7 @@ $(document).ready(function () {
     e.preventDefault();
     $.ajax({
       type: "POST",
-      url: "email.php",
-      contentType: 'application/json',
-      dataType: 'json',
-      data: JSON.stringify({
-        name: 'no-reply@art-sauna.ru',
-        email: 'no-reply@art-sauna.ru',
-        subject: 'subject',
-        message: 'I am message'
-      })
+      url: "email.php"
     }).done(function (data) {
       console.log('data', data);
     });
