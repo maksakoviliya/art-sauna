@@ -215,7 +215,7 @@ Array.from(document.querySelectorAll(".video-preview")).forEach(function (elemen
     })
 })
 
-function handleSubmit(e) {
+async function handleSubmit(e) {
     e.preventDefault()
 
     let phone = Inputmask.unmask(e.target.elements.phone.value, {mask: "+7 999 999 99 99"})
@@ -223,7 +223,6 @@ function handleSubmit(e) {
         e.target.elements.phone.classList.add('bg-red-200')
     } else {
         e.target.elements.phone.classList.remove('bg-red-200')
-
         fetch('email.php', {
             method: 'POST',
             body: JSON.stringify({
