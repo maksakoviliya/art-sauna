@@ -1063,7 +1063,7 @@ function handleSubmit(_x) {
 
 function _handleSubmit() {
   _handleSubmit = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(e) {
-    var phone, data;
+    var phone;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
@@ -1077,34 +1077,23 @@ function _handleSubmit() {
               e.target.elements.phone.classList.add('bg-red-200');
             } else {
               e.target.elements.phone.classList.remove('bg-red-200');
-              data = {
-                name: 'name',
-                phone: 'phone'
-              };
-              fetch('/mail.php', {
+              fetch('email.php', {
                 method: 'POST',
-                body: data
+                body: JSON.stringify({
+                  name: 'no-reply@art-sauna.ru',
+                  email: 'no-reply@art-sauna.ru',
+                  subject: 'subject',
+                  message: 'I am message'
+                }),
+                headers: {
+                  'Content-type': 'application/json; charset=UTF-8'
+                }
               }).then(function (response) {
                 console.log('res', response);
-              }); // fetch('email.php', {
-              //     method: 'POST',
-              //     body: JSON.stringify({
-              //         name: 'no-reply@art-sauna.ru',
-              //         email: 'no-reply@art-sauna.ru',
-              //         subject: 'subject',
-              //         message: 'I am message',
-              //     }),
-              //     headers: {
-              //         'Content-type': 'application/json; charset=UTF-8',
-              //     },
-              // })
-              //     .then((response) => {
-              //         console.log('res', response)
-              //     })
-              //     .catch((error) => {
-              //         console.error(error)
-              //         e.target.elements.phone.classList.add('bg-red-200')
-              //     });
+              })["catch"](function (error) {
+                console.error(error);
+                e.target.elements.phone.classList.add('bg-red-200');
+              });
             }
 
           case 3:
