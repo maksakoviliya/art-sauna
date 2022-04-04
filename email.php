@@ -8,6 +8,8 @@ $json = file_get_contents('php://input');
 
 // decode the json data
 $data = json_decode($json);
+echo 'data';
 print_r($data);
+echo 'here';
 mail($to, $subject, $message, $headers);
 echo 'success';
