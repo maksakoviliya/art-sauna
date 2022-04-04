@@ -7,6 +7,6 @@ $headers = 'From: no-reply@art-sauna.com'       . "\r\n" .
 $json = file_get_contents('php://input');
 $data = json_decode($json);
 
-echo $data['name'];
+print_r($data['name']);
 //mail($to, $subject, $message, $headers);
 echo 'success';
