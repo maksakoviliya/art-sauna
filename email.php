@@ -4,6 +4,10 @@ $subject = 'the subject';
 $message = 'hello';
 $headers = 'From: no-reply@art-sauna.com'       . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
-print_r($_POST);
+$json = file_get_contents('php://input');
+
+// decode the json data
+$data = json_decode($json);
+print_r($data);
 mail($to, $subject, $message, $headers);
 echo 'success';
