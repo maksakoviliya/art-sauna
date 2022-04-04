@@ -251,7 +251,7 @@ $(document).ready(function () {
     $.ajax({
       type: "POST",
       url: "email.php",
-      data: JSON.stringify({
+      body: JSON.stringify({
         name: 'no-reply@art-sauna.ru',
         email: 'no-reply@art-sauna.ru',
         subject: 'subject',
