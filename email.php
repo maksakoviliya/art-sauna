@@ -11,5 +11,5 @@ $data = json_decode($json);
 echo 'data';
 print_r($data);
 echo 'here';
-mail($to, $subject, $message, $headers);
+//mail($to, $subject, $message, $headers);
 echo 'success';
