@@ -213,6 +213,7 @@ function handleSubmit(e) {
     fetch('email.php', {
       method: 'POST',
       body: JSON.stringify({
+        name: 'no-reply@art-sauna.ru',
         email: 'no-reply@art-sauna.ru',
         subject: 'subject',
         message: 'I am message'
