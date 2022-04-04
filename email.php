@@ -1,54 +1,39 @@
 <?php
-header('Access-Control-Allow-Origin: *');
+//Import PHPMailer classes into the global namespace
+//These must be at the top of your script, not inside a function
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
-header('Access-Control-Allow-Methods: POST');
+//Load Composer's autoloader
+require 'vendor/autoload.php';
 
-header("Access-Control-Allow-Headers: X-Requested-With");
+//Create an instance; passing `true` enables exceptions
+$mail = new PHPMailer(true);
 
+try {
+    //Server settings
+    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+    $mail->isSMTP();                                            //Send using SMTP
+    $mail->Host       = 'ssl://smtp.mail.ru';                     //Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+    $mail->Username   = 'artsaunaleads@mail.ru';                     //SMTP username
+    $mail->Password   = 'wsf#%gts44';                               //SMTP password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
-error_reporting(E_ALL);
-ini_set("display_errors", 1);
+    //Recipients
+    $mail->setFrom('no-reply@art-sauna.com', 'Mailer');
+    $mail->addAddress('maksak_il@mail.ru');               //Name is optional
 
-//require 'phpmailer/PHPMailer.php';
-require 'vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
+    //Content
+    $mail->isHTML(true);                                  //Set email format to HTML
+    $mail->Subject = 'Here is the subject';
+    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-if (!empty($_POST['name'])) {
-
-    $mail = new PHPMailer;
-    $mail->isSMTP();
-
-    $mail->SMTPDebug = 1;
-
-    $mail->Host = 'ssl://smtp.mail.ru';
-
-    $mail->SMTPAuth = true;
-    $mail->Username = 'artsaunaleads@mail.ru'; // логин от вашей почты
-    $mail->Password = 'wsf#%gts44'; // пароль от почтового ящика
-    $mail->SMTPSecure = 'SSL';
-    $mail->Port = '465';
-
-    $mail->CharSet = 'UTF-8';
-    $mail->From = 'noreply@art-sauna.ru';  // адрес почты, с которой идет отправка
-    $mail->FromName = 'New Lead'; // имя отправителя
-
-    $mail->addAddress('maksak_il@mail.ru', 'Maksak_il');
-
-    $mail->isHTML(true);
-
-    $mail->Subject = $_POST['subject'];
-    $mail->Body = "Имя: {$_POST['name']}<br> Email: {$_POST['email']}<br> Сообщение: " . nl2br($_POST['body']);
-    $mail->AltBody = "Имя: {$_POST['name']}\r\n Email: {$_POST['email']}\r\n Сообщение: {$_POST['body']}";
-
-    //$mail->SMTPDebug = 1;
-
-    if ($mail->send()) {
-        $answer = '1';
-    } else {
-        $answer = '0';
-        echo 'Письмо не может быть отправлено. ';
-        echo 'Ошибка: ' . $mail->ErrorInfo;
-    }
-    die($answer);
+    $mail->send();
+    echo 'Message has been sent';
+} catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
-
-?>
