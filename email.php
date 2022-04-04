@@ -10,7 +10,7 @@ error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
 //require 'phpmailer/PHPMailer.php';
-require './vendor/phpmailer/PHPMailerAutoload.php';
+require './vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
 
 if (!empty($_POST['name'])) {
 
