@@ -31,6 +31,8 @@ if (!empty($_POST['name'])) {
     $mail->From = 'noreply@art-sauna.ru';  // адрес почты, с которой идет отправка
     $mail->FromName = 'New Lead'; // имя отправителя
 
+    $mail->addAddress('maksak_il@mail.ru', 'Maksak_il');
+
     $mail->isHTML(true);
 
     $mail->Subject = $_POST['subject'];
