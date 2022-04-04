@@ -1,6 +1,6 @@
 <?php
 //echo '$_POST['name']';
-echo $_POST;
+echo $_POST['name'];
 //if (!empty($_POST['name'])) {
 //    $to = 'maksak_il@mail.ru';
 //    $subject = 'the subject';
