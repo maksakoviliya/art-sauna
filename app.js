@@ -210,20 +210,20 @@ function handleSubmit(e) {
     e.target.elements.phone.classList.add('bg-red-200');
   } else {
     e.target.elements.phone.classList.remove('bg-red-200');
-    fetch('https://jsonplaceholder.typicode.com/posts', {
+    fetch('email.php', {
       method: 'POST',
       body: JSON.stringify({
-        title: 'foo',
-        body: 'bar',
-        userId: 1
+        email: 'no-reply@art-sauna.ru',
+        subject: 'subject',
+        message: 'I am message'
       }),
       headers: {
         'Content-type': 'application/json; charset=UTF-8'
       }
     }).then(function (response) {
       console.log('res', response);
-    }).then(function (json) {
-      console.log(json);
+    })["catch"](function (error) {
+      console.error(error);
       e.target.elements.phone.classList.add('bg-red-200');
     });
   }

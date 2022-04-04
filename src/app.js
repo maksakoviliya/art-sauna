@@ -224,12 +224,12 @@ function handleSubmit(e) {
     } else {
         e.target.elements.phone.classList.remove('bg-red-200')
 
-        fetch('https://jsonplaceholder.typicode.com/posts', {
+        fetch('email.php', {
             method: 'POST',
             body: JSON.stringify({
-                title: 'foo',
-                body: 'bar',
-                userId: 1,
+                email: 'no-reply@art-sauna.ru',
+                subject: 'subject',
+                message: 'I am message',
             }),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
@@ -238,8 +238,8 @@ function handleSubmit(e) {
             .then((response) => {
                 console.log('res', response)
             })
-            .then((json) => {
-                console.log(json)
+            .catch((error) => {
+                console.error(error)
                 e.target.elements.phone.classList.add('bg-red-200')
             });
     }
