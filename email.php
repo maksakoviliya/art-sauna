@@ -11,7 +11,7 @@ ini_set("display_errors", 1);
 
 //require 'phpmailer/PHPMailer.php';
 require 'vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
-
+die(1);
 if (!empty($_POST['name'])) {
 
     $mail = new PHPMailer;
