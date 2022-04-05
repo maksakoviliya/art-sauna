@@ -280,9 +280,12 @@ function handleSubmit(e) {
                 phone: phone,
                 id: e.target.id
             }),
+            success: function(response)
+            {
+                ym(87730208, 'reachGoal', 'formsend')
+                window.location.href = "https://catalog.art-sauna.com/thankyou"
+            }
         })
-        ym(87730208, 'reachGoal', 'formsend')
-        window.location.href = "https://catalog.art-sauna.com/thankyou"
     }
 }
 
@@ -320,9 +323,12 @@ function handleSubmitQuestion(e) {
                 text: e.target.elements.text.value,
                 id: e.target.id
             }),
+            success: function(response)
+            {
+                ym(87730208, 'reachGoal', 'formsend')
+                window.location.href = "https://catalog.art-sauna.com/thankyou"
+            }
         })
-        ym(87730208, 'reachGoal', 'formsend')
-        window.location.href = "https://catalog.art-sauna.com/thankyou"
     }
 }
 

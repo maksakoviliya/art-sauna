@@ -19,11 +19,11 @@ if (isset($data->id)) {
     $message = $message . "form_id: $data->id";
 }
 if (isset($data->name)) {
-    $message = $message . "Имя: $data->name";
+    $message = $message . "Имя: $data->name;";
 }
 
 if (isset($data->text)) {
-    $message = $message . "Текст: $data->text";
+    $message = $message . "Текст: $data->text;";
 }
 
 $current .= "$message\n";
