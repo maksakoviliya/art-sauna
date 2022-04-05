@@ -215,53 +215,6 @@ Array.from(document.querySelectorAll(".video-preview")).forEach(function (elemen
     })
 })
 
-// async function handleSubmit(e) {
-//     e.preventDefault()
-//
-//     let phone = Inputmask.unmask(e.target.elements.phone.value, {mask: "+7 999 999 99 99"})
-//     if (phone.length < 10) {
-//         e.target.elements.phone.classList.add('bg-red-200')
-//     } else {
-//         e.target.elements.phone.classList.remove('bg-red-200')
-//         fetch('email.php', {
-//             method: 'POST',
-//             body: JSON.stringify({
-//                 name: 'no-reply@art-sauna.ru',
-//                 email: 'no-reply@art-sauna.ru',
-//                 subject: 'subject',
-//                 message: 'I am message',
-//             }),
-//             headers: {
-//                 'Content-type': 'application/json; charset=UTF-8',
-//             },
-//         })
-//             .then((response) => {
-//                 console.log('res', response)
-//             })
-//             .catch((error) => {
-//                 console.error(error)
-//                 e.target.elements.phone.classList.add('bg-red-200')
-//             });
-//     }
-// }
-//
-// function handleSubmitQuestion(e) {
-//     e.preventDefault()
-//
-//     let phone = Inputmask.unmask(e.target.elements.phone.value, {mask: "+7 999 999 99 99"})
-//     if (phone.length < 10) {
-//         e.target.elements.phone.classList.add('bg-red-200')
-//     } else {
-//         e.target.elements.phone.classList.remove('bg-red-200')
-//     }
-// }
-//
-// document.getElementById('apply-main').addEventListener("submit", handleSubmit)
-// document.getElementById('back-call').addEventListener("submit", handleSubmit)
-// document.getElementById('contacts').addEventListener("submit", handleSubmit)
-// document.getElementById('contacts-2').addEventListener("submit", handleSubmit)
-// document.getElementById('question').addEventListener("submit", handleSubmitQuestion)
-
 function handleSubmit(e) {
     e.preventDefault()
 
@@ -271,7 +224,6 @@ function handleSubmit(e) {
         e.target.elements.phone.classList.add('bg-red-200')
     } else {
         e.target.elements.phone.classList.remove('bg-red-200')
-        ym(87730208, 'reachGoal', 'formsend')
         $.ajax({
             type: "POST",
             url: "email.php",
@@ -283,10 +235,13 @@ function handleSubmit(e) {
             }),
             success: function()
             {
-                console.log('success')
+                console.log('asd')
+                ym(87730208, 'reachGoal', 'formsend')
                 window.location.href = "https://catalog.art-sauna.com/thankyou"
             }
         })
+        ym(87730208, 'reachGoal', 'formsend')
+        window.location.href = "https://catalog.art-sauna.com/thankyou"
     }
 }
 
@@ -313,7 +268,6 @@ function handleSubmitQuestion(e) {
         e.target.elements.phone.classList.add('bg-red-200')
     } else {
         e.target.elements.phone.classList.remove('bg-red-200')
-        ym(87730208, 'reachGoal', 'formsend')
         $.ajax({
             type: "POST",
             url: "email.php",
@@ -327,10 +281,12 @@ function handleSubmitQuestion(e) {
             }),
             success: function()
             {
-                console.log('success')
+                ym(87730208, 'reachGoal', 'formsend')
                 window.location.href = "https://catalog.art-sauna.com/thankyou"
             }
         })
+        ym(87730208, 'reachGoal', 'formsend')
+        window.location.href = "https://catalog.art-sauna.com/thankyou"
     }
 }
 

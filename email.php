@@ -25,10 +25,9 @@ if (isset($data->name)) {
 if (isset($data->text)) {
     $message = $message . "Текст: $data->text;";
 }
-
 $current .= "$message\n";
 file_put_contents($file, $current);
 
 mail($to, $subject, $message, $headers);
 echo $message;
-return $message;
+return 1;
