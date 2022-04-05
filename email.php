@@ -1,7 +1,7 @@
 <?php
 $file = 'log.log';
 $current = file_get_contents($file);
-$current .= "New form:\n";
+$current .= "New form: {date('Y-m-d')}\n";
 file_put_contents($file, $current);
 
 $to = 'artsaunabiz@yandex.ru';
@@ -16,7 +16,7 @@ $roistatVisitId = array_key_exists('roistat_visit', $_COOKIE) ? $_COOKIE['roista
 
 $message = "Телефон: +7$data->phone; Roistat: {$roistatVisitId};";
 if (isset($data->id)) {
-    $message = $message . "form_id: $data->id";
+    $message = $message . "form_id: $data->id;";
 }
 if (isset($data->name)) {
     $message = $message . "Имя: $data->name;";
