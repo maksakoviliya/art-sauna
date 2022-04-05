@@ -261,7 +261,8 @@ function handleSubmit(e) {
       contentType: 'application/json',
       dataType: 'json',
       data: JSON.stringify({
-        phone: phone
+        phone: phone,
+        id: e.id
       })
     }).done(function (data) {
       console.log('data', data);
@@ -304,7 +305,8 @@ function handleSubmitQuestion(e) {
       data: JSON.stringify({
         phone: phone,
         name: e.target.elements.name.value,
-        text: e.target.elements.text.value
+        text: e.target.elements.text.value,
+        id: e.id
       })
     }).done(function (data) {
       console.log('data', data);

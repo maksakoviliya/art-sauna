@@ -14,7 +14,10 @@ $data = json_decode($json);
 
 $roistatVisitId = array_key_exists('roistat_visit', $_COOKIE) ? $_COOKIE['roistat_visit'] : 'nocookie';
 
-$message = "Телефон: +7$data->phone; Название формы: Форма; Roistat: {$roistatVisitId};";
+$message = "Телефон: +7$data->phone; Roistat: {$roistatVisitId};";
+if (isset($data->id)) {
+    $message = $message . "form_id: $data->id";
+}
 if (isset($data->name)) {
     $message = $message . "Имя: $data->name";
 }
