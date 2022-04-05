@@ -271,6 +271,7 @@ function handleSubmit(e) {
         e.target.elements.phone.classList.add('bg-red-200')
     } else {
         e.target.elements.phone.classList.remove('bg-red-200')
+        ym(87730208, 'reachGoal', 'formsend')
         $.ajax({
             type: "POST",
             url: "email.php",
@@ -278,11 +279,11 @@ function handleSubmit(e) {
             dataType: 'json',
             data: JSON.stringify({
                 phone: phone,
-                id: e.target.id
+                id: e.target.dataset.form
             }),
-            success: function(response)
+            success: function()
             {
-                ym(87730208, 'reachGoal', 'formsend')
+                console.log('success')
                 window.location.href = "https://catalog.art-sauna.com/thankyou"
             }
         })
@@ -312,6 +313,7 @@ function handleSubmitQuestion(e) {
         e.target.elements.phone.classList.add('bg-red-200')
     } else {
         e.target.elements.phone.classList.remove('bg-red-200')
+        ym(87730208, 'reachGoal', 'formsend')
         $.ajax({
             type: "POST",
             url: "email.php",
@@ -321,11 +323,11 @@ function handleSubmitQuestion(e) {
                 phone: phone,
                 name: e.target.elements.name.value,
                 text: e.target.elements.text.value,
-                id: e.target.id
+                id: e.target.dataset.form
             }),
-            success: function(response)
+            success: function()
             {
-                ym(87730208, 'reachGoal', 'formsend')
+                console.log('success')
                 window.location.href = "https://catalog.art-sauna.com/thankyou"
             }
         })
@@ -348,6 +350,9 @@ $(document).ready(function () {
     })
     $('#question').on('submit', function (e) {
         handleSubmitQuestion(e)
+    })
+    $('#modal-online-form').on('submit', function (e) {
+        handleSubmit(e)
     })
 
 });
