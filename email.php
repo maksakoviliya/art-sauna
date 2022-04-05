@@ -1,4 +1,9 @@
 <?php
+$file = 'log.log';
+$current = file_get_contents($file);
+$current .= "New form:\n";
+file_put_contents($file, $current);
+
 $to = '20785813.293103@parser.amocrm.ru';
 $subject = 'the subject';
 $headers = 'From: no-reply@art-sauna.com' . "\r\n" .
@@ -17,6 +22,9 @@ if (isset($data->name)) {
 if (isset($data->text)) {
     $message = $message . "Текст: $data->text";
 }
+
+$current .= "$message\n";
+file_put_contents($file, $current);
 
 mail($to, $subject, $message, $headers);
 echo $message;
