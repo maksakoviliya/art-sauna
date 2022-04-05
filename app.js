@@ -266,7 +266,7 @@ function handleSubmit(e) {
       })
     });
     ym(87730208, 'reachGoal', 'formsend');
-    window.location.href = "/thankyou";
+    window.location.href = "https://catalog.art-sauna.com/thankyou";
   }
 }
 
@@ -308,7 +308,7 @@ function handleSubmitQuestion(e) {
       })
     });
     ym(87730208, 'reachGoal', 'formsend');
-    window.location.href = "/thankyou";
+    window.location.href = "https://catalog.art-sauna.com/thankyou";
   }
 }
 

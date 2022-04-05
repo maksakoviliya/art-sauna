@@ -4,7 +4,7 @@ $current = file_get_contents($file);
 $current .= "New form:\n";
 file_put_contents($file, $current);
 
-$to = 'artsaunaleads@mail.ru';
+$to = 'artsaunabiz@yandex.ru';
 $subject = 'the subject';
 $headers = 'From: no-reply@art-sauna.com' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
