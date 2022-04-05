@@ -9,9 +9,7 @@ $data = json_decode($json);
 
 $roistatVisitId = array_key_exists('roistat_visit', $_COOKIE) ? $_COOKIE['roistat_visit'] : 'nocookie';
 
-//$message = "Телефон: $data->phone; Название формы: Форма; Roistat: {$roistatVisitId};";
-$message = 'asda';
+$message = "Телефон: $data->phone; Название формы: Форма; Roistat: {$roistatVisitId};";
 
 mail($to, $subject, $message, $headers);
-echo $message;
 echo 'success';
