@@ -1,7 +1,7 @@
 <?php
 $file = 'log.log';
 $current = file_get_contents($file);
-$current .= "New form: {date('Y-m-d')}\n";
+$current .= "New form: " . date('Y-m-d') . "\n";
 file_put_contents($file, $current);
 
 $to = 'artsaunabiz@yandex.ru';
