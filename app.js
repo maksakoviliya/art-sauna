@@ -266,6 +266,7 @@ function handleSubmit(e) {
     }).done(function (data) {
       console.log('data', data);
       ym(87730208, 'reachGoal', 'formsend');
+      window.location.href = "/thankyou";
     });
   }
 }
@@ -308,6 +309,7 @@ function handleSubmitQuestion(e) {
     }).done(function (data) {
       console.log('data', data);
       ym(87730208, 'reachGoal', 'formsend');
+      window.location.href = "/thankyou";
     });
   }
 }
