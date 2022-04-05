@@ -12,4 +12,4 @@ $roistatVisitId = array_key_exists('roistat_visit', $_COOKIE) ? $_COOKIE['roista
 $message = "Телефон: $data->phone; Название формы: Форма; Roistat: {$roistatVisitId};";
 
 mail($to, $subject, $message, $headers);
-echo 'success';
+echo $message;
