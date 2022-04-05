@@ -4817,6 +4817,14 @@
     <div class="modal micromodal-slide" id="modal-3" aria-hidden="true">
         <div class="modal__overlay" tabindex="-1" data-micromodal-close>
             <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-3-title">
+                <button class="absolute bottom-full right-0 z-10 text-white transition hover:text-violet-500"
+                        data-micromodal-close>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 stroke-current" fill="none"
+                         viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+                
                 <h2 class="md:text-2xl uppercase font-black text-center tracking-wide">Задайте вопрос руководителю</h2>
                 <form id="question">
                     <input type="text"
@@ -4830,7 +4838,7 @@
                     <textarea
                             name="text"
                             class="resize-none h-32 w-full flex-centered justify-start bg-gray-200 outline-none p-6 font-montserrat mt-10"
-                            placeholder="Введите свой номер телефона"></textarea>
+                            placeholder="Введите свой вопрос"></textarea>
                     <div class="banner-button__wrapper max-w-full w-full mt-5 h-[80px]">
                         <button data-micromodal-trigger="modal-3" class="banner-button group text-sm text-center"
                                 type="submit">

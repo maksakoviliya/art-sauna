@@ -245,23 +245,88 @@ Array.from(document.querySelectorAll(".video-preview")).forEach(function (elemen
 // document.getElementById('contacts-2').addEventListener("submit", handleSubmit)
 // document.getElementById('question').addEventListener("submit", handleSubmitQuestion)
 
-$(document).ready(function () {
-  $('#apply-main').on('submit', function (e) {
-    e.preventDefault();
+function handleSubmit(e) {
+  e.preventDefault();
+  var phone = Inputmask.unmask(e.target.elements.phone.value, {
+    mask: "+7 999 999 99 99"
+  });
+
+  if (phone.length < 10) {
+    e.target.elements.phone.classList.add('bg-red-200');
+  } else {
+    e.target.elements.phone.classList.remove('bg-red-200');
     $.ajax({
       type: "POST",
       url: "email.php",
       contentType: 'application/json',
       dataType: 'json',
       data: JSON.stringify({
-        name: 'no-reply@art-sauna.ru',
-        email: 'no-reply@art-sauna.ru',
-        subject: 'subject',
-        message: 'I am message'
+        phone: phone
       })
     }).done(function (data) {
       console.log('data', data);
+      ym(87730208, 'reachGoal', 'formsend');
     });
+  }
+}
+
+function handleSubmitQuestion(e) {
+  e.preventDefault();
+
+  if (!e.target.elements.name.value) {
+    e.target.elements.name.classList.add('bg-red-200');
+    return;
+  } else {
+    e.target.elements.name.classList.remove('bg-red-200');
+  }
+
+  if (!e.target.elements.text.value) {
+    e.target.elements.text.classList.add('bg-red-200');
+    return;
+  } else {
+    e.target.elements.text.classList.remove('bg-red-200');
+  }
+
+  var phone = Inputmask.unmask(e.target.elements.phone.value, {
+    mask: "+7 999 999 99 99"
+  });
+
+  if (phone.length < 10) {
+    e.target.elements.phone.classList.add('bg-red-200');
+  } else {
+    e.target.elements.phone.classList.remove('bg-red-200');
+    $.ajax({
+      type: "POST",
+      url: "email.php",
+      contentType: 'application/json',
+      dataType: 'json',
+      data: JSON.stringify({
+        phone: phone,
+        name: e.target.elements.name.value,
+        text: e.target.elements.text.value
+      })
+    }).done(function (data) {
+      console.log('data', data);
+      ym(87730208, 'reachGoal', 'formsend');
+    });
+  }
+}
+
+$(document).ready(function () {
+  $('#apply-main').on('submit', function (e) {
+    handleSubmit(e);
+  });
+  $('#back-call').on('submit', function (e) {
+    handleSubmit(e);
+  });
+  $('#contacts').on('submit', function (e) {
+    handleSubmit(e);
+  });
+  $('#contacts-2').on('submit', function (e) {
+    handleSubmit(e);
+  });
+  $('#question').on('submit', function (e) {
+    handleSubmitQuestion(e);
   });
 });
 /******/ })()
