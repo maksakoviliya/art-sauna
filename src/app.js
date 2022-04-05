@@ -280,13 +280,12 @@ function handleSubmit(e) {
                 phone: phone,
                 id: e.target.id
             }),
-        }).done(function(data) {
-            console.log('data', data)
-            ym(87730208,'reachGoal','formsend')
-            window.location.href = "/thankyou"
-        });
+        })
+        ym(87730208, 'reachGoal', 'formsend')
+        window.location.href = "/thankyou"
     }
 }
+
 function handleSubmitQuestion(e) {
     e.preventDefault()
 
@@ -321,11 +320,9 @@ function handleSubmitQuestion(e) {
                 text: e.target.elements.text.value,
                 id: e.target.id
             }),
-        }).done(function(data) {
-            console.log('data', data)
-            ym(87730208,'reachGoal','formsend')
-            window.location.href = "/thankyou"
-        });
+        })
+        ym(87730208, 'reachGoal', 'formsend')
+        window.location.href = "/thankyou"
     }
 }
 

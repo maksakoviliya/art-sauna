@@ -31,3 +31,4 @@ file_put_contents($file, $current);
 
 mail($to, $subject, $message, $headers);
 echo $message;
+return $message;
