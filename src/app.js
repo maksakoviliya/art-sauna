@@ -278,7 +278,7 @@ function handleSubmit(e) {
             dataType: 'json',
             data: JSON.stringify({
                 phone: phone,
-                id: e.id
+                id: e.target.id
             }),
         }).done(function(data) {
             console.log('data', data)
@@ -319,7 +319,7 @@ function handleSubmitQuestion(e) {
                 phone: phone,
                 name: e.target.elements.name.value,
                 text: e.target.elements.text.value,
-                id: e.id
+                id: e.target.id
             }),
         }).done(function(data) {
             console.log('data', data)
