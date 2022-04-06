@@ -128,29 +128,44 @@ let portfolio_items = document.querySelectorAll(".portfolio-item")
 let portfolio_btn = document.getElementById('showOtherItems')
 portfolio_btn.addEventListener('click', function () {
     if (!portfolio_btn.classList.contains('opened')) {
-        let i = 0;
         Array.from(portfolio_items).forEach(function (element) {
-            if (element.classList.contains('hidden')) {
-
-                if (i < 2) {
-                    element.classList.remove('hidden')
-                    i++
-                }
-            }
+            element.classList.remove('hidden')
         });
-        if (!document.querySelectorAll(".portfolio-item.hidden").length) {
-            portfolio_btn.textContent = 'Скрыть'
-            portfolio_btn.classList.add('opened')
-        }
+        portfolio_btn.textContent = 'Скрыть'
+        portfolio_btn.classList.add('opened')
     } else {
         Array.from(portfolio_items).forEach(function (element, j) {
-            if (j > 1) {
+            if (j > 2) {
                 element.classList.add('hidden')
             }
         });
         portfolio_btn.textContent = 'Показать еще'
         portfolio_btn.classList.remove('opened')
     }
+    // if (!portfolio_btn.classList.contains('opened')) {
+    //     let i = 0;
+    //     Array.from(portfolio_items).forEach(function (element) {
+    //         if (element.classList.contains('hidden')) {
+    //
+    //             if (i < 3) {
+    //                 element.classList.remove('hidden')
+    //                 i++
+    //             }
+    //         }
+    //     });
+    //     if (!document.querySelectorAll(".portfolio-item.hidden").length) {
+    //         portfolio_btn.textContent = 'Скрыть'
+    //         portfolio_btn.classList.add('opened')
+    //     }
+    // } else {
+    //     Array.from(portfolio_items).forEach(function (element, j) {
+    //         if (j > 1) {
+    //             element.classList.add('hidden')
+    //         }
+    //     });
+    //     portfolio_btn.textContent = 'Показать еще'
+    //     portfolio_btn.classList.remove('opened')
+    // }
 })
 
 MicroModal.init({
@@ -233,8 +248,7 @@ function handleSubmit(e) {
                 phone: phone,
                 id: e.target.dataset.form
             }),
-            success: function()
-            {
+            success: function () {
                 console.log('asd')
                 ym(87730208, 'reachGoal', 'formsend')
                 window.location.href = "https://catalog.art-sauna.com/thankyou"
@@ -279,8 +293,7 @@ function handleSubmitQuestion(e) {
                 text: e.target.elements.text.value,
                 id: e.target.dataset.form
             }),
-            success: function()
-            {
+            success: function () {
                 ym(87730208, 'reachGoal', 'formsend')
                 window.location.href = "https://catalog.art-sauna.com/thankyou"
             }

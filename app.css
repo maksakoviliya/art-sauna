@@ -999,6 +999,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1rem;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
 .mt-14 {
   margin-top: 3.5rem;
 }
@@ -1231,8 +1235,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-height: 800px;
 }
 
-.max-h-\[222px\] {
-  max-height: 222px;
+.max-h-\[320px\] {
+  max-height: 320px;
 }
 
 .max-h-\[585px\] {
@@ -1245,10 +1249,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .max-h-screen {
   max-height: 100vh;
-}
-
-.max-h-\[320px\] {
-  max-height: 320px;
 }
 
 .w-0\.2 {
@@ -2858,10 +2858,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: 0.25rem;
   }
 
-  .md\:max-h-\[340px\] {
-    max-height: 340px;
-  }
-
   .md\:max-h-\[500px\] {
     max-height: 500px;
   }
@@ -3624,16 +3620,12 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: 3rem;
   }
 
-  .xl\:max-h-\[500px\] {
-    max-height: 500px;
+  .xl\:max-h-\[700px\] {
+    max-height: 700px;
   }
 
   .xl\:max-h-full {
     max-height: 100%;
-  }
-
-  .xl\:max-h-\[700px\] {
-    max-height: 700px;
   }
 
   .xl\:w-5 {

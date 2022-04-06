@@ -6,6 +6,9 @@ file_put_contents($file, $current);
 
 $to = 'artsaunabiz@yandex.ru';
 $subject = 'the subject';
+if (isset($data->id)) {
+    $subject = $data->id;
+}
 $headers = 'From: no-reply@art-sauna.com' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
@@ -15,9 +18,7 @@ $data = json_decode($json);
 $roistatVisitId = array_key_exists('roistat_visit', $_COOKIE) ? $_COOKIE['roistat_visit'] : 'nocookie';
 
 $message = "Телефон: +7$data->phone; Roistat: {$roistatVisitId};";
-if (isset($data->id)) {
-    $message = $message . "form_id: $data->id;";
-}
+
 if (isset($data->name)) {
     $message = $message . "Имя: $data->name;";
 }
