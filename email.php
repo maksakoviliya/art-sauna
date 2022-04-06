@@ -5,7 +5,7 @@ $current .= "New form: " . date('Y-m-d') . "\n";
 file_put_contents($file, $current);
 
 $to = 'artsaunabiz@yandex.ru';
-$subject = 'the subject';
+$subject = 'form';
 if (isset($data->id)) {
     $subject = $data->id;
 }
