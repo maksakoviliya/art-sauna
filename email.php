@@ -5,10 +5,6 @@ $current .= "New form: " . date('Y-m-d') . "\n";
 file_put_contents($file, $current);
 
 $to = 'artsaunabiz@yandex.ru';
-$subject = 'form';
-if (isset($data->id)) {
-    $subject = $data->id;
-}
 $headers = 'From: no-reply@art-sauna.com' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
@@ -27,8 +23,15 @@ if (isset($data->text)) {
     $message = $message . "Текст: $data->text;";
 }
 $current .= "$message\n";
-file_put_contents($file, $current);
 
+$subject = 'form';
+echo $data->id;
+if (isset($data->id)) {
+    $subject = $data->id;
+}
+
+file_put_contents($file, $current);
+echo $subject;
 mail($to, $subject, $message, $headers);
 echo $message;
 return 1;
