@@ -48,6 +48,30 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'PP Object Sans';
+    src: url('./fonts/PPObjectSans-Heavy.eot');
+    src: url('./fonts/PPObjectSans-Heavy.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/PPObjectSans-Heavy.woff2') format('woff2'),
+    url('./fonts/PPObjectSans-Heavy.woff') format('woff'),
+    url('./fonts/PPObjectSans-Heavy.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Object Sans';
+    src: url('./fonts/PPObjectSans-Regular.eot');
+    src: url('./fonts/PPObjectSans-Regular.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/PPObjectSans-Regular.woff2') format('woff2'),
+    url('./fonts/PPObjectSans-Regular.woff') format('woff'),
+    url('./fonts/PPObjectSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

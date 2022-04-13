@@ -6,7 +6,8 @@ module.exports = {
               "3xl": "1660px"
             },
             fontFamily: {
-                sans: ['RF Dewi', 'sans-serif'],
+                sans: ['PP Object Sans', 'sans-serif'],
+                // sans: ['RF Dewi', 'sans-serif'],
                 montserrat: ['Montserrat', 'sans-serif']
             },
             spacing: {
