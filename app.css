@@ -672,7 +672,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .banner-button {
-  background: linear-gradient(92.95deg, #A081E6 -2.36%, #8569C4 -2.35%, #9872EB 102.97%);
+  background: linear-gradient(90deg, #9577ee, #9550ac);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%);
   position: absolute;
@@ -710,7 +710,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-translate-x: 0px;
   --tw-translate-y: 0px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  background: linear-gradient(92.95deg, #8C6BD6 -2.36%, #8C6BD6 -2.35%, #7D56D6 102.97%);
+  background: linear-gradient(90deg, #9550ac, #9577ee);
 }
 
 .item.active {
@@ -1888,9 +1888,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(41 39 37 / 0));
 }
 
-.from-violet-500 {
-  --tw-gradient-from: #9172D6;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(145 114 214 / 0));
+.from-violet-from {
+  --tw-gradient-from: #9577ee;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(149 119 238 / 0));
 }
 
 .from-violet-400 {
@@ -1898,8 +1898,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(140 107 214 / 0));
 }
 
-.to-violet-400 {
-  --tw-gradient-to: #8C6BD6;
+.to-violet-to {
+  --tw-gradient-to: #9550ac;
 }
 
 .to-violet-500 {
@@ -2743,17 +2743,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(140 107 214 / 0));
 }
 
-.hover\:from-violet-500:hover {
-  --tw-gradient-from: #9172D6;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(145 114 214 / 0));
+.hover\:from-violet-from:hover {
+  --tw-gradient-from: #9577ee;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(149 119 238 / 0));
 }
 
 .hover\:to-violet-500:hover {
   --tw-gradient-to: #9172D6;
 }
 
-.hover\:to-violet-400:hover {
-  --tw-gradient-to: #8C6BD6;
+.hover\:to-violet-to:hover {
+  --tw-gradient-to: #9550ac;
 }
 
 .hover\:text-violet-500:hover {

@@ -134,12 +134,12 @@
         @apply absolute top-0 right-0 border-r border-violet-500 h-2 -ml-0.05;
     }
     .banner-button {
-        background: linear-gradient(92.95deg, #A081E6 -2.36%, #8569C4 -2.35%, #9872EB 102.97%);
+        background: linear-gradient(90deg, #9577ee, #9550ac);
         clip-path: polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%);
         @apply absolute inset-0 h-full w-full font-montserrat font-bold flex items-center justify-center relative text-white shadow-md uppercase text-sm transition translate-x-1.5 translate-y-1.5 duration-75 hover:translate-x-0 hover:translate-y-0;
     }
     .banner-button:hover {
-        background: linear-gradient(92.95deg, #8C6BD6 -2.36%, #8C6BD6 -2.35%, #7D56D6 102.97%);
+        background: linear-gradient(90deg, #9550ac, #9577ee);
     }
 
     .item.active {

@@ -52,7 +52,10 @@ module.exports = {
                 "violet-500": "#9172D6",
                 "violet-50": "rgba(145, 114, 214, .3)",
 
-                "white-50": "rgba(255, 255, 255, .5)"
+                "white-50": "rgba(255, 255, 255, .5)",
+
+                "violet-from": "#9577ee",
+                "violet-to": "#9550ac",
             },
             letterSpacing: {
                 wide: "0.02em"
