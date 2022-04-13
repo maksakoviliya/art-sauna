@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'RF Dewi';
+    src: local('RF Dewi Expanded Light'), local('RF-Dewi-Expanded-Light'),
+        url('RFDewiExpanded-Light.woff2') format('woff2'),
+        url('RFDewiExpanded-Light.woff') format('woff'),
+        url('RFDewiExpanded-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }

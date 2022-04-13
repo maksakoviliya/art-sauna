@@ -1,10 +1,30 @@
 @font-face {
     font-family: 'RF Dewi';
+    src: local('RF Dewi Expanded Light'), local('RF-Dewi-Expanded-Light'),
+    url('./fonts/RFDewiExpanded-Light/RFDewiExpanded-Light.woff2') format('woff2'),
+    url('./fonts/RFDewiExpanded-Light/RFDewiExpanded-Light.woff') format('woff'),
+    url('./fonts/RFDewiExpanded-Light/RFDewiExpanded-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RF Dewi';
     src: local('RF Dewi Expanded Regular'), local('RF-Dewi-Expanded-Regular'),
     url('./fonts/RFDewiExpanded-Regular/RFDewiExpanded-Regular.woff2') format('woff2'),
     url('./fonts/RFDewiExpanded-Regular/RFDewiExpanded-Regular.woff') format('woff'),
     url('./fonts/RFDewiExpanded-Regular/RFDewiExpanded-Regular.ttf') format('truetype');
     font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RF Dewi';
+    src: local('RF Dewi Expanded Semibold'), local('RF-Dewi-Expanded-Semibold'),
+    url('./fonts/RFDewiExpanded-Semibold/RFDewiExpanded-Semibold.woff2') format('woff2'),
+    url('./fonts/RFDewiExpanded-Semibold/RFDewiExpanded-Semibold.woff') format('woff'),
+    url('./fonts/RFDewiExpanded-Semibold/RFDewiExpanded-Semibold.ttf') format('truetype');
+    font-weight: 600;
     font-style: normal;
 }
 
@@ -78,35 +98,44 @@
 
 @layer base {
     .content {
-        @apply max-w-7xl xl:max-w-8xl mx-auto;
+        @apply max-w-6xl xl:max-w-7xl 2xl:max-w-8xl mx-auto;
     }
 }
 
 @layer components {
     .main-banner {
-        background-image: url('img/banner_2.png');
+        background-image: url('./img/banner_2.png');
     }
 
     @media (min-width: 768px)  {
         .main-banner {
-            background-image: url('img/banner_2_large.png');
+            background-image: url('./img/main_banner.png');
         }
     }
     .second-banner {
-        background-image: url('img/banner_3.png');
+        background-image: url('./img/banner_3.png');
     }
 
     @media (min-width: 768px)  {
         .second-banner {
-            background-image: url('img/banner_3_large.png');
+            background-image: url('./img/banner_3_large.png');
         }
     }
 
     .banner-button__wrapper {
-        @apply max-w-xs relative h-[70px] xl:h-20 border border-violet-500;
+        @apply max-w-xs relative h-[70px] xl:h-20 border-t border-l border-violet-500 relative;
+    }
+    .banner-button__wrapper:after {
+        content: '';
+        @apply absolute top-full left-0 border-t border-violet-500 w-2 -mt-0.05;
+    }
+    .banner-button__wrapper:before {
+        content: '';
+        @apply absolute top-0 right-0 border-r border-violet-500 h-2 -ml-0.05;
     }
     .banner-button {
         background: linear-gradient(92.95deg, #A081E6 -2.36%, #8569C4 -2.35%, #9872EB 102.97%);
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%);
         @apply absolute inset-0 h-full w-full font-montserrat font-bold flex items-center justify-center relative text-white shadow-md uppercase text-sm transition translate-x-1.5 translate-y-1.5 duration-75 hover:translate-x-0 hover:translate-y-0;
     }
     .banner-button:hover {
@@ -114,13 +143,17 @@
     }
 
     .item.active {
-        @apply bg-gradient-to-r from-violet-500 to-violet-400;
+        @apply border-violet-500;
     }
-    .item.active span {
-        @apply from-white to-white text-violet-500;
-    }
+    /*.item.active span {*/
+    /*    @apply from-white to-white text-violet-500;*/
+    /*}*/
     .item.active .hide-when-active {
         @apply hidden;
+    }
+
+    .tab.active {
+        @apply bg-white text-neutral-850 hover:text-neutral-850 opacity-100
     }
 }
 
@@ -140,6 +173,16 @@
 
     .video-container iframe {
         @apply absolute inset-0 w-full h-full
+    }
+    .overflow-visible-important {
+        overflow: visible !important;
+    }
+    .hidden-important {
+        display: none !important;
+    }
+
+    .bg-full {
+        background-size: 100% 100%;
     }
 }
 
@@ -161,3 +204,203 @@
 .type_pagination.active {
     @apply bg-gradient-to-r from-violet-500 to-violet-400 text-white
 }
+
+/**************************\
+  Basic Modal Styles
+\**************************/
+
+.modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @apply z-30 p-5
+}
+
+.modal__container {
+    background-color: #fff;
+    max-height: 100vh;
+    overflow-y: visible;
+    box-sizing: border-box;
+    @apply max-w-640 p-5 sm:p-10 md:px-[70px] md:py-[60px] relative
+}
+
+.modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.25;
+    color: #00449e;
+    box-sizing: border-box;
+}
+
+.modal__close {
+    background: transparent;
+    border: 0;
+}
+
+.modal__header .modal__close:before { content: "\2715"; }
+
+.modal__content {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    color: rgba(0,0,0,.8);
+}
+
+.modal__btn {
+    font-size: .875rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    background-color: #e6e6e6;
+    color: rgba(0,0,0,.8);
+    border-radius: .25rem;
+    border-style: none;
+    border-width: 0;
+    cursor: pointer;
+    -webkit-appearance: button;
+    text-transform: none;
+    overflow: visible;
+    line-height: 1.15;
+    margin: 0;
+    will-change: transform;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    transition: -webkit-transform .25s ease-out;
+    transition: transform .25s ease-out;
+    transition: transform .25s ease-out,-webkit-transform .25s ease-out;
+}
+
+.modal__btn:focus, .modal__btn:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.modal__btn-primary {
+    background-color: #00449e;
+    color: #fff;
+}
+
+
+
+/**************************\
+  Demo Animation Style
+\**************************/
+@keyframes mmfadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes mmfadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes mmslideIn {
+    from { transform: translateY(15%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes mmslideOut {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10%); }
+}
+
+.micromodal-slide {
+    display: none;
+}
+
+.micromodal-slide.is-open {
+    display: block;
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
+    animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__container {
+    animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
+    animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__container {
+    animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+    will-change: transform;
+}
+
+.custom-pagination {
+    position: relative !important;
+    width: auto !important;
+    display: flex !important;
+    align-items: center;
+    bottom: 0 !important;
+}
+
+.custom-pagination .swiper-pagination-bullet {
+    opacity: 100%;
+    @apply w-4 h-4 bg-neutral-750 rounded-full;
+}
+
+.custom-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    @apply bg-white;
+}
+
+.handle-container:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: #fff;
+}
+
+.button-bg {
+    background-image: radial-gradient(47.34% 47.35% at 22.68% 19.41%, rgba(41, 39, 37, 0.63) 17.42%, rgba(0, 0, 0, 0) 100%)
+}
+.button-bg-large {
+    background-image: radial-gradient(53.88% 53.88% at 13.97% 94.88%, rgba(41, 39, 37, 0.63) 17.42%, rgba(0, 0, 0, 0) 100%)
+}
+
+.light {
+    background-image: radial-gradient(rgba(255,255,255,.1) 0%, rgba(255,255,255,0) 75%)
+}
+
+/*.animated {*/
+/*    @apply duration-200*/
+/*}*/
+
+/*.from-bottom {*/
+/*    @apply opacity-0 transform translate-y-8*/
+/*}*/
+/*.from-bottom.active {*/
+/*    @apply translate-y-0 opacity-100*/
+/*}*/
+/*.from-right {*/
+/*    @apply opacity-0 transform translate-x-8*/
+/*}*/
+/*.from-right.active {*/
+/*    @apply translate-x-0 opacity-100*/
+/*}*/

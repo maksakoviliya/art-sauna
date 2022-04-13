@@ -1,9 +1,11 @@
 module.exports = {
-    content: ["./**/*.html"],
+    content: ["./**/*.html", "./src/**/*.js"],
     theme: {
         extend: {
             screens: {
-              "3xl": "1660px"
+                "xl": "1440px",
+                "3xl": "1660px",
+                "4xl": "1920px"
             },
             fontFamily: {
                 sans: ['PP Object Sans', 'sans-serif'],
@@ -24,6 +26,7 @@ module.exports = {
                 93: "372px",
                 100: "100px",
                 200: "200px",
+                300: "300px",
             },
             rotate: {
                 150: '150deg',
@@ -33,12 +36,17 @@ module.exports = {
                 200: '200px',
             },
             maxWidth: {
-                '8xl': "1620px"
+                640: "640px",
+                '8xl': "1620px",
+                'screen': "100vw"
             },
             colors: {
+                "gray-200": "#F6F6F6",
+                "gray-350": "rgba(196, 196, 196, 0.13)",
                 "gray-450": "rgba(26, 26, 26, .8)",
 
                 "neutral-850": "#292725",
+                "neutral-750": "#3C3A38",
 
                 "violet-400": "#8C6BD6",
                 "violet-500": "#9172D6",
@@ -48,6 +56,10 @@ module.exports = {
             },
             letterSpacing: {
                 wide: "0.02em"
+            },
+            gridTemplateRows: {
+                '3x200': 'repeat(3, 200px)',
+                '3x224': 'repeat(3, 224px)',
             },
             lineHeight: {
                 7.5: "29px",
@@ -70,13 +82,13 @@ module.exports = {
                     '0%': {transform: 'translateY(-30px) translateX(-50%)', opacity: 0},
                     '50%': {transform: 'translateY(-15px) translateX(-50%)', opacity: .85},
                     '100%': {transform: 'translateY(0) translateX(-50%)', opacity: .05},
-                }
+                },
             },
             animation: {
                 "drop-1": 'drop .9s linear infinite',
                 "drop-2": 'drop .9s linear infinite .3s',
                 "drop-3": 'drop .9s linear infinite .6s',
-                "spin-slowly": 'spin 3s linear infinite'
+                "spin-slowly": 'spin 3s linear infinite',
             }
         },
     },
