@@ -894,6 +894,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: 0.5rem;
 }
 
+.left-\[262px\] {
+  left: 262px;
+}
+
 .z-10 {
   z-index: 10;
 }
