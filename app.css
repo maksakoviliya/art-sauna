@@ -124,7 +124,7 @@
 }
 
 /*
-! tailwindcss v3.0.24 | MIT License | https://tailwindcss.com
+! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -1265,6 +1265,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 80vh;
 }
 
+.h-\[86px\] {
+  height: 86px;
+}
+
+.h-\[36px\] {
+  height: 36px;
+}
+
+.h-\[26px\] {
+  height: 26px;
+}
+
+.h-\[18px\] {
+  height: 18px;
+}
+
+.h-\[24px\] {
+  height: 24px;
+}
+
 .max-h-\[790px\] {
   max-height: 790px;
 }
@@ -2327,6 +2347,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   outline-offset: 2px;
 }
 
+.outline {
+  outline-style: solid;
+}
+
 .blur-200 {
   --tw-blur: blur(200px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -2478,6 +2502,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   .modal__container {
     padding-left: 70px;
     padding-right: 70px;
+  }
+
+  .modal__container {
     padding-top: 60px;
     padding-bottom: 60px;
   }
@@ -2893,6 +2920,14 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: 0.25rem;
   }
 
+  .md\:h-\[154px\] {
+    height: 154px;
+  }
+
+  .md\:h-\[45px\] {
+    height: 45px;
+  }
+
   .md\:max-h-\[500px\] {
     max-height: 500px;
   }
@@ -3286,8 +3321,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:flex-centered {
     display: flex;
+  }
+
+  .lg\:flex-centered {
     flex-direction: column;
+  }
+
+  .lg\:flex-centered {
     align-items: center;
+  }
+
+  .lg\:flex-centered {
     justify-content: center;
   }
 }
