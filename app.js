@@ -1,12 +1,8 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	var __webpack_modules__ = ({
-
-/***/ "./src/app.js":
+var __webpack_exports__ = {};
 /*!********************!*\
   !*** ./src/app.js ***!
   \********************/
-/***/ (() => {
-
 new Accordion('.accordion-container-first', {
   duration: 75,
   openOnInit: [0]
@@ -52,15 +48,15 @@ var swiper_portfolio = new Swiper('.swiper_portfolio', {
   mousewheel: {
     forceToAxis: true
   },
-  // simulateTouch: false,
+  simulateTouch: false,
   pagination: {
     el: '.swiper-pagination',
     clickable: true
   },
   spaceBetween: 40,
   slideToClickedSlide: true,
-  preventClicks: false // preventClicksPropagation: false
-
+  preventClicks: true,
+  preventClicksPropagation: true
 });
 document.querySelectorAll('.portfolio-item').forEach(function (n) {
   var slider = new Swiper(n.querySelector('.swiper_portfolio_mobile'), {
@@ -315,28 +311,5 @@ $(document).ready(function () {
     handleSubmit(e);
   });
 });
-
-/***/ }),
-
-/***/ "./src/app.css":
-/*!*********************!*\
-  !*** ./src/app.css ***!
-  \*********************/
-/***/ (() => {
-
-throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ./node_modules/css-loader/dist/cjs.js):\nError: Can't resolve './fonts/PPObjectSans-Heavy.eot' in '/Users/mmm/work/art-sauna/src'\n    at finishWithoutResolve (/Users/mmm/work/art-sauna/node_modules/enhanced-resolve/lib/Resolver.js:309:18)\n    at /Users/mmm/work/art-sauna/node_modules/enhanced-resolve/lib/Resolver.js:386:15\n    at /Users/mmm/work/art-sauna/node_modules/enhanced-resolve/lib/Resolver.js:435:5\n    at eval (eval at create (/Users/mmm/work/art-sauna/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)\n    at /Users/mmm/work/art-sauna/node_modules/enhanced-resolve/lib/Resolver.js:435:5\n    at eval (eval at create (/Users/mmm/work/art-sauna/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:27:1)\n    at /Users/mmm/work/art-sauna/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js:87:43\n    at /Users/mmm/work/art-sauna/node_modules/enhanced-resolve/lib/Resolver.js:435:5\n    at eval (eval at create (/Users/mmm/work/art-sauna/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at /Users/mmm/work/art-sauna/node_modules/enhanced-resolve/lib/Resolver.js:435:5\n    at processResult (/Users/mmm/work/art-sauna/node_modules/webpack/lib/NormalModule.js:758:19)\n    at /Users/mmm/work/art-sauna/node_modules/webpack/lib/NormalModule.js:860:5\n    at /Users/mmm/work/art-sauna/node_modules/loader-runner/lib/LoaderRunner.js:399:11\n    at /Users/mmm/work/art-sauna/node_modules/loader-runner/lib/LoaderRunner.js:251:18\n    at context.callback (/Users/mmm/work/art-sauna/node_modules/loader-runner/lib/LoaderRunner.js:124:13)\n    at Object.loader (/Users/mmm/work/art-sauna/node_modules/css-loader/dist/index.js:155:5)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)");
-
-/***/ })
-
-/******/ 	});
-/************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	__webpack_modules__["./src/app.js"]();
-/******/ 	// This entry module doesn't tell about it's top-level declarations so it can't be inlined
-/******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./src/app.css"]();
-/******/ 	
 /******/ })()
 ;

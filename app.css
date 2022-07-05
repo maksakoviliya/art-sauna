@@ -743,6 +743,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(41 39 37 / var(--tw-text-opacity));
 }
 
+.pointer-events-none {
+  pointer-events: none;
+}
+
 .fixed {
   position: fixed;
 }

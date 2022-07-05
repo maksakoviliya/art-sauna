@@ -45,15 +45,15 @@ const swiper_portfolio = new Swiper('.swiper_portfolio', {
     mousewheel: {
         forceToAxis: true
     },
-    // simulateTouch: false,
+    simulateTouch: false,
     pagination: {
         el: '.swiper-pagination',
         clickable: true
     },
     spaceBetween: 40,
     slideToClickedSlide: true,
-    preventClicks: false,
-    // preventClicksPropagation: false
+    preventClicks: true,
+    preventClicksPropagation: true
 });
 
 document.querySelectorAll('.portfolio-item').forEach(n => {
