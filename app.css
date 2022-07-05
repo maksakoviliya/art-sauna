@@ -1027,6 +1027,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 72px;
 }
 
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
 .mt-\[60px\] {
   margin-top: 60px;
 }
@@ -1689,6 +1693,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .grid-rows-5 {
   grid-template-rows: repeat(5, minmax(0, 1fr));
+}
+
+.grid-rows-3x290 {
+  grid-template-rows: repeat(3, 290px);
 }
 
 .flex-row-reverse {
@@ -3084,6 +3092,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-right: 4rem;
   }
 
+  .lg\:mt-14 {
+    margin-top: 3.5rem;
+  }
+
   .lg\:mt-0 {
     margin-top: 0px;
   }
@@ -3458,6 +3470,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .xl\:mt-100 {
     margin-top: 100px;
+  }
+
+  .xl\:mt-\[34px\] {
+    margin-top: 34px;
   }
 
   .xl\:mt-18 {

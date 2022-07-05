@@ -63,6 +63,7 @@ module.exports = {
             gridTemplateRows: {
                 '3x200': 'repeat(3, 200px)',
                 '3x224': 'repeat(3, 224px)',
+                '3x290': 'repeat(3, 290px)',
             },
             lineHeight: {
                 7.5: "29px",
