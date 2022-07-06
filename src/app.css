@@ -107,9 +107,17 @@
         background-image: url('./img/main_banner_small.png');
     }
 
+    .shadows {
+        display: none;
+    }
+
     @media (min-width: 768px)  {
         .main-banner {
-            background-image: url('./img/main_large_ver3.png');
+            background-image: url('./img/main_banner_ver4.jpg');
+        }
+        .shadows {
+            display: block;
+            background-image: url('./img/main_banner_shadows.png');
         }
     }
     .second-banner {

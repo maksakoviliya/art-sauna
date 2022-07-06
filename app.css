@@ -124,7 +124,7 @@
 }
 
 /*
-! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com
+! tailwindcss v3.1.4 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -311,6 +311,8 @@ textarea {
   font-family: inherit;
   /* 1 */
   font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
   /* 1 */
   line-height: inherit;
   /* 1 */
@@ -540,14 +542,6 @@ video {
   height: auto;
 }
 
-/*
-Ensure the default browser behavior of the `hidden` attribute.
-*/
-
-[hidden] {
-  display: none;
-}
-
 .content {
   margin-left: auto;
   margin-right: auto;
@@ -567,6 +561,102 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 *, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::-webkit-backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
   --tw-translate-y: 0;
   --tw-rotate: 0;
@@ -615,9 +705,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-image: url('./img/main_banner_small.png');
 }
 
+.shadows {
+  display: none;
+}
+
 @media (min-width: 768px)  {
   .main-banner {
-    background-image: url('./img/main_large_ver3.png');
+    background-image: url('./img/main_banner_ver4.jpg');
+  }
+
+  .shadows {
+    display: block;
+    background-image: url('./img/main_banner_shadows.png');
   }
 }
 
@@ -1099,6 +1198,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .h-\[143px\] {
   height: 143px;
 }
@@ -1137,10 +1240,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-\[400px\] {
   height: 400px;
-}
-
-.h-full {
-  height: 100%;
 }
 
 .h-22 {
@@ -1887,22 +1986,26 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .from-gray-450 {
   --tw-gradient-from: rgba(26, 26, 26, .8);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(26 26 26 / 0));
+  --tw-gradient-to: rgb(26 26 26 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 .from-neutral-850 {
   --tw-gradient-from: #292725;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(41 39 37 / 0));
+  --tw-gradient-to: rgb(41 39 37 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 .from-violet-from {
   --tw-gradient-from: #9577ee;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(149 119 238 / 0));
+  --tw-gradient-to: rgb(149 119 238 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 .from-violet-400 {
   --tw-gradient-from: #8C6BD6;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(140 107 214 / 0));
+  --tw-gradient-to: rgb(140 107 214 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 .to-violet-to {
@@ -2329,10 +2432,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   outline-offset: 2px;
 }
 
-.outline {
-  outline-style: solid;
-}
-
 .blur-200 {
   --tw-blur: blur(200px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -2440,7 +2539,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .type_pagination.active {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
   --tw-gradient-from: #9172D6;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(145 114 214 / 0));
+  --tw-gradient-to: rgb(145 114 214 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
   --tw-gradient-to: #8C6BD6;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -2484,9 +2584,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   .modal__container {
     padding-left: 70px;
     padding-right: 70px;
-  }
-
-  .modal__container {
     padding-top: 60px;
     padding-bottom: 60px;
   }
@@ -2749,12 +2846,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .hover\:from-violet-400:hover {
   --tw-gradient-from: #8C6BD6;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(140 107 214 / 0));
+  --tw-gradient-to: rgb(140 107 214 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 .hover\:from-violet-from:hover {
   --tw-gradient-from: #9577ee;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(149 119 238 / 0));
+  --tw-gradient-to: rgb(149 119 238 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 .hover\:to-violet-500:hover {
@@ -3299,17 +3398,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:flex-centered {
     display: flex;
-  }
-
-  .lg\:flex-centered {
     flex-direction: column;
-  }
-
-  .lg\:flex-centered {
     align-items: center;
-  }
-
-  .lg\:flex-centered {
     justify-content: center;
   }
 }
