@@ -617,7 +617,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 @media (min-width: 768px)  {
   .main-banner {
-    background-image: url('./img/banner_1_ver2.png');
+    background-image: url('./img/main_large_ver3.png');
   }
 }
 
@@ -741,10 +741,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .tab.active:hover {
   --tw-text-opacity: 1;
   color: rgb(41 39 37 / var(--tw-text-opacity));
-}
-
-.pointer-events-none {
-  pointer-events: none;
 }
 
 .fixed {
@@ -1697,10 +1693,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .grid-rows-5 {
   grid-template-rows: repeat(5, minmax(0, 1fr));
-}
-
-.grid-rows-3x290 {
-  grid-template-rows: repeat(3, 290px);
 }
 
 .flex-row-reverse {
@@ -3901,12 +3893,12 @@ Ensure the default browser behavior of the `hidden` attribute.
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
-  .xl\:grid-rows-3x224 {
-    grid-template-rows: repeat(3, 224px);
-  }
-
   .xl\:grid-rows-3x290 {
     grid-template-rows: repeat(3, 290px);
+  }
+
+  .xl\:grid-rows-3x224 {
+    grid-template-rows: repeat(3, 224px);
   }
 
   .xl\:flex-wrap {
